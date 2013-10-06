@@ -16,6 +16,33 @@ Feature: Add a movie to Rotten Potatoes
   So that I can share a movie with other movie fans
 I want to add a movie to Rotten Potatoes database
 ```
+```
+Summary:
+According to our client, the basic functionality should resemble Ninja Courses, a popular class scheduling website.
+Our website should simplifiy class scheduling by automatically checking every possible combination of classes for a schedule, 
+and then organizing them based on certain criterias. So our application should have two distinct parts. 
+One of it should be class schedule collection. 
+The app needs to be able to fetch all of class scheduling information from a university's official website.
+In addition to that, the app needs to have an interal data structure to store user data 
+so that each user has his or her own class schedule. 
+```
+```
+Feature 1: Add class schedule fethcing function to Neptus Blueprint
+  So that we can provide class information to the user
+```
+```
+Feature 2: Add scheduling function to Neptus Blueprint
+  So that the user can add and remove classes to change the schedule.
+```
+```
+Feature 3: Add auto scheduling function to Neptus Blueprint
+  So that the app can generate a draft to let the user choose. 
+```
+```
+Feature 4: Add class search function to Neptus Blueprint
+  So that the user can search for courses based on certain criterias. 
+```
+
 
 * ###Part 3 (due 10/13)
 [10 points]
