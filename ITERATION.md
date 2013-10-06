@@ -16,33 +16,39 @@ Feature: Add a movie to Rotten Potatoes
   So that I can share a movie with other movie fans
 I want to add a movie to Rotten Potatoes database
 ```
-```
-Summary:
-According to our client, the basic functionality should resemble Ninja Courses, a popular class scheduling website.
-Our website should simplifiy class scheduling by automatically checking every possible combination of classes for a schedule, 
-and then organizing them based on certain criterias. So our application should have two distinct parts. 
+
+***Summary:***
+
+Our client has identified that studnets have the need discover the nexus between their passions and the requirements to gain their coveted degree. Our application will visually help the students create a 4 year blueprint for course selection. Course prequisites, major requirements, time horizon are taken into account while generating possible 4 year plans. The students then have the freedom to select among their preferred classes to further customize their plans.
+
+***We feel that the many diverse degrees offered by many universities will not be feasbile for us to process with our appliction. Thus we has decided to isolate our project to L&S CS major at UC Berkeley***
+Our client has requested that we provide a platform that will allow students to generate a 4 year coursework plan that satisfies major requirements with the minimal amount of classes. We can display the coursework as a graph, with constraints between classes, to help the students identify class dependencies and expand their course options as they progress.
+So our application should have two distinct parts. 
 One of it should be class schedule collection. 
 The app needs to be able to fetch all of class scheduling information from a university's official website.
-In addition to that, the app needs to have an interal data structure to store user data 
+In addition to that, the app needs to have an internal data structure to store user data 
 so that each user has his or her own class schedule. 
+
+***High Priority***
 ```
-```
-Feature 1: Add class schedule fethcing function to Neptus Blueprint
-  So that we can provide class information to the user
-```
-```
-Feature 2: Add scheduling function to Neptus Blueprint
-  So that the user can add and remove classes to change the schedule.
-```
-```
-Feature 3: Add auto scheduling function to Neptus Blueprint
-  So that the app can generate a draft to let the user choose. 
-```
-```
-Feature 4: Add class search function to Neptus Blueprint
-  So that the user can search for courses based on certain criterias. 
+Feature 1: Allow user to select their major and time horizon:
+  Because: we would like to present the users with and estimate of how many and what classes they need to take every semester to graduate within their time horizon
+  
+
+Feature 2: Allow user to select their preferred classes among the options that fulfill the same requirement:
+  Because: we would like to allow the users to select classes that interest them
+
+
+Feature 3: Provide a graph representation of the users of their 4 year coursework blueprint
+  Becuase: we would like the user to visualize their progress and discover dependencies and potential issues with their desired coursework when they decide to make changes
+
 ```
 
+***Medium Priority***
+```
+ Feature 4: Provide a method for students to ask questions and get answers regarding individual courses
+  Because: we would like students to be able to get any questions about courses answered
+```
 
 * ###Part 3 (due 10/13)
 [10 points]
