@@ -34,7 +34,7 @@ so that each user has his or her own class schedule.
 Feature 1: Allow user to select their major and time horizon:
   Because: we would like to present the users with and estimate of how many and what classes they need to take every    semester to graduate within their time horizon
   
-  As a student intended majoring in CS
+  As a student who intends to major in CS
   So that I can graduate within my expected time horizon
   I want to create a resonable course plan so that I can take more prerequisite classes and maintain a reasonable 
   workload throughout my course plan
