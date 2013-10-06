@@ -32,15 +32,32 @@ so that each user has his or her own class schedule.
 ***High Priority***
 ```
 Feature 1: Allow user to select their major and time horizon:
-  Because: we would like to present the users with and estimate of how many and what classes they need to take every semester to graduate within their time horizon
+  Because: we would like to present the users with and estimate of how many and what classes they need to take every    semester to graduate within their time horizon
+  
+  As a student intended majoring in CS
+  So that I can graduate within my expected time horizon
+  I want to create a resonable course plan so that I can take more prerequisite classes and maintain a reasonable 
+  workload throughout my course plan
+  
+Feature 2: Allow user to select their preferred classes among the options that fulfill the same requirement and show the classes that fulfill the most major requirments first:
+  Because: we would like to allow the users to select classes that interest them
+  
+  As an avid learner
+  So that I can exprience all sorts of classes while filfulling all my major requirements and personal interests
+  I want to have a list of classes sorted by the number of requirements it fulfills
+
+Feature 3: Provide a interactive graph representation of the users of their 4 year coursework blueprint
+  Becuase: we would like the user to visualize their progress and discover dependencies and potential issues with their desired coursework when they decide to make changes
+  
+  As a L&S CS student
+  So that I can make sure any changes I make to my potential schedule still satisfy all major and personal requirements
+  I want to easily visualize and understand my 4 year commitments and identify the relationship between classes.
+  
+  As a student planning official class schedule
+  So that I can finalize my cousre plan for comming semesters
+  I want to interactively experiment with changes of classes on my graph and to immediately see its impact
   
 
-Feature 2: Allow user to select their preferred classes among the options that fulfill the same requirement:
-  Because: we would like to allow the users to select classes that interest them
-
-
-Feature 3: Provide a graph representation of the users of their 4 year coursework blueprint
-  Becuase: we would like the user to visualize their progress and discover dependencies and potential issues with their desired coursework when they decide to make changes
 
 ```
 
@@ -49,6 +66,17 @@ Feature 3: Provide a graph representation of the users of their 4 year coursewor
  Feature 4: Provide a method for students to ask questions and get answers regarding individual courses
   Because: we would like students to be able to get any questions about courses answered
 ```
+
+***user stories:***
+ 
+```
+
+
+
+
+
+
+
 
 * ###Part 3 (due 10/13)
 [10 points]
