@@ -10,3 +10,9 @@ Neptus is a non-profit, that seeks to spread as a student organization to univer
 ##Specifics
 
 We want to collect a lot of data about class descriptions, friends academic activities, job descriptions, macro economic trends, work environment preferences, trends in technology development, and put them into a graph database much like www.GraphMyLife.net - to accurately understand current conditions, and based on time series developments being able to postulate trends with some degree of certainty. As a non-profit, we seek to have an open and transparent approach to collecting and analysing data, adopting open innovation methodologies, featuring an API and allowing others to contribute in how data is being visualized and graphically presented. We've already developed relationships with various non-profits like ACLU, YMCA, which would be able to provide us with data for other types of analysis. Neptus has a long term goal of focusing on sustainability, and will therefore have a particular focus on climate change, global warming and developing various scenarios for nature disasters and water rising due to glaciers melting. But first we need to collect the data, structure the data, and apply both machine learning methods and a multi-factor model approach to analysing the data. Methods I'm quite familiar with already teaching the class Quantitative Trading: www.DeCal.org/Quant This project builds off a projects I was involved with in 2011, called Education 360: www.j.mp/Education360 which focus on analytics for elementary schools. I recently got a book from www.Neo4j.org called "Graph Databases", and I'll be going to the upcoming conference www.GraphConnect.com to develop a better understanding of graph databases.
+
+
+[![Code Climate][CC img]][Code Climate]
+
+
+[Code Climate]: https://codeclimate.com/github/geraldpgreen/neptus-blueprint
