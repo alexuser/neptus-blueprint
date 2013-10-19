@@ -14,19 +14,4 @@ We want to collect a lot of data about class descriptions, friends academic acti
 
 # Current Status
 
-[![Gem Version][GV img]][Gem Version]
-[![Build Status][BS img]][Build Status]
-[![Dependency Status][DS img]][Dependency Status]
-[![Code Climate][CC img]][Code Climate]
-
-[Gem Version]: https://rubygems.org/gems/neptus-blueprint
-[Build Status]: https://travis-ci.org/geraldpgreen/neptus-blueprint
-[Dependency Status]: https://gemnasium.com/geraldpgreen/neptus-blueprint
-[Code Climate]: https://codeclimate.com/github/geraldpgreen/neptus-blueprint
-[Coverage Status]: https://coveralls.io/r/geraldpgreen/neptus-blueprint
-
-[GV img]: https://badge.fury.io/rb/boolean_class.png
-[BS img]: https://travis-ci.org/elgalu/boolean_class.png
-[DS img]: https://gemnasium.com/elgalu/boolean_class.png
-[CC img]: https://codeclimate.com/github/elgalu/boolean_class.png
-[CS img]: https://coveralls.io/repos/elgalu/boolean_class/badge.png?branch=master
+[![Code Climate](https://codeclimate.com/github/geraldpgreen/neptus-blueprint.png)](https://codeclimate.com/github/geraldpgreen/neptus-blueprint)
