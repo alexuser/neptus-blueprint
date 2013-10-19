@@ -120,14 +120,6 @@ Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
   end
 end
 
-Then /^(?:|I )should not see "([^"]*)"$/ do |text|
-  if page.respond_to? :should
-    page.should have_no_content(text)
-  else
-    assert page.has_no_content?(text)
-  end
-end
-
 Then /^(?:|I )should not see \/([^\/]*)\/$/ do |regexp|
   regexp = Regexp.new(regexp)
 
@@ -146,18 +138,6 @@ Then /^the "([^"]*)" field(?: within (.*))? should contain "([^"]*)"$/ do |field
       field_value.should =~ /#{value}/
     else
       assert_match(/#{value}/, field_value)
-    end
-  end
-end
-
-Then /^the "([^"]*)" field(?: within (.*))? should not contain "([^"]*)"$/ do |field, parent, value|
-  with_scope(parent) do
-    field = find_field(field)
-    field_value = (field.tag_name == 'textarea') ? field.text : field.value
-    if field_value.respond_to? :should_not
-      field_value.should_not =~ /#{value}/
-    else
-      assert_no_match(/#{value}/, field_value)
     end
   end
 end
