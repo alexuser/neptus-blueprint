@@ -1,0 +1,2 @@
+module MajorSelectHelper
+end

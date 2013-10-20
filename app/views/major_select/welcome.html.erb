@@ -1,0 +1,11 @@
+<h1>Neptus Blueprint</h1>
+
+<p>Please choose your major</p>
+
+<%= select_tag :user_college_id, options_from_collection_for_select(College.all, "id", "name"), { :prompt => "-- Select A College --"} %>
+
+<div id="versionsDiv">
+  <%= render :partial => 'majors', :locals => { :object => @majors } %>
+</div>
+
+
