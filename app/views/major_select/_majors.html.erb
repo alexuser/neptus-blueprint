@@ -1,4 +1,3 @@
-<%= label_tag :major %><br/>
 <% unless @majors.blank? %>
     <%= collection_select(nil, :major_id, @majors, :id, :name, :prompt => true, :prompt => "-- Select a Major --")%>
 <% else %>
