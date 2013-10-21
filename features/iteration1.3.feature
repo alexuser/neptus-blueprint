@@ -1,27 +1,31 @@
 Feature3: We recommand courses for choosing major and college 
-  As a user
-  So that I can choose my major and college
-  I want to see what courses I might like
+  As a new user
+  So that I can start editing my blueprint
+  I want to enter the profile page after I click start button
+
 
 BackGround: Courses have been added to database.
 
   Given the following accounts existed:
-  |coursename  |college name  |related major   |
-  |software eng|L&S           |Computer Science|
+  |college name  |related major   |
+  |L&S           |Computer Science|
 
   And I am on the welcome page
 
 Scenario: choosing specific college and related major should see sepecific course names
-  When I choose "L&S" as "college"
-  And I choose "Computer Science"
+  When I select "College of Letter and Science" from "user_college_id"
+  
+  And I select "Computer Science" from "major_id" 
   
   And I press "next"
 
-  Then I should be directed to "profile page"
+  Then I should be on profile page
 
 Scenario: missing either college or related major
-  When I choose "L&S" as "college"
+  When I select "College of Letter and Science" from "user_college_id"
 
-  And I press "login"
+  And I press "next"
+
+  Then I should be on welcome page
 
   Then I should see "Please select related major."
