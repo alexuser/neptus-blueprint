@@ -13,24 +13,24 @@ BackGround: Accounts have been added to database.
   And I am on the welcome page
 
 Scenario: signed in with correct user name and password
-  When I enter "kevinliu" as "username"
-  And I enter "123456" as "password"
+  When I fill in "kevinliu" for "username"
+  And I fill in "123456" for "password"
   
   And I press "login"
 
   Then I should see "kevin logged in."
 
 Scenario: signed in with correct user name and incorrect password
-  When I enter "kevinliu" as "username"
-  And I enter "1234567"
+  When I fill in "kevinliu" for "username"
+  And I fill in "1234567" for "password"
 
   And I press "login"
 
   Then I should see "Wrong password."
 
 Scenario: signed in with incorrect user name
-  When I enter "kevinliu111" as "username"
-  And I enter "1234567"
+  When I fill in  "kevinliu111" for "username"
+  And I fill in "1234567" for "password"
 
   And I press "login"
 
