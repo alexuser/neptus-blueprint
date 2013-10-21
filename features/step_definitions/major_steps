@@ -1,0 +1,5 @@
+Given /the following majors existed/ do |majors_table|
+  majors_table.hashes.each do |major|
+    Major.create!(major)
+  end
+end
