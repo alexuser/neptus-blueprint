@@ -6,22 +6,22 @@ Feature1: Registered user can login.
 BackGround: Accounts have been added to database.
 
   Given the following accounts existed:
-  |username |password |
-  |kevinliu |123456   |
-  |jinbaobao|1234567  |
+  |email                   |password |
+  |kevinliu@berkeley.edu   |123456   |
+  |jinbaobao@berkeley.edu  |1234567  |
 
   And I am on the welcome page
 
 Scenario: signed in with correct user name and password
-  When I fill in "kevinliu" for "username"
+  When I fill in "kevinliu@berkeley.edu" for "username"
   And I fill in "123456" for "password"
   
   And I press "Sign in"
 
-  Then I should see "kevin logged in."
+  Then I should see "kevin signed in."
 
 Scenario: signed in with correct user name and incorrect password
-  When I fill in "kevinliu" for "username"
+  When I fill in "kevinliu@berkeley.edu" for "username"
   And I fill in "1234567" for "password"
 
   And I press "Sign in"
@@ -29,7 +29,7 @@ Scenario: signed in with correct user name and incorrect password
   Then I should see "Wrong password."
 
 Scenario: signed in with incorrect user name
-  When I fill in  "kevinliu111" for "username"
+  When I fill in  "kevinliu111@berkeley.edu" for "username"
   And I fill in "1234567" for "password"
 
   And I press "Sign in"
