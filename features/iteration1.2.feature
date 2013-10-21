@@ -5,15 +5,15 @@ Feature2: college and related majors should match
 
 BackGround: Courses have been added to database.
 
-  Given the following accounts existed:
-  |coursename  |college name  |related major   |
-  |software eng|L&S           |Computer Science|
+  Given the following majors existed:
+  |college name  |related major   |
+  |L&S           |Computer Science|
 
   And I am on the welcome page
 
-Scenario: choosing specific college
-  When I choose "L&S" as "college"
-  And I press "related major"
+Scenario: choosing specific major
+  When I select "College of Letter and Science" from "user_college_id"
 
-  Then I should see "Computer Science"
-  And I should not see "EECS"
+  Then I should see "Computer Science" within "major_id"
+
+  And I should not see "EECS" within "major_id"
