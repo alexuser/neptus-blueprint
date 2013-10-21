@@ -16,7 +16,7 @@ Scenario: signed in with correct user name and password
   When I fill in "kevinliu" for "username"
   And I fill in "123456" for "password"
   
-  And I press "login"
+  And I press "Sign in"
 
   Then I should see "kevin logged in."
 
@@ -24,7 +24,7 @@ Scenario: signed in with correct user name and incorrect password
   When I fill in "kevinliu" for "username"
   And I fill in "1234567" for "password"
 
-  And I press "login"
+  And I press "Sign in"
 
   Then I should see "Wrong password."
 
@@ -32,6 +32,6 @@ Scenario: signed in with incorrect user name
   When I fill in  "kevinliu111" for "username"
   And I fill in "1234567" for "password"
 
-  And I press "login"
+  And I press "Sign in"
 
   Then I should see "User name not exist."
