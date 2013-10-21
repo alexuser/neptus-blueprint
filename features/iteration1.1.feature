@@ -1,7 +1,7 @@
 Feature1: Registered user can login.
-  As a registered user,
-  So that I can login using my registered account,
-  I want to see whether I successfully logged in or not.
+  As a current user
+  So that I can log in to view my profile
+  I want to use navigation bar to log in and navigate 
 
 BackGround: Accounts have been added to database.
 
