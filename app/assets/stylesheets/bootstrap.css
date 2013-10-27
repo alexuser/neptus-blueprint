@@ -4376,7 +4376,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
   background-color: #f8f8f8;
   border-color: #e7e7e7;
 }
-
+.Not-you{
+  color: #66ccff;
+}
 .navbar-default .navbar-brand {
   color: #777777;
 }
