@@ -1,4 +1,7 @@
 Neptus::Application.routes.draw do
+  devise_for :users
+  resources :profilepage
+
   get "major_select/welcome"
   match 'major_select/update_majors' => 'major_select#update_majors'
   # The priority is based upon order of creation:

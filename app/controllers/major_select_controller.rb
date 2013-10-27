@@ -1,5 +1,8 @@
 class MajorSelectController < ApplicationController
   def welcome
+  	if user_signed_in?
+  		redirect_to :controller=>'profilepage', :action => 'index'
+  	end
   end
   
   def update_majors

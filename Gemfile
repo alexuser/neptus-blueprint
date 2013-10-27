@@ -10,7 +10,7 @@ group :development, :test do
   gem 'ruby-debug19'
 end
 
-
+gem 'devise'
 gem 'haml'
 gem 'bootstrap-sass', '2.3.2.0'
 
