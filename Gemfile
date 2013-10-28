@@ -8,11 +8,20 @@ gem 'rails', '3.2.14'
 group :development, :test do
   gem 'sqlite3'
   gem 'ruby-debug19'
+  gem 'cucumber-rails'
+  gem 'cucumber-rails-training-wheels'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'rspec-rails'
+  gem 'simplecov'
 end
 
 gem 'devise'
 gem 'haml'
 gem 'bootstrap-sass', '2.3.2.0'
+
+
 
 group :production do
   gem 'pg'

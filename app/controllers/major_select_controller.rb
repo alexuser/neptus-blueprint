@@ -9,5 +9,6 @@ class MajorSelectController < ApplicationController
     @majors = Major.where("college_id = #{params[:college_id]}")
 
     render :partial => "majors", :locals => {:object => @majors}
+    
   end
 end

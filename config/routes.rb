@@ -1,6 +1,11 @@
 Neptus::Application.routes.draw do
+  get "contact/index"
+
   devise_for :users
   resources :profilepage
+  resources :about
+  resources :contact
+  root :to => 'major_select#welcome'
 
   get "major_select/welcome"
   match 'major_select/update_majors' => 'major_select#update_majors'
@@ -53,7 +58,7 @@ Neptus::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'major_select#welcome'
+ 
 
   # See how all your routes lay out with "rake routes"
 

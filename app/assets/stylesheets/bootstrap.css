@@ -4827,13 +4827,17 @@ textarea.input-group-sm > .input-group-btn > .btn {
   background-color: #999999;
 }
 
+.tags-pro{
+  background-color:  #66ccff
+}
+
 .label-default[href]:hover,
 .label-default[href]:focus {
   background-color: #808080;
 }
 
 .label-primary {
-  background-color: #428bca;
+  background-color: #5cb85c;
 }
 
 .label-primary[href]:hover,
@@ -4842,7 +4846,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .label-success {
-  background-color: #5cb85c;
+  background-color: #428bca;
 }
 
 .label-success[href]:hover,
@@ -4851,12 +4855,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .label-info {
-  background-color: #5bc0de;
+  background-color: #66ccff;
 }
 
 .label-info[href]:hover,
 .label-info[href]:focus {
-  background-color: #31b0d5;
+  background-color: #66ccff;
 }
 
 .label-warning {

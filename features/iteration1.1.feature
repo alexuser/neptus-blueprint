@@ -1,37 +1,16 @@
-Feature1: Registered user can login.
-  As a current user
-  So that I can log in to view my profile
-  I want to use navigation bar to log in and navigate 
+Feature: use navigation bar to navigate
+As a user
+So that I can go to different page quickly
+I want to use a navigation bar to navigate
 
-BackGround: Accounts have been added to database.
+Scenario: go to About page
 
-  Given the following accounts existed:
-  |email                   |password |
-  |kevinliu@berkeley.edu   |123456   |
-  |jinbaobao@berkeley.edu  |1234567  |
+  When I go to About page
 
-  And I am on the welcome page
+  Then I am on the about index page
 
-Scenario: signed in with correct user name and password
-  When I fill in "kevinliu@berkeley.edu" for "email"
-  And I fill in "123456" for "password"
-  
-  And I press "Sign in"
+Scenario: go to Contact page
 
-  Then I should see "kevin signed in."
+  When I go to Contact page
 
-Scenario: signed in with correct user name and incorrect password
-  When I fill in "kevinliu@berkeley.edu" for "email"
-  And I fill in "1234567" for "password"
-
-  And I press "Sign in"
-
-  Then I should see "Wrong password."
-
-Scenario: signed in with incorrect user name
-  When I fill in  "kevinliu111@berkeley.edu" for "email"
-  And I fill in "1234567" for "password"
-
-  And I press "Sign in"
-
-  Then I should see "User name not exist."
+  Then I am on the contact index page
