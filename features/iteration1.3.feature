@@ -3,11 +3,11 @@ Feature: sign up for an account
   So that I can build and access my own information
   I want to sign up an account on Neptus
 
-Background: I open the index page.
+Background: as a new user, I opened the neptus page
 
-And I am on the major select welcome page
+Given I am on the major select welcome page
 
-Scenario: click on sign up button
+Scenario: click on Sign up button
   When I press "Sign up"
   
   Then I am on the new user registration page
