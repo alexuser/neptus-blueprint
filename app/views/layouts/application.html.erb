@@ -17,38 +17,63 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Neptus-Blueprint</a>
+          <%= link_to "Neptus-Blueprint", about_index_path, :class=>"navbar-brand" %>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#">Home</a></li>
+            <li><%= link_to "Home", major_select_welcome_path %></li>
+            <%if user_signed_in? %>
+              <li><%= link_to "My profile", profilepage_index_path %></li>
+            <% end %>
             <li><%= link_to "About", about_index_path %></li>
             <li><%= link_to "Contact", contact_index_path%></li>
           </ul>
-          <form class="navbar-form navbar-right">
-              <div class="form-group" id="user_nav">
-                <%if user_signed_in? %>
-                 <a class = Not-you> Signed in as <%= current_user.email %>. Not you?</a>
-                 <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "Not-you" %>
-                <% else %>
-                 <button class="btn btn-success"><%= link_to "Sign up", new_user_registration_path, :class => "Not-you"%></button> or <button class="btn btn-success"><%= link_to "sign in", new_user_session_path, :class => "Not-you" %></button>
-                <% end %>
-              </div>
+          
+              <div class="navbar-right">
 
-            
-          </form>
+
+                <%if user_signed_in? %>
+                 <ul class="nav navbar-nav">
+                   <div class="dropdown">
+                   
+                     <div class="btn-group">
+                       <button type="button" class="btn btn-info"><%= "#{current_user.username}" %></button>
+                       <button type="button" id="drop" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                         <span class="caret"></span>
+                         <span class="sr-only">Toggle Dropdown</span>
+                       </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="drop">
+                          <li><%= link_to "#{current_user.username}" %></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                     </div>  
+                   </div>
+
+
+                   </li>
+                 </ul>
+
+                <% else %>
+                 <%= link_to "Sign up", new_user_registration_path, :class => "btn btn-warning" %> or <%= link_to "sign in", new_user_session_path, :class => "btn btn-warning" %>
+                <% end %>
+
+
+              </div>
+          
         </div><!--/.navbar-collapse -->
       </div>
     </div>
 
 
 
+
+
   <div class="container">
   
-  <div class="leaderboard">
-  <h1>Welcome to Neptus Blueprint</h1>
-  <p>We will help you choose the classes that you will enjoy</p>
-  <%= yield %>
+    <%= yield %>
   </div>
 
 

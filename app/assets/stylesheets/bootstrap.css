@@ -2121,8 +2121,8 @@ fieldset[disabled] .btn-primary.active {
 
 .btn-warning {
   color: #ffffff;
-  background-color: #f0ad4e;
-  border-color: #eea236;
+  background-color: #FFFF00;
+  /*border-color: */
 }
 
 .btn-warning:hover,
@@ -4180,12 +4180,23 @@ textarea.input-group-sm > .input-group-btn > .btn {
   margin-bottom: 0;
 }
 
+
+/* original 
 .navbar-brand {
   float: left;
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
 }
+*/
+
+.navbar-brand {
+  float: left;
+  padding: 15px 15px;
+  font-size: 20px;
+  line-height: 20px;
+}
+
 
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -4268,10 +4279,17 @@ textarea.input-group-sm > .input-group-btn > .btn {
   .navbar-nav > li {
     float: left;
   }
+  /* original
   .navbar-nav > li > a {
     padding-top: 15px;
     padding-bottom: 15px;
   }
+  */
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
 }
 
 @media (min-width: 768px) {
@@ -4492,13 +4510,20 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-  background-color: #222222;
-  border-color: #080808;
+  background-color: #336699;
+  border-color: #2E5C8A;
 }
 
+/* Original
 .navbar-inverse .navbar-brand {
   color: #999999;
 }
+*/
+
+.navbar-inverse .navbar-brand {
+  color: #ffffff;
+}
+
 
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
@@ -4511,7 +4536,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: #999999;
+  color: #B5BDF7;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
