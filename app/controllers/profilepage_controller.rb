@@ -28,11 +28,9 @@ class ProfilepageController < ApplicationController
 	 		end
 	 	end	
 
-	 	@completed_requirements.each do |req|
-	 		req_list << req[0]
-	 	end 	
-
 	 	
+
+
 	 end
 
 end
