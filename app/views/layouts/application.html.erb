@@ -12,9 +12,10 @@
   <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
-            <%= link_to "Neptus-Blueprint", about_index_path, :class=>"navbar-brand" %>
+            <%= link_to "Neptus-Blueprint", major_select_welcome_path, :class=>"navbar-brand" %>
           </div>
           <div class="navbar-collapse collapse">
+           
             <ul class="nav navbar-nav">
               <li><%= link_to "Home", major_select_welcome_path %></li>
 
@@ -28,8 +29,6 @@
             </ul>
             
                 <div class="navbar-right">
-
-
                   <%if user_signed_in? %>
                    <ul class="nav navbar-nav">
                     <%= link_to "Sign out", destroy_user_session_path, :class => "btn btn-warning" %>
@@ -44,14 +43,12 @@
                          </button>
                           <ul class="dropdown-menu" role="menu" aria-labelledby="drop">
                             <li><%= link_to "#{current_user.username}" %></li>
-                            <li><a href="#">Another action</a></li>
                             <li><a href="#">Something else here</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
+                            <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "Not-you" %></li>
                           </ul>
                        </div>  
                      </div>
-
                      </li>
                    </ul>
 

@@ -16,6 +16,7 @@ module NavigationHelpers
     when /^"Next"/ then '/users/sign_in'
     when /^About page/ then about_index_path
     when /^Contact page/ then contact_index_path
+    when /^profilepage/ then profilepage_index_path
     when /^the profilepage/ then profilepage_index_path
 
     # Add more mappings here.

@@ -8,15 +8,15 @@ Background: as a new user, I opened the neptus page
 Given I am on the major select welcome page
 
 Scenario: click on Sign up button
-  When I press "Sign up"
+  When I follow "Sign up"
   
   Then I am on the new user registration page
 
 Scenario: click on Next button
-  When I go to "Next"
+  When I follow "Next"
 
   Then I am on the new user session page
 
-  When I press "Sign up"
+  When I follow "Forgot your password?"
   
-  Then I am on the new user registration page
+  Then I am on the new user password page

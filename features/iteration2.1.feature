@@ -7,6 +7,7 @@ I want to be able to click on the University button or college button and be sho
 Background: Courses have been added to database.
 
 
+
   Given I am on the major select welcome page
   And I am signed up
 
@@ -50,25 +51,3 @@ Scenario: see how much the user have fulfilled the College requirement
 	And I should see "Physical Science Satisfied" 
 
 	And I should see "Social and Behavioral Sciences Satisfied" 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
