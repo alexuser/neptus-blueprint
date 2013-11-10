@@ -20,10 +20,10 @@
               <div class="row">
                 <div class="col-lg-6">
 
-                  <%= check_box_tag 'requirements_entry_level_writing', 1, :true, :id => 'requirements_entry_level_writing' %>
+                  <%= check_box_tag "requirements[entry_level_writing]", 1, @completed_requirements.include?('entry_level_writing'), :id => "requirements_entry_level_writing" %>
                   <%= 'Entry-Level Writing Satisfied' %>
                   <br>
-                  <%= check_box_tag 'requirements_american_history_and_institutions' %>
+                  <%= check_box_tag 'requirements[american_history_and_institutions]', 1, :id => 'requirements_american_history_and_institutions' %>
                   <%= 'American History and Institutions Satisfied' %>
                 </div><!-- /.col-lg-6 -->
               </div>
@@ -46,7 +46,7 @@
             <div class="panel-body">
               <div class="row">
                 <div class="col-lg-6">
-                  <%= check_box_tag 'requirements_american_cultures' %>
+                  <%= check_box_tag 'requirements[american_cultures]', 1, :id => 'requirements_american_cultures' %>
                   <%= 'American Cultures Satisfied' %>
                 </div><!-- /.col-lg-6 -->
               </div>
@@ -69,35 +69,35 @@
             <div class="panel-body">
               <div class="row">
                 <div class="col-lg-9">
-                  <%= check_box_tag 'requirements_reading_and_Composition_requirements' %>
+                  <%= check_box_tag 'requirements[reading_and_Composition_requirements]', 1, :id => 'requirements_reading_and_Composition_requirements' %>
                   <%= 'Reading & Composition Requirements Satisfied' %>
                   <br>
-                  <%= check_box_tag 'requirements_quantitative_reasoning_requirements' %>
+                  <%= check_box_tag 'requirements[quantitative_reasoning_requirements]', 1, :id => 'requirements_quantitative_reasoning_requirements' %>
                   <%= 'Quantitative Reasoning Requirements Satisfied' %>
                   <br>
-                  <%= check_box_tag 'requirements_foreign_language_requirements' %>
+                  <%= check_box_tag 'requirements[foreign_language_requirements]', 1, :id => 'requirements_foreign_language_requirements' %>
                   <%= 'Foreign Language Requirements Satisfied' %>
                   <div class="col-lg-9">
                     <h4>Seven Breath Requirements</h4>
-                      <%= check_box_tag 'requirements_arts_and_literature' %>
+                      <%= check_box_tag 'requirements[arts_and_literature]', 1, :id => 'requirements_arts_and_literature' %>
                       <%= 'Arts and Literature Satisfied' %>
                       <br>
-                      <%= check_box_tag 'requirements_biological_science' %>
+                      <%= check_box_tag 'requirements[biological_science]', 1, :id => 'requirements_biological_science' %>
                       <%= 'Biological Science Satisfied' %>
                       <br>
-                      <%= check_box_tag 'requirements_historical_studies' %>
+                      <%= check_box_tag 'requirements[historical_studies]', 1, :id => 'requirements_historical_studies'%>
                       <%= 'Historical Studies Satisfied' %>
                       <br>
-                      <%= check_box_tag 'requirements_international_studies' %>
+                      <%= check_box_tag 'requirements[international_studies]', 1, :id => 'requirements_international_studies'%>
                       <%= 'International Studies Satisfied' %>
                       <br>
-                      <%= check_box_tag 'requirements_philosophy_and_values' %>
+                      <%= check_box_tag 'requirements[philosophy_and_values]', 1, :id => 'requirements_philosophy_and_values' %>
                       <%= 'Philosophy and Values Satisfied' %>
                       <br>
-                      <%= check_box_tag 'requirements_physical_science' %>
+                      <%= check_box_tag 'requirements[physical_science]', 1, :id => 'requirements_physical_science'%>
                       <%= 'Physical Science Satisfied' %>
                       <br>
-                      <%= check_box_tag 'requirements_social_and_behavioral_sciences' %>
+                      <%= check_box_tag 'requirements[social_and_behavioral_sciences]', 1, :id => 'requirements_social_and_behavioral_sciences' %>
                       <%= 'Physical Sciences Satisfied' %>
                   </div>
                 </div><!-- /.col-lg-6 -->

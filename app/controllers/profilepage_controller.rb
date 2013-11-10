@@ -3,7 +3,7 @@ class ProfilepageController < ApplicationController
 
 	 def index
 	 	@tests ='wo qu!'
-	 	@completed_requirements = params[:requirements] || session[:requirements] || {}
+	 	@completed_requirements = params[:requirements] || {}
 
 	 	
 	 	
