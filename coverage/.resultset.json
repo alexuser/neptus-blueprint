@@ -74,8 +74,8 @@
       "/home/saasbook/169proj/neptus-blueprint/app/controllers/major_select_controller.rb": [
         1,
         1,
-        18,
-        4,
+        20,
+        5,
         null,
         null,
         null,
@@ -92,11 +92,11 @@
         1,
         null,
         1,
-        6,
-        6,
-        6,
-        6,
-        6,
+        7,
+        7,
+        7,
+        7,
+        7,
         null,
         0,
         null,
@@ -118,7 +118,7 @@
         null,
         null,
         null,
-        6,
+        7,
         0,
         null,
         null,
@@ -184,7 +184,7 @@
         null
       ]
     },
-    "timestamp": 1384123218
+    "timestamp": 1384123952
   },
   "RSpec": {
     "coverage": {

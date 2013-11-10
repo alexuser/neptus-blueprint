@@ -30,3 +30,8 @@ Scenario: click on My profile button
   When I follow "My profile"
 
   Then I am on the profilepage index page
+
+Scenario: 
+  Given I am signed up
+
+  Then I press #{user_username} button
