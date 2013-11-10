@@ -105,7 +105,8 @@ public class Generate {
 		String read1 = root + "ReadingCompositionA.txt";
 		String read2 = root + "ReadingCompositionB.txt";
 		String americanhistory = root + "AmericanHistoryInstitutions.txt";
-
+    String entry = root + "EntryLevelWriting.txt";
+    
 		// here is the LS requirements
 		readRequirementsFile(arts, courses, LevelOneRequirement.LSCOLLEGE,
 				LevelTwoRequirement.ARTSANDLITERATURE);
@@ -132,6 +133,8 @@ public class Generate {
 		readRequirementsFile(americanhistory, courses,
 				LevelOneRequirement.UNIVERSITY,
 				LevelTwoRequirement.AMERICANHISTORYANDINSTITUTIONS);
+		readRequirementsFile(entry, courses, LevelOneRequirement.UNIVERSITY,
+		    LevelTwoRequirement.ENTRYLEVELWRITING);
 
 		int course_counter = 0;
 		int requirement_counter = 0;
