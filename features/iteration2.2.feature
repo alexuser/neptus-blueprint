@@ -34,4 +34,14 @@ Scenario: click on My profile button
 Scenario: 
   Given I am signed up
 
-  Then I press #{user_username} button
+  When I press "drop"
+
+  Then I should see "JackCen"
+
+  And I should not see "nno"
+
+  And I should see "Sign out"
+
+  When I follow "Sign out"
+
+  Then I am on the major select welcome page
