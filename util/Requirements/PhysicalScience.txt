@@ -1,0 +1,312 @@
+Anthropology 131
+Anthropology 132
+Anthropology 133
+Anthropology 134
+Anthropology 134A
+Architecture 39A
+Architecture 140
+Architecture 149
+Architecture 150
+Architecture 152
+Architecture 153
+Architecture 159A
+Architecture 159B
+Architecture 159C
+Architecture 159D
+Architecture 159X
+Astronomy - any, except 100
+Biochemistry 170B
+Bioengineering C125
+Chemical Engineering 40
+Chemical Engineering 124
+Chemical Engineering 140
+Chemical Engineering 141
+Chemical Engineering 142
+Chemical Engineering 150A
+Chemical Engineering 150B
+Chemical Engineering 152
+Chemical Engineering 154
+Chemical Engineering 160
+Chemical Engineering 162
+Chemical Engineering 170A
+Chemical Engineering 170E
+Chemical Engineering 171
+Chemical Engineering 173
+Chemical Engineering 174
+Chemical Engineering 175
+Chemical Engineering 176
+Chemical Engineering 178
+Chemical Engineering 179
+Chemical Engineering 181
+Chemistry - any, except 20
+Chemistry - any, except 130A
+Chemistry - any, except 130B
+Civil and Environmental Engineering 70
+Civil and Environmental Engineering 100
+Civil and Environmental Engineering 101
+Civil and Environmental Engineering 102
+Civil and Environmental Engineering 103
+Civil and Environmental Engineering 104
+Civil and Environmental Engineering 105
+Civil and Environmental Engineering 106
+Civil and Environmental Engineering C106
+Civil and Environmental Engineering 108
+Civil and Environmental Engineering 109
+Civil and Environmental Engineering 110
+Civil and Environmental Engineering 111
+Civil and Environmental Engineering 112
+Civil and Environmental Engineering 113
+Civil and Environmental Engineering 115
+Civil and Environmental Engineering 116N
+Civil and Environmental Engineering C116
+Civil and Environmental Engineering 117
+Civil and Environmental Engineering 118
+Civil and Environmental Engineering 119
+Civil and Environmental Engineering 120
+Civil and Environmental Engineering 120N
+Civil and Environmental Engineering 121
+Civil and Environmental Engineering 121N
+Civil and Environmental Engineering 122
+Civil and Environmental Engineering 122N
+Civil and Environmental Engineering 123N
+Civil and Environmental Engineering 124
+Civil and Environmental Engineering 125
+Civil and Environmental Engineering 130
+Civil and Environmental Engineering 131
+Civil and Environmental Engineering 131N
+Civil and Environmental Engineering 140
+Civil and Environmental Engineering 144
+Civil and Environmental Engineering 148A
+Civil and Environmental Engineering 148B
+Civil and Environmental Engineering 150
+Civil and Environmental Engineering 153
+Civil and Environmental Engineering 160
+Civil and Environmental Engineering 166
+Civil and Environmental Engineering 168N
+Civil and Environmental Engineering 170
+Civil and Environmental Engineering 171
+Civil and Environmental Engineering 172
+Civil and Environmental Engineering 173
+Civil and Environmental Engineering 175
+Civil and Environmental Engineering 176
+Civil and Environmental Engineering 177
+Civil and Environmental Engineering 185
+Civil and Environmental Engineering 186
+Computer Science 39F
+Computer Science 61C
+Computer Science 61CL
+Computer Science 188
+Earth and Planetary Science - any, except 39A
+Earth and Planetary Science - any, except 60
+Earth and Planetary Science - any, except C100
+Earth and Planetary Science - any, except 104
+Earth and Planetary Science - any, except 106AC
+Earth and Planetary Science - any, except 120
+Electrical Engineering 1
+Electrical Engineering 20
+Electrical Engineering 40
+Electrical Engineering 41I
+Electrical Engineering 42
+Electrical Engineering 100
+Electrical Engineering 104
+Electrical Engineering 110
+Electrical Engineering 114
+Electrical Engineering 117
+Electrical Engineering 118
+Electrical Engineering 121
+Electrical Engineering 122
+Electrical Engineering 123
+Electrical Engineering C125
+Electrical Engineering 128
+Electrical Engineering 129
+Electrical Engineering 130
+Electrical Engineering 131
+Electrical Engineering 134
+Electrical Engineering 135
+Electrical Engineering 136
+Electrical Engineering 140
+Electrical Engineering 141
+Electrical Engineering 142
+Electrical Engineering 143
+Electrical Engineering 145A
+Electrical Engineering 145B
+Electrical Engineering 145M
+Electrical Engineering 146
+Energy and Resources Group 100
+Energy and Resources Group C100
+Energy and Resources Group 102
+Energy and Resources Group 120
+Energy and Resources Group 140
+Energy and Resources Group 141
+Engineering 11
+Engineering 36
+Engineering 45
+Engineering 49
+Engineering 101
+Engineering 102
+Engineering 117
+Engineering 135
+Engineering 145
+Engineering C150
+Engineering 153
+Engineering 160
+Engineering 161
+Engineering 162
+Engineering 165
+Engineering 166
+Engineering 172
+Environmental Science, Policy, and Management 2
+Environmental Science, Policy, and Management 4
+Environmental Science, Policy, and Management 15
+Environmental Science, Policy, and Management 20
+Environmental Science, Policy, and Management 22
+Environmental Science, Policy, and Management C107
+Environmental Science, Policy, and Management 120
+Environmental Science, Policy, and Management 121
+Environmental Science, Policy, and Management 124
+Environmental Science, Policy, and Management 125
+Environmental Science, Policy, and Management 126
+Environmental Science, Policy, and Management 127
+Environmental Science, Policy, and Management 128
+Environmental Science, Policy, and Management C128
+Environmental Science, Policy, and Management 129
+Environmental Science, Policy, and Management C129
+Environmental Science, Policy, and Management 130
+Environmental Science, Policy, and Management C130
+Environmental Science, Policy, and Management 148
+Environmental Science, Policy, and Management 172
+Environmental Science, Policy, and Management 177
+Environmental Science, Policy, and Management 179
+Environmental Science, Policy, and Management 180
+Environmental Science, Policy, and Management C180
+Environmental Science, Policy, and Management 181
+Environmental Sciences 10
+Environmental Sciences 125
+Geography 1
+Geography 30
+Geography 39C
+Geography 40
+Geography C82
+Geography C136
+Geography C139
+Geography 140
+Geography 140A
+Geography 140B
+Geography C141
+Geography 142
+Geography 143
+Geography 144
+Geography 146
+Geography 147
+Geography 171
+Geography 184
+Geography 185
+History 181B
+Industrial Engineering and Operations Research 39A
+Industrial Engineering and Operations Research 130
+Industrial Engineering and Operations Research 131
+Industrial Engineering and Operations Research 140
+Industrial Engineering and Operations Research 150
+Industrial Engineering and Operations Research 161
+Industrial Engineering and Operations Research 162
+Industrial Engineering and Operations Research 164
+Industrial Engineering and Operations Research 165
+Industrial Engineering and Operations Research 180
+Integrative Biology 39D
+Integrative Biology C82
+Integrative Biology 106
+Integrative Biology C158
+Interdepartmental Studies 80
+Letters and Science 16
+Letters and Science 70A
+Letters and Science 70B
+Letters and Science C70T
+Letters and Science C70U
+Letters and Science C70V
+Letters and Science C70W
+Letters and Science C70X
+Letters and Science C70Y
+Letters and Science 117
+Letters and Science 122
+Letters and Science 170AC
+Letters and Science C170AC
+Materials Science and Engineering 101
+Materials Science and Engineering 102
+Materials Science and Engineering 103
+Materials Science and Engineering 104
+Materials Science and Engineering 111
+Materials Science and Engineering 112
+Materials Science and Engineering 113
+Materials Science and Engineering 114
+Materials Science and Engineering 115
+Materials Science and Engineering 116
+Materials Science and Engineering 117
+Materials Science and Engineering 118
+Materials Science and Engineering 120
+Materials Science and Engineering 121
+Materials Science and Engineering 122
+Materials Science and Engineering 123
+Materials Science and Engineering 124
+Materials Science and Engineering 125
+Materials Science and Engineering 130
+Materials Science and Engineering 145
+Materials Science and Engineering 146
+Materials Science and Engineering 148
+Materials Science and Engineering 149
+Materials Science and Engineering 150
+Materials Science and Engineering 160
+Materials Science and Engineering 161
+Materials Science and Engineering 170
+Materials Science and Engineering 172
+Materials Science and Engineering 176
+Materials Science and Engineering 180
+Mechanical Engineering 1
+Mechanical Engineering 39A
+Mechanical Engineering 39C
+Mechanical Engineering 39D
+Mechanical Engineering 39E
+Mechanical Engineering 101
+Mechanical Engineering 102A
+Mechanical Engineering 104
+Mechanical Engineering 105
+Mechanical Engineering 106
+Mechanical Engineering 107A
+Mechanical Engineering 107B
+Mechanical Engineering 109
+Mechanical Engineering 110
+Mechanical Engineering 122
+Mechanical Engineering 130
+Mechanical Engineering 132
+Mechanical Engineering 133
+Mechanical Engineering 134
+Mechanical Engineering 135
+Mechanical Engineering 136
+Mechanical Engineering 140
+Mechanical Engineering 142
+Mechanical Engineering 145
+Mechanical Engineering 151
+Mechanical Engineering 161
+Mechanical Engineering 162
+Mechanical Engineering 163
+Mechanical Engineering 170
+Mechanical Engineering 173
+Mechanical Engineering 175
+Mechanical Engineering 185
+Nuclear Engineering 39
+Nuclear Engineering 92
+Nuclear Engineering 104A
+Nuclear Engineering 107
+Nuclear Engineering 124
+Nuclear Engineering 150
+Nuclear Engineering 160
+Nuclear Engineering 161
+Nuclear Engineering 162
+Nuclear Engineering 180
+Optometry 39A
+Physics - any, except 39
+Public Health C171
+Public Health 175
+Public Health 176
+Public Policy C184
+Statistics 39B
+Undergraduate and Interdisciplinary Studies 66
