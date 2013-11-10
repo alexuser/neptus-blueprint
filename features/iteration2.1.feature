@@ -13,11 +13,11 @@ Background: Courses have been added to database.
 
 Scenario: see how much the user have fulfilled the university requirements
 
-  Then I should see "University Requirements"
-
 	When I follow "University Requirements"
-
 	Then I should see "Entry-Level Writing Satisfied" 
+  When I check "requirements_entry_level_writing"
+  And I press "Save"
+  Then the "requirements_entry_level_writing" checkbox should be checked
 
 	And I should see "American History and Institutions Satisfied"
 

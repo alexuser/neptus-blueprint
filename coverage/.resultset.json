@@ -98,7 +98,7 @@
         7,
         7,
         null,
-        0,
+        1,
         null,
         null,
         0,
@@ -182,6 +182,10 @@
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1384125591
+=======
+    "timestamp": 1384124804
+>>>>>>> e25b0eeab177fac5646c99df51c1f5591eeca031
   }
 }
