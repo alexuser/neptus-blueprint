@@ -1,0 +1,560 @@
+African American Studies 4A
+African American Studies 4B
+African American Studies 5A
+African American Studies 5B
+African American Studies 111
+African American Studies 113
+African American Studies 116
+African American Studies 117
+African American Studies 121
+African American Studies 122
+African American Studies 123
+African American Studies 125
+African American Studies 126
+African American Studies 128
+African American Studies 131
+African American Studies C131
+African American Studies N131
+African American Studies 135
+African American Studies 138
+African American Studies 150A
+African American Studies 151B
+African American Studies C178
+American Studies 10
+American Studies 10AC
+American Studies C10
+American Studies C112A
+American Studies C112B
+American Studies C112F
+American Studies C132
+American Studies C132B
+American Studies C171
+American Studies 172
+American Studies C172
+Anthropology 2
+Anthropology 2AC
+Anthropology 10AC
+Anthropology 114
+Anthropology 121A
+Anthropology 121AC
+Anthropology 121B
+Anthropology 122A
+Anthropology 122C
+Anthropology 122D
+Anthropology 122E
+Anthropology 122F
+Anthropology 123A
+Anthropology 123B
+Anthropology 123C
+Anthropology 123D
+Anthropology 123E
+Anthropology 124A
+Anthropology 124AC
+Anthropology C125A
+Anthropology C125B
+Anthropology 129A
+Anthropology 129C
+Anthropology C129F
+Anthropology 134
+Anthropology 134A
+Anthropology 173
+Anthropology 174AC
+Anthropology 175
+Anthropology 180
+Anthropology 183
+Anthropology 187
+Architecture 130
+Architecture 170A
+Architecture 170B
+Architecture 176
+Architecture 179AC
+Art, History of - any, except R 1B
+Art, History of - any, except R N142
+Asian American Studies 20A
+Asian American Studies 120
+Asian American Studies 121
+Asian American Studies 122
+Asian American Studies 123
+Asian American Studies 124
+Asian American Studies 128AC
+Asian American Studies 131
+Asian American Studies 170
+Asian American Studies 171
+Asian American Studies 175
+Asian Studies 147
+Asian Studies 148
+Buddhist Studies C120
+Buddhist Studies 183
+Business Administration (UGBA) C172
+Celtic Studies 70
+Celtic Studies 128
+Celtic Studies 173
+Chicano Studies 50
+Chicano Studies 130
+Chicano Studies 135
+Chicano Studies 135A
+Chicano Studies 135B
+Chicano Studies 150A
+Chicano Studies 150B
+Chicano Studies 161
+Chicano Studies 162
+Chinese 7A
+Chinese 102
+Chinese 181
+Chinese 182
+Chinese 183
+City and Regional Planning 110
+City and Regional Planning 112B
+Classics 10A
+Classics 10B
+Classics 17A
+Classics 17B
+Classics 29
+Classics 36
+Classics C36
+Classics 39B
+Classics 39G
+Classics 39I
+Classics R44
+Classics 121
+Classics 155A
+Classics 155B
+Classics 161
+Cognitive Science C103
+College Writing Programs 50AC
+College Writing Programs 150AC
+Comparative Literature 113
+Computer Science 39B
+Computer Science 39C
+Computer Science 39E
+Computer Science 39K
+Demography 145AC
+Development Studies C100
+Dutch 39A
+Dutch C170
+Dutch 171AC
+Dutch 173
+Dutch 175
+Dutch 177
+Dutch C178
+Earth and Planetary Science C51
+East Asian Languages 109
+East Asian Languages C120
+Economics 105
+Economics 113
+Economics 114
+Economics 115
+Economics 134
+Education 122
+Education 183
+English 101
+Environmental Design 10
+Environmental Design 71
+Environmental Design 169A
+Environmental Design 169B
+Environmental Design C169A
+Environmental Design C169B
+Environmental Science, Policy, and Management 50AC
+Environmental Science, Policy, and Management 160AC
+Environmental Science, Policy, and Management C160
+Environmental Science, Policy, and Management 166
+Environmental Science, Policy, and Management C191
+Ethnic Studies 10A
+Ethnic Studies 10AC
+Ethnic Studies 21AC
+Ethnic Studies 39A
+Ethnic Studies 41AC
+Ethnic Studies C73AC
+Ethnic Studies 124
+Ethnic Studies 130
+Ethnic Studies 130AC
+Ethnic Studies 132
+Film Studies 25A
+Film Studies 25B
+Film Studies 129
+Film Studies 160
+French 43
+French 43A
+French 43B
+French 145
+French 160A
+French 160B
+French 161A
+French 161B
+French 162A
+French 162B
+French 171A
+French 171B
+French 180A
+French 180B
+French 180C
+French 180D
+French 183A
+French 183B
+Gender and Women's Studies 100AC
+Gender and Women's Studies 120
+Gender and Women's Studies 122
+Gender and Women's Studies C145
+Gender and Women's Studies 153A
+Geography 39A
+Geography 51
+Geography 55
+Geography 70AC
+Geography C112
+Geography 113
+Geography 120
+Geography C152
+Geography 154
+Geography 157
+Geography 158
+Geography 160A
+Geography 160B
+Geography C160A
+Geography C160B
+Geography 163
+Geography 164
+Geography 165
+Geography 166
+Geography 167
+Geography 168
+Geography 189
+German C25
+German 39E
+German 120
+German 123
+German 141
+German 150
+German 153
+German 154
+German 157A
+German 157B
+German 157C
+German 157D
+German C157B
+German 160A
+German 160B
+German 160C
+German 160K
+German 164
+German 170
+German 176
+German 177
+Greek 120
+Greek 121
+Greek 122
+Health and Medical Sciences C133
+History - any, except R 1
+History - any, except R R1B
+History - any, except R 30A
+History - any, except R 30B
+History - any, except R 30C
+Information C103
+Information 182AC
+Interdepartmental Studies 100AC
+Interdisciplinary Studies 145
+Interdisciplinary Studies C145
+International and Area Studies 45
+International and Area Studies 145
+International and Area Studies C145
+International and Area Studies 147
+International and Area Studies 148
+Italian Studies 39F
+Italian Studies 40
+Italian Studies 70
+Italian Studies 103
+Italian Studies 160
+Italian Studies N160
+Japanese 7A
+Japanese 80
+Japanese 102
+Japanese 104
+Jewish Studies 39B
+Jewish Studies 39E
+Journalism 39A
+Journalism 39AC
+Journalism 140
+Korean 7A
+Korean 102
+Landscape Architecture 170
+Landscape Architecture C171
+Latin 100
+Latin 120
+Latin 121
+Latin 155A
+Latin 155B
+Legal Studies 103
+Legal Studies 111
+Legal Studies 112
+Legal Studies 116
+Legal Studies 121
+Legal Studies 160
+Legal Studies 161
+Legal Studies 171
+Legal Studies 174
+Legal Studies 175
+Legal Studies 176
+Legal Studies 177
+Legal Studies 178
+Lesbian, Gay, Bisexual, Transgender Studies 145
+Letters and Science 16
+Letters and Science 17
+Letters and Science 21
+Letters and Science 26
+Letters and Science 40A
+Letters and Science 40AC
+Letters and Science 40B
+Letters and Science 40C
+Letters and Science C40T
+Letters and Science C60U
+Letters and Science C70X
+Letters and Science 120
+Letters and Science 122
+Letters and Science 123
+Letters and Science 140A
+Letters and Science 140B
+Letters and Science 140C
+Letters and Science 140D
+Letters and Science C140T
+Letters and Science C140U
+Letters and Science C140V
+Letters and Science 148
+Linguistics 11
+Linguistics 22
+Linguistics 55AC
+Linguistics 71
+Linguistics C139
+Linguistics 155AC
+Mass Communications C103
+Mathematics 160
+Media Studies 104B
+Media Studies 104C
+Medieval Studies 150
+Military Affairs 20
+Military Affairs 120
+Military Affairs 121
+Military Affairs 123
+Military Affairs 154
+Music 39F
+Music 75
+Music 76
+Music 77
+Music 128
+Music 128A
+Music 128AM
+Music 128B
+Music 128BM
+Music 128D
+Music 128DM
+Music 128E
+Music 128P
+Music 128Q
+Music 128R
+Music 128RM
+Music 128S
+Music 128SM
+Music 128T
+Music 128TM
+Music 130A
+Music 130AM
+Music 130B
+Music 137AC
+Native American Studies 20A
+Native American Studies 71
+Native American Studies 72
+Native American Studies 90
+Native American Studies 145
+Native American Studies 173
+Native American Studies 175
+Native American Studies 176
+Native American Studies 177
+Native American Studies 178
+Naval Science 2
+Near Eastern Studies 15
+Near Eastern Studies 18
+Near Eastern Studies 20
+Near Eastern Studies C26
+Near Eastern Studies 101A
+Near Eastern Studies 101B
+Near Eastern Studies 102A
+Near Eastern Studies 102B
+Near Eastern Studies 105A
+Near Eastern Studies 105B
+Near Eastern Studies 106A
+Near Eastern Studies 106B
+Near Eastern Studies 107
+Near Eastern Studies 109
+Near Eastern Studies 110
+Near Eastern Studies 112
+Near Eastern Studies C120A
+Near Eastern Studies C120B
+Near Eastern Studies 122
+Near Eastern Studies 122A
+Near Eastern Studies 122B
+Near Eastern Studies 123
+Near Eastern Studies 123A
+Near Eastern Studies 123B
+Near Eastern Studies 124
+Near Eastern Studies 124A
+Near Eastern Studies 124B
+Near Eastern Studies 125
+Near Eastern Studies 126
+Near Eastern Studies 128
+Near Eastern Studies C129
+Near Eastern Studies 130A
+Near Eastern Studies 130B
+Near Eastern Studies 131
+Near Eastern Studies C133
+Near Eastern Studies 134
+Near Eastern Studies C135
+Near Eastern Studies 136
+Near Eastern Studies 137
+Near Eastern Studies 140
+Near Eastern Studies 141
+Near Eastern Studies 143A
+Near Eastern Studies 143B
+Near Eastern Studies 144
+Near Eastern Studies 146A
+Near Eastern Studies 146B
+Near Eastern Studies 147
+Near Eastern Studies 150A
+Near Eastern Studies 150B
+Near Eastern Studies 160
+Near Eastern Studies 162A
+Near Eastern Studies 162B
+Near Eastern Studies 171
+Near Eastern Studies 173A
+Near Eastern Studies 173B
+Near Eastern Studies 175
+Peace and Conflict Studies 125AC
+Peace and Conflict Studies 161
+Philosophy 9
+Philosophy 25A
+Philosophy 25B
+Philosophy C25A
+Philosophy 114
+Philosophy C151
+Philosophy C152
+Philosophy 153
+Philosophy 160
+Philosophy 161
+Philosophy 163
+Philosophy 170
+Philosophy 171
+Philosophy 172
+Philosophy 173
+Philosophy 174
+Philosophy 175
+Philosophy 176
+Philosophy 178
+Philosophy 183
+Philosophy 184
+Physical Education 39
+Political Economy 160
+Political Economy 160A
+Political Science 33
+Political Science 112A
+Political Science 112B
+Political Science 112C
+Political Science 112D
+Political Science 113A
+Political Science N113A
+Political Science 115C
+Political Science 122A
+Political Science 124A
+Political Science 136A
+Political Science 137B
+Political Science 141A
+Political Science 146C
+Political Science N146C
+Portuguese 39A
+Portuguese 112
+Portuguese 113
+Psychology 109
+Public Health 183
+Public Policy 39
+Religious Studies 120A
+Religious Studies 120B
+Religious Studies 123
+Religious Studies C124
+Religious Studies 125
+Religious Studies 130
+Religious Studies C132
+Religious Studies C133
+Religious Studies C134
+Religious Studies C135
+Religious Studies C156
+Religious Studies C157
+Religious Studies C164
+Religious Studies 173AC
+Rhetoric 106
+Rhetoric 116
+Rhetoric 152
+Rhetoric 152AC
+Rhetoric 153
+Rhetoric 155
+Rhetoric 166
+Scandinavian 75
+Scandinavian 123
+Scandinavian 127
+Scandinavian 128
+Scandinavian 132
+Slavic 39A
+Slavic 39B
+Slavic 39D
+Slavic 39H
+Slavic 39I
+Slavic 100
+Slavic 130
+Slavic 131
+Slavic C139
+Slavic 148
+Slavic 149AC
+Slavic 158
+Slavic 190
+Social Welfare C129
+Sociology 131
+Sociology 131AC
+Sociology 181
+Sociology 181
+Sociology 186
+Sociology C189
+South and Southeast Asian Studies C110
+South and Southeast Asian Studies C112
+South and Southeast Asian Studies C123
+South Asian 1A
+South Asian 1B
+South Asian 110A
+South Asian 110B
+South Asian 144
+South Asian 146
+South Asian 148
+South Asian 151
+Southeast Asian 10A
+Southeast Asian 10B
+Southeast Asian 137
+Southeast Asian 138
+Spanish 40
+Spanish 112
+Spanish 113
+Spanish 122
+Spanish C178
+Theater, Dance and Performance Studies 39A
+Theater, Dance and Performance Studies 125
+Theater, Dance and Performance Studies 151A
+Theater, Dance and Performance Studies 151B
+Theater, Dance and Performance Studies 153A
+Theater, Dance and Performance Studies 153B
+Undergraduate and Interdisciplinary Studies 44A
+Undergraduate and Interdisciplinary Studies 44B
+Undergraduate and Interdisciplinary Studies 44C
+Undergraduate and Interdisciplinary Studies 55A
+Undergraduate and Interdisciplinary Studies 55B
+Undergraduate and Interdisciplinary Studies C132
+Undergraduate and Interdisciplinary Studies C133
+Undergraduate and Interdisciplinary Studies C136
+Undergraduate and Interdisciplinary Studies C145
+Undergraduate and Interdisciplinary Studies C152
+Undergraduate and Interdisciplinary Studies C153
+Undergraduate and Interdisciplinary Studies C154
+Undergraduate and Interdisciplinary Studies C155
+Undergraduate and Interdisciplinary Studies 162A

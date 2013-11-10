@@ -1,0 +1,214 @@
+Anthropology 1
+Anthropology C100
+Anthropology 101
+Anthropology C103
+Anthropology 105
+Anthropology 106
+Anthropology 107
+Anthropology 108
+Anthropology 109
+Anthropology 110
+Anthropology 112
+Anthropology 135
+Biochemistry 170B
+Bioengineering C119
+Bioengineering 155
+Biology 1A
+Biology 1B
+Biology 11
+Chemical Engineering 170A
+Chemical Engineering 170E
+Civil and Environmental Engineering 113
+Cognitive Science C102
+Cognitive Science C110
+Cognitive Science C126
+Cognitive Science C127
+Cognitive Science C147
+Computer Science C182
+Earth and Planetary Science C30
+Earth and Planetary Science C82
+Earth and Planetary Science C129
+Earth and Planetary Science 185
+English C77
+Environmental Science, Policy, and Management 2
+Environmental Science, Policy, and Management 6
+Environmental Science, Policy, and Management 8
+Environmental Science, Policy, and Management C10
+Environmental Science, Policy, and Management C11
+Environmental Science, Policy, and Management C12
+Environmental Science, Policy, and Management 15
+Environmental Science, Policy, and Management 36
+Environmental Science, Policy, and Management 40
+Environmental Science, Policy, and Management 42
+Environmental Science, Policy, and Management 44
+Environmental Science, Policy, and Management 100
+Environmental Science, Policy, and Management 101A
+Environmental Science, Policy, and Management 101B
+Environmental Science, Policy, and Management 102A
+Environmental Science, Policy, and Management 102B
+Environmental Science, Policy, and Management 102C
+Environmental Science, Policy, and Management C103
+Environmental Science, Policy, and Management 105A
+Environmental Science, Policy, and Management 106
+Environmental Science, Policy, and Management C107
+Environmental Science, Policy, and Management 108A
+Environmental Science, Policy, and Management 108B
+Environmental Science, Policy, and Management 109
+Environmental Science, Policy, and Management 110
+Environmental Science, Policy, and Management 111
+Environmental Science, Policy, and Management 112
+Environmental Science, Policy, and Management 113
+Environmental Science, Policy, and Management 114
+Environmental Science, Policy, and Management 115A
+Environmental Science, Policy, and Management 115B
+Environmental Science, Policy, and Management 115C
+Environmental Science, Policy, and Management 116A
+Environmental Science, Policy, and Management 116B
+Environmental Science, Policy, and Management 116C
+Environmental Science, Policy, and Management 117
+Environmental Science, Policy, and Management 118
+Environmental Science, Policy, and Management 119
+Environmental Science, Policy, and Management 129
+Environmental Science, Policy, and Management C129
+Environmental Science, Policy, and Management 131
+Environmental Science, Policy, and Management 132
+Environmental Science, Policy, and Management 133
+Environmental Science, Policy, and Management 134
+Environmental Science, Policy, and Management 135
+Environmental Science, Policy, and Management 136
+Environmental Science, Policy, and Management 137
+Environmental Science, Policy, and Management 138
+Environmental Science, Policy, and Management 140
+Environmental Science, Policy, and Management 141
+Environmental Science, Policy, and Management 142
+Environmental Science, Policy, and Management 143
+Environmental Science, Policy, and Management 144
+Environmental Science, Policy, and Management 145
+Environmental Science, Policy, and Management 146
+Environmental Science, Policy, and Management 149
+Environmental Science, Policy, and Management 152
+Environmental Science, Policy, and Management 164
+Environmental Science, Policy, and Management 167
+Environmental Science, Policy, and Management 181
+Environmental Science, Policy, and Management 185
+Environmental Science, Policy, and Management 186
+Environmental Science, Policy, and Management 187
+Environmental Science, Policy, and Management 189
+Environmental Sciences 10
+Environmental Sciences C12
+Environmental Sciences 125
+Geography 30
+Geography 40
+Geography C82
+Geography 131
+Geography 143
+Geography 148
+Geography 149
+Geography 179D
+Integrative Biology - any, except 39C
+Interdepartmental Studies 114A
+Interdepartmental Studies 114B
+Landscape Architecture 12
+Landscape Architecture 110
+Letters and Science 18
+Letters and Science 19
+Letters and Science 23
+Letters and Science C30T
+Letters and Science C30U
+Letters and Science C30V
+Letters and Science C30W
+Letters and Science C30X
+Letters and Science 117
+Letters and Science 126
+Linguistics C109
+Linguistics C147
+Linguistics 160
+Mechanical Engineering C176
+Molecular and Cell Biology - any, except 168
+Nutritional Sciences 10
+Nutritional Sciences 11
+Nutritional Sciences 39A
+Nutritional Sciences 39C
+Nutritional Sciences 100
+Nutritional Sciences 103
+Nutritional Sciences 106
+Nutritional Sciences 110
+Nutritional Sciences 113
+Nutritional Sciences 120
+Nutritional Sciences 150
+Nutritional Sciences 160
+Nutritional Sciences 161
+Nutritional Sciences 170
+Optometry 10
+Optometry C10
+Optometry 130
+Physical Education 32
+Physical Education C129
+Physical Education C165L
+Physics 177
+Plant and Microbial Biology 10
+Plant and Microbial Biology 11
+Plant and Microbial Biology 13
+Plant and Microbial Biology 39A
+Plant and Microbial Biology 39B
+Plant and Microbial Biology 39C
+Plant and Microbial Biology 39D
+Plant and Microbial Biology 40
+Plant and Microbial Biology C41X
+Plant and Microbial Biology 100
+Plant and Microbial Biology 101
+Plant and Microbial Biology 102
+Plant and Microbial Biology C103
+Plant and Microbial Biology 105
+Plant and Microbial Biology 110
+Plant and Microbial Biology 111
+Plant and Microbial Biology 112
+Plant and Microbial Biology 114
+Plant and Microbial Biology C116
+Plant and Microbial Biology 120
+Plant and Microbial Biology 130
+Plant and Microbial Biology 135
+Plant and Microbial Biology 140
+Plant and Microbial Biology 142
+Plant and Microbial Biology C148
+Plant and Microbial Biology 150
+Plant and Microbial Biology 160
+Plant and Microbial Biology 165
+Plant and Microbial Biology 170
+Plant and Microbial Biology 180
+Psychology C19
+Psychology 39L
+Psychology 100A
+Psychology 110
+Psychology 111
+Psychology C112
+Psychology 113
+Psychology 114
+Psychology 115A
+Psychology 115B
+Psychology C115C
+Psychology 116
+Psychology 117
+Psychology 118
+Psychology 119
+Psychology 121
+Psychology 122
+Psychology 125
+Psychology C126
+Psychology C127
+Psychology C129
+Psychology 133
+Public Health 39C
+Public Health 39F
+Public Health C102
+Public Health 150C
+Public Health C160
+Public Health 161
+Public Health 162A
+Public Health 162B
+Public Health 170
+Public Health 170B
+Public Health 172
+Undergraduate and Interdisciplinary Studies C10
+Undergraduate and Interdisciplinary Studies C12
+Undergraduate and Interdisciplinary Studies C130
