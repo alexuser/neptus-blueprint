@@ -32,6 +32,8 @@
 
                   <%if user_signed_in? %>
                    <ul class="nav navbar-nav">
+                    <%= link_to "Sign out", destroy_user_session_path, :class => "btn btn-warning" %>
+
                      <div class="dropdown">
                      
                        <div class="btn-group">
@@ -49,7 +51,6 @@
                           </ul>
                        </div>  
                      </div>
-
 
                      </li>
                    </ul>

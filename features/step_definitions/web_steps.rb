@@ -31,6 +31,32 @@ module WithinHelpers
 end
 World(WithinHelpers)
 
+
+And /^I am signed up$/ do
+  click_link 'Sign up' 
+  fill_in 'user_username', :with => 'JackCen' 
+  fill_in 'user_email', :with => 'foobar@gmail.com' 
+  fill_in 'user_password', :with => '12341234'
+  fill_in 'user_password_confirmation', :with => '12341234'
+  within('#sign_up') do
+    click_button 'Sign up' 
+  end
+end
+
+
+
+
+
+When(/^I follow University Requirement$/) do
+  within(find("div", :class=>"panel-heading"))
+  click_link 'University Requirement'
+end
+
+
+
+
+
+
 # Single-line step scoper
 When /^(.*) within (.*[^:])$/ do |step, parent|
   with_scope(parent) { When step }
