@@ -30,3 +30,18 @@ Scenario: click on My profile button
   When I follow "My profile"
 
   Then I am on the profilepage index page
+
+Scenario: 
+  Given I am signed up
+
+  When I press "drop"
+
+  Then I should see "JackCen"
+
+  And I should not see "nno"
+
+  And I should see "Sign out"
+
+  When I follow "Sign out"
+
+  Then I am on the major select welcome page

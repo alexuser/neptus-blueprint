@@ -74,8 +74,8 @@
       "/Users/kaiqicen/Desktop/169proj/app/controllers/major_select_controller.rb": [
         1,
         1,
-        18,
-        4,
+        22,
+        5,
         null,
         null,
         null,
@@ -92,11 +92,11 @@
         1,
         null,
         1,
-        7,
-        7,
-        7,
-        7,
-        7,
+        8,
+        8,
+        8,
+        8,
+        8,
         null,
         1,
         null,
@@ -274,7 +274,7 @@
         null
       ]
     },
-    "timestamp": 1384126046
+    "timestamp": 1384126229
   },
   "RSpec": {
     "coverage": {
@@ -551,6 +551,6 @@
         null
       ]
     },
-    "timestamp": 1384126030
+    "timestamp": 1384126567
   }
 }

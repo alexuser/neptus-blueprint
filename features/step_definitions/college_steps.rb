@@ -13,7 +13,3 @@ end
 Then /I should see "(.*)" in "_major_id"/ do |major|
 	assert major != "--Select a Major--" 
 end
-  
-Then /I should not see "(.*)" in "_major_id"/ do |major|
-	assert major != "--Select a Major--" 
-end
