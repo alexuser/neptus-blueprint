@@ -1,14 +1,13 @@
 <div class="container">
-
   <div class="row">
     <div class="col-md-8">
+
       <div class="panel-group" id="accordion">
+      <%= form_tag profilepage_index_path, :method => :get, :id => 'requirements_form' do -%>
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                University Requirement
-              </a>
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">University Requirement</a>
             </h3>
           </div>
           <div class="progress progress-striped active">
@@ -20,10 +19,12 @@
             <div class="panel-body">
               <div class="row">
                 <div class="col-lg-6">
-                  <h4><input type="checkbox">
-                    Entry-Level Writing Satisfied</h4>
-                  <h4><input type="checkbox">
-                    American History and Institutions Satisfied</h4>                 
+
+                  <%= check_box_tag 'requirements_entry_level_writing', 1, :true, :id => 'requirements_entry_level_writing' %>
+                  <%= 'Entry-Level Writing Satisfied' %>
+                  <br>
+                  <%= check_box_tag 'requirements_american_history_and_institutions' %>
+                  <%= 'American History and Institutions Satisfied' %>
                 </div><!-- /.col-lg-6 -->
               </div>
             </div>
@@ -33,9 +34,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h2 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                Campus Requirement
-              </a>
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Campus Requirement</a>
             </h2>
           </div>
           <div class="progress progress-striped active">
@@ -47,8 +46,8 @@
             <div class="panel-body">
               <div class="row">
                 <div class="col-lg-6">
-                  <h4><input type="checkbox">
-                    American Cultures Satisfied</h4>
+                  <%= check_box_tag 'requirements_american_cultures' %>
+                  <%= 'American Cultures Satisfied' %>
                 </div><!-- /.col-lg-6 -->
               </div>
             </div>
@@ -58,9 +57,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h2 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                College Requirement
-              </a>
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">College Requirement</a>
             </h2>
           </div>
           <div class="progress progress-striped active">
@@ -72,25 +69,46 @@
             <div class="panel-body">
               <div class="row">
                 <div class="col-lg-9">
-                  <h4><input type="checkbox">Reading & Composition Requirements Satisfied</h4>
-                  <h4><input type="checkbox">Quantitative Reasoning Requirements Satisfied</h4>
-                  <h4><input type="checkbox">Foreign Language Requirements Satisfied</h4>
+                  <%= check_box_tag 'requirements_reading_and_Composition_requirements' %>
+                  <%= 'Reading & Composition Requirements Satisfied' %>
+                  <br>
+                  <%= check_box_tag 'requirements_quantitative_reasoning_requirements' %>
+                  <%= 'Quantitative Reasoning Requirements Satisfied' %>
+                  <br>
+                  <%= check_box_tag 'requirements_foreign_language_requirements' %>
+                  <%= 'Foreign Language Requirements Satisfied' %>
                   <div class="col-lg-9">
                     <h4>Seven Breath Requirements</h4>
-                      <h5><input type="checkbox">Arts and Literature Satisfied</h5>
-                      <h5><input type="checkbox">Biological Science Satisfied</h5>
-                      <h5><input type="checkbox">Historical Studies Satisfied</h5>
-                      <h5><input type="checkbox">International Studies Satisfied</h5>           
-                      <h5><input type="checkbox">Philosophy and Values Satisfied</h5>     
-                      <h5><input type="checkbox">Physical Science Satisfied</h5>
-                      <h5><input type="checkbox">Social and Behavioral Sciences Satisfied</h5>
+                      <%= check_box_tag 'requirements_arts_and_literature' %>
+                      <%= 'Arts and Literature Satisfied' %>
+                      <br>
+                      <%= check_box_tag 'requirements_biological_science' %>
+                      <%= 'Biological Science Satisfied' %>
+                      <br>
+                      <%= check_box_tag 'requirements_historical_studies' %>
+                      <%= 'Historical Studies Satisfied' %>
+                      <br>
+                      <%= check_box_tag 'requirements_international_studies' %>
+                      <%= 'International Studies Satisfied' %>
+                      <br>
+                      <%= check_box_tag 'requirements_philosophy_and_values' %>
+                      <%= 'Philosophy and Values Satisfied' %>
+                      <br>
+                      <%= check_box_tag 'requirements_physical_science' %>
+                      <%= 'Physical Science Satisfied' %>
+                      <br>
+                      <%= check_box_tag 'requirements_social_and_behavioral_sciences' %>
+                      <%= 'Physical Sciences Satisfied' %>
                   </div>
                 </div><!-- /.col-lg-6 -->
               </div>
             </div>
           </div> 
-        </div>   
-        <button type="submit" class="btn btn-success">Save</button>
+        </div> 
+        <%= submit_tag 'Save', :id => 'requirements_submit', :class => "btn btn-success" %>  
+      <% end -%>
+      <%= "here is the test:"%>
+      <%= @completed_requirements %>
       </div>
     </div>  
     <div class="col-md-2">
