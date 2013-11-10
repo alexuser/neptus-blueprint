@@ -19,11 +19,14 @@ Scenario: click on Home button
 
   Then I am on the major select welcome page
 
-Given I am on the profilepage index page
 
-	Then I should see "My profile"
 
 Scenario: click on My profile button
+  Given I am on the major select welcome page
+  
+  And I am signed up
+
+  Then I should see "My profile"
   When I follow "My profile"
 
   Then I am on the profilepage index page
