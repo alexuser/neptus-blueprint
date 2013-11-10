@@ -46,17 +46,6 @@ end
 
 
 
-
-When(/^I follow University Requirement$/) do
-  within(find("div", :class=>"panel-heading"))
-  click_link 'University Requirement'
-end
-
-
-
-
-
-
 # Single-line step scoper
 When /^(.*) within (.*[^:])$/ do |step, parent|
   with_scope(parent) { When step }

@@ -16,11 +16,8 @@ module NavigationHelpers
     when /^"Next"/ then '/users/sign_in'
     when /^About page/ then about_index_path
     when /^Contact page/ then contact_index_path
-<<<<<<< HEAD
     when /^profilepage/ then profilepage_index_path
-=======
     when /^the profilepage/ then profilepage_index_path
->>>>>>> 0592f2f644b1fa433d83742ae1b96ae1dcde31f2
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

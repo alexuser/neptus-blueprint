@@ -74,8 +74,8 @@
       "/home/saasbook/169proj/neptus-blueprint/app/controllers/major_select_controller.rb": [
         1,
         1,
-        0,
-        0,
+        16,
+        3,
         null,
         null,
         null,
@@ -92,11 +92,11 @@
         1,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
-        0,
+        3,
+        3,
+        3,
+        3,
+        3,
         null,
         0,
         null,
@@ -118,7 +118,7 @@
         null,
         null,
         null,
-        0,
+        3,
         0,
         null,
         null,
@@ -169,6 +169,82 @@
         1,
         1,
         1,
+        null
+      ],
+      "/home/saasbook/169proj/neptus-blueprint/app/models/major.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/home/saasbook/169proj/neptus-blueprint/app/models/university_requirement.rb": [
+        1,
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1384122142
+  },
+  "RSpec": {
+    "coverage": {
+      "/home/saasbook/169proj/app/models/user.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/home/saasbook/169proj/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/saasbook/169proj/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/169proj/app/helpers/home_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/169proj/app/helpers/major_select_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/169proj/app/helpers/profilepage_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/169proj/app/controllers/major_select_controller.rb": [
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/saasbook/169proj/app/controllers/profilepage_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "/home/saasbook/169proj/neptus-blueprint/app/models/major.rb": [
