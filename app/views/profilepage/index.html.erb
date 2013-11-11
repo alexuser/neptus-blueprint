@@ -114,7 +114,9 @@
       <% @courses_hash.each do |key, value| %>
         <% if value.size > 1 %>
           <%= key.name + ": " %>
-          <%= value %>
+          <% value.each do |req| %>
+            <%= req + " " %>
+          <% end %>
           <br>
           <br>
         <% end %>
