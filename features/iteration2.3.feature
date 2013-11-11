@@ -35,9 +35,10 @@ Background: The user has created a profile, and now he or she wants to see what 
  	And I should see "Letters and Science 123: arts_and_literature historical_studies philosophy_and_values"
 
  	And I should see "German 176: arts_and_literature historical_studies philosophy_and_values"
+ 
+ 	And I should see "South Asian 151: historical_studies philosophy_and_values"
 
- 	And I should see "Anthropology 123C: historical_studies physical_science"
-
+ 	And I should see "French 145: arts_and_literature historical_studies"
 
 
 
