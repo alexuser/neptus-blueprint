@@ -110,8 +110,14 @@
         <%= submit_tag 'Save', :id => 'requirements_submit', :class => "btn btn-success" %>  
       <% end -%>
       <%= "here is the test:"%>
-      <%= @completed_requirements %>
-      <%= @university_req_rate %>
+      <br>
+      <% @courses_hash.each do |key, value| %>
+        <% if value.size > 1 %>
+          <%= key.name + ":" %>
+          <br>
+          <%= value %>
+        <% end %>
+      <% end %>
       </div>
     </div>  
     <div class="col-md-2">

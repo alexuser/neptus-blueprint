@@ -30,6 +30,12 @@ Scenario: see how much the user have fulfilled the university requirements
 
 	Then the "requirements_american_history_and_institutions" checkbox should be checked
 
+	When I uncheck "requirements_american_history_and_institutions"
+
+	And I press "Save"
+
+	Then the "requirements_american_history_and_institutions" checkbox should be unchecked
+
 Scenario: see if the user have fulfilled the campus requirement
 	When I follow "Campus Requirement"
 
@@ -40,6 +46,12 @@ Scenario: see if the user have fulfilled the campus requirement
 	And I press "Save"
 
 	Then the "requirements_american_cultures" checkbox should be checked
+
+	When I uncheck "requirements_american_cultures"
+
+	And I press "Save"
+
+	Then the "requirements_american_cultures" checkbox should be unchecked
 
 Scenario: see how much the user have fulfilled the College requirement
 	When I follow "L&S College Requirements"
@@ -107,3 +119,25 @@ Scenario: see how much the user have fulfilled the College requirement
 	And the "requirements_physical_science" checkbox should be checked
 
 	And the "requirements_social_and_behavioral_sciences" checkbox should be checked
+
+	When I uncheck "requirements_reading_and_Composition_requirements"
+
+	And I uncheck "requirements_quantitative_reasoning_requirements"
+
+	And I uncheck "requirements_foreign_language_requirements"
+
+	And I uncheck "requirements_arts_and_literature"
+
+	And I uncheck "requirements_biological_science"
+
+	And I press "Save"
+
+	Then the "requirements_reading_and_Composition_requirements" checkbox should be unchecked
+
+	And the "requirements_quantitative_reasoning_requirements" checkbox should not be checked
+
+	And the "requirements_foreign_language_requirements" checkbox should not be checked
+
+	And the "requirements_international_studies" checkbox should not be unchecked
+
+	And the "requirements_social_and_behavioral_sciences" should not be unchecked
