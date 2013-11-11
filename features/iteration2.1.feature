@@ -78,7 +78,7 @@ Scenario: see how much the user have fulfilled the College requirement
 
 	And I should see "Social and Behavioral Sciences Satisfied" 
 
-	When I check "requirements_reading_and_Composition_requirements"
+	When I check "requirements_reading_and_composition_requirements"
 
 	And I check "requirements_quantitative_reasoning_requirements"
 
@@ -100,7 +100,7 @@ Scenario: see how much the user have fulfilled the College requirement
 
 	And I press "Save"
 
-	Then the "requirements_reading_and_Composition_requirements" checkbox should be checked
+	Then the "requirements_reading_and_composition_requirements" checkbox should be checked
 
 	And the "requirements_quantitative_reasoning_requirements" checkbox should be checked
 
@@ -120,7 +120,7 @@ Scenario: see how much the user have fulfilled the College requirement
 
 	And the "requirements_social_and_behavioral_sciences" checkbox should be checked
 
-	When I uncheck "requirements_reading_and_Composition_requirements"
+	When I uncheck "requirements_reading_and_composition_requirements"
 
 	And I uncheck "requirements_quantitative_reasoning_requirements"
 
@@ -132,7 +132,7 @@ Scenario: see how much the user have fulfilled the College requirement
 
 	And I press "Save"
 
-	Then the "requirements_reading_and_Composition_requirements" checkbox should not be checked
+	Then the "requirements_reading_and_composition_requirements" checkbox should not be checked
 
 	And the "requirements_quantitative_reasoning_requirements" checkbox should not be checked
 

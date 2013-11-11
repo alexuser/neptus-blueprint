@@ -6,15 +6,29 @@ I need a filter which can show me courses that fulfill more than one requirement
 
 Background: The user has created a profile, and now he or she wants to see what kind of classes he or she needs to take to fulfill requirements given their inputs.
 
+  Given the following courses existed
+  | name                        |
+  | African American Studies 4A |
+  | Letters and Science 123     |
+  | German 176                  |
+  | Political Science N146C     |
+  | Anthropology 123C           |
+
+  
+
+
   Given I am on the major select welcome page
   And I am signed up
 
  Scenario: user can see requirement joint courses after checked requirements and pressed Save button
- 	When I follow "Campus Requirement"
-
+ 	When I follow "University Requirements"
+ 	And I check "requirements_american_history_and_institutions"
+ 	And I follow "Campus Requirement"
  	And I check "requirements_american_cultures"
-
  	And I follow "L&S College Requirements"
+ 	And I check "requirements_reading_and_composition_requirements"
+ 	And I check "requirements_quantitative_reasoning_requirements"
+ 	And I check "requirements_foreign_language_requirements"
 
  	And I check "requirements_arts_and_literature"
 
@@ -26,29 +40,14 @@ Background: The user has created a profile, and now he or she wants to see what 
 
  	And I press "Save"
 
- 	Then I should see "["arts_and_literature", "historical_studies", "philosophy_and_values"] Letters and Science 123:"
+ 	Then I should see "African American Studies 4A:"
 
- 	And I should see "["arts_and_literature", "historical_studies", "philosophy_and_values"] German 176:"
+ 	And I should see "Letters and Science 123: ["arts_and_literature", "historical_studies", "philosophy_and_values"]"
 
- 	And I should see "["historical_studies", "philosophy_and_values"] Portuguese 39A:"
+ 	And I should see "German 176: ["arts_and_literature", "historical_studies", "philosophy_and_values"]"
 
- 	When I follow "L&S College Requirements"
+ 	And I should see "Political Science N146C: ["historical_studies", "philosophy_and_values"]"
 
- 	And I check "requirements_quantitative_reasoning_requirements"
+ 	And I should see "Anthropology 123C: ["historical_studies", "physical_science"]"
 
- 	And I check "requirements_biological_science"
-
- 	And I check "requirements_international_studies"
-
- 	And I uncheck "requirements_philosophy_and_values"
-
- 	And I uncheck "requirements_physical_science"	
-
- 	And I press "Save"
-
- 	Then I should see "["arts_and_literature", "historical_studies"]" African American Studies 5A:
-
- 	And I should see "["arts_and_literature", "historical_studies"]" South Asian 110A:
-
- 	And I should see "["arts_and_literature", "international_studies"]" Slavic 39H:
 

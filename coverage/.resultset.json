@@ -74,8 +74,8 @@
       "/Users/kaiqicen/Desktop/169proj/app/controllers/major_select_controller.rb": [
         1,
         1,
-        22,
-        5,
+        24,
+        6,
         null,
         null,
         null,
@@ -92,20 +92,17 @@
         1,
         null,
         1,
-        14,
-        14,
-        14,
-        14,
-        14,
-        14,
-        20,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        29,
         null,
         null,
-        14,
-        null,
-        null,
-        null,
-        null,
+        16,
+        16,
         null,
         null,
         null,
@@ -119,14 +116,18 @@
         null,
         null,
         null,
-        14,
+        null,
+        null,
+        null,
+        null,
+        16,
         null,
         null,
         null,
         1,
-        14,
-        14,
-        14,
+        16,
+        16,
+        16,
         0,
         0,
         0,
@@ -137,8 +138,8 @@
         0,
         null,
         null,
-        14,
-        14,
+        16,
+        16,
         null,
         null
       ],
@@ -278,7 +279,7 @@
         null
       ]
     },
-    "timestamp": 1384131288
+    "timestamp": 1384134974
   },
   "RSpec": {
     "coverage": {
@@ -560,6 +561,6 @@
         null
       ]
     },
-    "timestamp": 1384131813
+    "timestamp": 1384133005
   }
 }

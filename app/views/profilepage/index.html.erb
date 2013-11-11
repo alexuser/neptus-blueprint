@@ -71,7 +71,7 @@
             <div class="panel-body">
               <div class="row">
                 <div class="col-lg-9">
-                  <%= check_box_tag 'requirements[reading_and_Composition_requirements]', 1,@completed_requirements.include?('reading_and_Composition_requirements'), :id => 'requirements_reading_and_Composition_requirements' %>
+                  <%= check_box_tag 'requirements[reading_and_composition_requirements]', 1,@completed_requirements.include?('reading_and_composition_requirements'), :id => 'requirements_reading_and_composition_requirements' %>
                   <%= 'Reading & Composition Requirements Satisfied' %>
                   <br>
                   <%= check_box_tag 'requirements[quantitative_reasoning_requirements]', 1,@completed_requirements.include?('quantitative_reasoning_requirements'), :id => 'requirements_quantitative_reasoning_requirements' %>
@@ -113,9 +113,9 @@
       <br>
       <% @courses_hash.each do |key, value| %>
         <% if value.size > 1 %>
-          <%= key.name + ":" %>
-          <br>
+          <%= key.name + ": " %>
           <%= value %>
+          <br>
           <br>
         <% end %>
       <% end %>
