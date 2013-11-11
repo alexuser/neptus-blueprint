@@ -6,9 +6,13 @@ class ProfilepageController < ApplicationController
 	 	@campus_req_rate = 0
 	 	@ls_college_req_rate = 0
 	 	@completed_requirements = params[:requirements] || session[:requirements] || {}
+	 	@req_array = Array.new
 	 	@completed_requirements.each do |req|
-	 		
-	 		case req[0]
+	 		@req_array << req[0]
+	 	end
+	 	
+	 	@courses_hash = filter(@req_array)
+	 		/case req[0]
 	 		when 'entry_level_writing'
 	 		when 'american_history_and_institutions'
 	 			@university_req_rate += 1
@@ -25,8 +29,8 @@ class ProfilepageController < ApplicationController
 	 		when 'physical_science'
 	 		when 'social_and_behavioral_sciences'
 	 			@ls_college_req_rate += 1
-	 		end
-	 	end	
+	 		end/
+	 	
 	 end
 
 	 	def filter(requirements)
@@ -43,7 +47,7 @@ class ProfilepageController < ApplicationController
         			results[course] = list
       			end
     		end
-    		results.sort_by{|_key, value| -value.length}
+    		results = results.sort_by{|key, value| -value.size}
     		return results
   		end
 end
