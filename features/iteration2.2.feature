@@ -31,7 +31,7 @@ Scenario: click on My profile button
 
   Then I am on the profilepage index page
 
-Scenario: 
+Scenario: Use drop down button
   Given I am signed up
 
   When I press "drop"
@@ -41,6 +41,8 @@ Scenario:
   And I should not see "nno"
 
   And I should see "Sign out"
+
+  And I should see "Something else here"
 
   When I follow "Sign out"
 
