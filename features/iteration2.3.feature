@@ -1,290 +1,54 @@
 Feature: generate blueprint
 
-As a college student, I want to see what classes I need to take to fulfill certain requirements
+As a college student
+So that I can see what classes I need to take to fulfill certain requirements
+I need a filter which can show me courses that fulfill more than one requirements
+
 Background: The user has created a profile, and now he or she wants to see what kind of classes he or she needs to take to fulfill requirements given their inputs.
 
+  Given I am on the major select welcome page
+  And I am signed up
 
-Scenario: see if we don't input anything to the profile, we should be able to see all the courses for all the requirements
+ Scenario: user can see requirement joint courses after checked requirements and pressed Save button
+ 	When I follow "Campus Requirement"
 
-When I am on the profile page
-Then I press "Blueprint"
-Then I should see "English N001A"
-Then I should see "History 7A"
-Then I should see "Psychology 166AC"
-Then I should see "English R001A"
-Then I should see "Stats 2"
-Then I should see "German 1"
-Then I should see "Chinese 7A"
-Then I should see "Biology 1A"
-Then I should see "Classic 10A"
-Then I should see "Catalan 101"
-Then I should see "Anthropology 150"
-Then I should see "Bioengineering C125"
-Then I should see "American Studies 10AC"
-Then I should see "Computer Science 61A"
-Scenario: If Entry-Level Writing is satisfied, then we should only see the courses except the ones for university requirements.
+ 	And I check "requirements_american_cultures"
 
-When I am on the profile page
-Then I go to the University page
-Then I check "Entry-Level Writing Satisfied" checkbox
-And I press "Save"
-Then I go to the profile page
-Then I press "Blueprint"
-Then I should not see "English N001A"
-Then I should see "History 7A"
-Then I should see "Psychology 166AC"
-Then I should see "English R001A"
-Then I should see "Stats 2"
-Then I should see "German 1"
-Then I should see "Chinese 7A"
-Then I should see "Biology 1A"
-Then I should see "Classic 10A"
-Then I should see "Catalan 101"
-Then I should see "Anthropology 150"
-Then I should see "Bioengineering C125"
-Then I should see "American Studies 10AC"
+ 	And I follow "L&S College Requirements"
 
-Scenario: If American History and Institutions is satisfied, then we should only see the courses except the ones for university requirements.
+ 	And I check "requirements_arts_and_literature"
 
-When I am on the profile page
-Then I go to the University page
-Then I check "American History and Institutions" checkbox
-And I press "Save"
-Then I go to the profile page
-Then I press "Blueprint"
-Then I should see "English N001A"
-Then I should not see "History 7A"
-Then I should see "Psychology 166AC"
-Then I should see "English R001A"
-Then I should see "Stats 2"
-Then I should see "German 1"
-Then I should see "Chinese 7A"
-Then I should see "Biology 1A"
-Then I should see "Classic 10A"
-Then I should see "Catalan 101"
-Then I should see "Anthropology 150"
-Then I should see "Bioengineering C125"
-Then I should see "American Studies 10AC"
-Scenario: If American Cultures requirements are already satisfied, then we should only see the courses except the ones for university requirements.
+ 	And I check "requirements_historical_studies"
 
-When I am on the profile page
-Then I go to the University page
-Then I check "American Cultures Satisfied" checkbox
-And I press "Save"
-Then I go to the profile page
-Then I press "Blueprint"
-Then I should see "English N001A"
-Then I should see "History 7A"
-Then I should not see "Psychology 166AC"
-Then I should see "English R001A"
-Then I should see "Stats 2"
-Then I should see "German 1"
-Then I should see "Chinese 7A"
-Then I should see "Biology 1A"
-Then I should see "Classic 10A"
-Then I should see "Catalan 101"
-Then I should see "Anthropology 150"
-Then I should see "Bioengineering C125"
-Then I should see "American Studies 10AC"
+ 	And I check "requirements_philosophy_and_values"
 
+ 	And I check "requirements_physical_science"
 
-Scenario: If Reading and Composition requirements are already satisfied, then we should only see the courses except the ones for university requirements.
+ 	And I press "Save"
 
-When I am on the profile page
-Then I go to the College Requirements page
-Then I check "Reading and Composition Satisfied" checkbox
-And I press "Save"
-Then I go to the profile page
-Then I press "Blueprint"
-Then I should not see "English N001A"
-Then I should see "History 7A"
-Then I should see "Psychology 166AC"
-Then I should not see "English R001A"
-Then I should see "Stats 2"
-Then I should see "German 1"
-Then I should see "Chinese 7A"
-Then I should see "Biology 1A"
-Then I should see "Classic 10A"
-Then I should see "Catalan 101"
-Then I should see "Anthropology 150"
-Then I should see "Bioengineering C125"
-Then I should see "American Studies 10AC"
+ 	Then I should see "["arts_and_literature", "historical_studies", "philosophy_and_values"] Letters and Science 123:"
 
-Scenario: If Quantitative Reasoning requirements are already satisfied, then we should only see the courses except the ones for university requirements.
+ 	And I should see "["arts_and_literature", "historical_studies", "philosophy_and_values"] German 176:"
 
-When I am on the profile page
-Then I go to the College Requirements page
-Then I check "Quantitative Reasoning Satisfied" checkbox
-And I press "Save"
-Then I go to the profile page
-Then I press "Blueprint"
-Then I should see "English N001A"
-Then I should see "History 7A"
-Then I should see "Psychology 166AC"
-Then I should see "English R001A"
-Then I should not see "Stats 2"
-Then I should see "German 1"
-Then I should see "Chinese 7A"
-Then I should see "Biology 1A"
-Then I should see "Classic 10A"
-Then I should see "Catalan 101"
-Then I should see "Anthropology 150"
-Then I should see "Bioengineering C125"
-Then I should see "American Studies 10AC"
+ 	And I should see "["historical_studies", "philosophy_and_values"] Portuguese 39A:"
 
-Scenario: If Foreign Language requirements are already satisfied, then we should only see the courses except the ones for university requirements.
+ 	When I follow "L&S College Requirements"
 
-When I am on the profile page
-Then I go to the College Requirements page
-Then I check "Foreign Language Satisfied" checkbox
-And I press "Save"
-Then I go to the profile page
-Then I press "Blueprint"
-Then I should see "English N001A"
-Then I should see "History 7A"
-Then I should see "Psychology 166AC"
-Then I should see "English R001A"
-Then I should see "Stats 2"
-Then I should not see "German 1"
-Then I should see "Chinese 7A"
-Then I should see "Biology 1A"
-Then I should see "Classic 10A"
-Then I should see "Catalan 101"
-Then I should see "Anthropology 150"
-Then I should see "Bioengineering C125"
-Then I should see "American Studies 10AC"
+ 	And I check "requirements_quantitative_reasoning_requirements"
 
+ 	And I check "requirements_biological_science"
 
-Scenario: If Arts and Literature requirements are already satisfied, then we should only see the courses except the ones for university requirements.
+ 	And I check "requirements_international_studies"
 
-When I am on the profile page
-Then I go to the College Requirements page
-Then I check "Arts and Literature Satisfied" checkbox
-And I press "Save"
-Then I go to the profile page
-Then I press "Blueprint"
-Then I should see "English N001A"
-Then I should see "History 7A"
-Then I should see "Psychology 166AC"
-Then I should see "English R001A"
-Then I should see "Stats 2"
-Then I should see "German 1"
-Then I should not see "Chinese 7A"
-Then I should see "Biology 1A"
-Then I should see "Classic 10A"
-Then I should see "Catalan 101"
-Then I should see "Anthropology 150"
-Then I should see "Bioengineering C125"
-Then I should see "American Studies 10AC"
+ 	And I uncheck "requirements_philosophy_and_values"
 
-Scenario: If Biological Science requirements are already satisfied, then we should only see the courses except the ones for university requirements.
+ 	And I uncheck "requirements_physical_science"	
 
-When I am on the profile page
-Then I go to the College Requirements page
-Then I check "Biological Science Satisfied" checkbox
-And I press "Save"
-Then I go to the profile page
-Then I press "Blueprint"
-Then I should see "English N001A"
-Then I should see "History 7A"
-Then I should see "Psychology 166AC"
-Then I should see "English R001A"
-Then I should see "Stats 2"
-Then I should see "German 1"
-Then I should see "Chinese 7A"
-Then I should not see "Biology 1A"
-Then I should see "Classic 10A"
-Then I should see "Catalan 101"
-Then I should see "Anthropology 150"
-Then I should see "Bioengineering C125"
-Then I should see "American Studies 10AC"
+ 	And I press "Save"
 
+ 	Then I should see "["arts_and_literature", "historical_studies"]" African American Studies 5A:
 
-Scenario: If Historical Studies requirements are already satisfied, then we should only see the courses except the ones for university requirements.
+ 	And I should see "["arts_and_literature", "historical_studies"]" South Asian 110A:
 
-When I am on the profile page
-Then I go to the College Requirements page
-Then I check "Historical Studies Satisfied" checkbox
-And I press "Save"
-Then I go to the profile page
-Then I press "Blueprint"
-Then I should see "English N001A"
-Then I should see "History 7A"
-Then I should see "Psychology 166AC"
-Then I should see "English R001A"
-Then I should see "Stats 2"
-Then I should see "German 1"
-Then I should see "Chinese 7A"
-Then I should see "Biology 1A"
-Then I should not see "Classic 10A"
-Then I should see "Catalan 101"
-Then I should see "Anthropology 150"
-Then I should see "Bioengineering C125"
-Then I should see "American Studies 10AC"
+ 	And I should see "["arts_and_literature", "international_studies"]" Slavic 39H:
 
-
-Scenario: If Philosophy and Values requirements are already satisfied, then we should only see the courses except the ones for university requirements.
-
-When I am on the profile page
-Then I go to the College Requirements page
-Then I check "Philosophy and Values Satisfied" checkbox
-And I press "Save"
-Then I go to the profile page
-Then I press "Blueprint"
-Then I should see "English N001A"
-Then I should see "History 7A"
-Then I should see "Psychology 166AC"
-Then I should see "English R001A"
-Then I should see "Stats 2"
-Then I should see "German 1"
-Then I should see "Chinese 7A"
-Then I should see "Biology 1A"
-Then I should see "Classic 10A"
-Then I should see "Catalan 101"
-Then I should not see "Anthropology 150"
-Then I should see "Bioengineering C125"
-Then I should see "American Studies 10AC"
-
-Scenario: If Physical Science requirements are already satisfied, then we should only see the courses except the ones for university requirements.
-
-When I am on the profile page
-Then I go to the College Requirements page
-Then I check "Physical Science Satisfied" checkbox
-And I press "Save"
-Then I go to the profile page
-Then I press "Blueprint"
-Then I should see "English N001A"
-Then I should see "History 7A"
-Then I should see "Psychology 166AC"
-Then I should see "English R001A"
-Then I should see "Stats 2"
-Then I should see "German 1"
-Then I should see "Chinese 7A"
-Then I should see "Biology 1A"
-Then I should see "Classic 10A"
-Then I should see "Catalan 101"
-Then I should see "Anthropology 150"
-Then I should not see "Bioengineering C125"
-Then I should see "American Studies 10AC"
-
-Scenario: If Social and Behavioral Sciences requirements are already satisfied, then we should only see the courses except the ones for university requirements.
-
-When I am on the profile page
-Then I go to the College Requirements page
-Then I check "Social and Behavioral Sciences Satisfied" checkbox
-And I press "Save"
-Then I go to the profile page
-Then I press "Blueprint"
-Then I should see "English N001A"
-Then I should see "History 7A"
-Then I should see "Psychology 166AC"
-Then I should see "English R001A"
-Then I should see "Stats 2"
-Then I should see "German 1"
-Then I should see "Chinese 7A"
-Then I should see "Biology 1A"
-Then I should see "Classic 10A"
-Then I should see "Catalan 101"
-Then I should see "Anthropology 150"
-Then I should see "Bioengineering C125"
-Then I should not see "American Studies 10AC"
