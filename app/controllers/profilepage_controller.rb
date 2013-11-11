@@ -12,6 +12,7 @@ class ProfilepageController < ApplicationController
 	 	end
 	 	
 	 	@courses_hash = filter(@req_array)
+	 	@courses_hash = @courses_hash.sort_by {|key, value| -value.size}
 	 		/case req[0]
 	 		when 'entry_level_writing'
 	 		when 'american_history_and_institutions'
@@ -47,7 +48,7 @@ class ProfilepageController < ApplicationController
         			results[course] = list
       			end
     		end
-    		results = results.sort_by{|key, value| -value.size}
+    		/results.sort_by{|_key, value| -value.length}/
     		return results
   		end
 end
