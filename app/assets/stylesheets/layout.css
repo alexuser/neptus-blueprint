@@ -1,0 +1,42 @@
+.site_center {margin:0 auto; width: 626px; text-align:left;position: relative;background: white url(/assets/leftbg.jpg) no-repeat 280px -40px;overflow: hidden;border-radius: 10px;
+
+margin-top: 10px;}
+
+
+.col_1, .col_2, .col_3, .col_box_1, .col_box_2{ float:left;}
+
+
+/*======= index.html =======*/
+#page1 .content .col_1{width: 86%;padding: 5% 7%;background: white;border-top: solid 2px #999;}
+#page1 .content .col_2{width:264px; margin-left:30px}
+#page1 .content .col_3{width:233px; margin-left:33px;}
+/*=========================*/
+
+/*======= index-1.html =======*/
+#page2 .content .col_1{width:605px;}
+#page2 .content .col_2{width:232px; margin-left:42px}
+/*=========================*/
+
+/*======= index-2.html =======*/
+#page3 .content .col_1{width:605px;}
+#page3 .content .col_2{width:232px; margin-left:42px}
+/*=========================*/
+
+/*======= index-3.html =======*/
+#page4 .content .col_1{width:605px;}
+#page4 .content .col_2{width:232px; margin-left:42px}
+/*=========================*/
+
+/*======= index-4.html =======*/
+#page5 .content .col_1{width:605px;}
+#page5 .content .col_2{width:232px; margin-left:42px}
+/*=========================*/
+
+
+.extra_left label {
+    width: 210px;
+    display: block;
+    float: left;
+    text-align: right;
+    margin-right: 10px;
+}

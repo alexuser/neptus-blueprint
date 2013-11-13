@@ -1,76 +1,52 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Neptus</title>
-  <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+<%= stylesheet_link_tag    "application", :media => "all" %>
+<%= javascript_include_tag "application" %>
 
-  <%= csrf_meta_tags %>
+<%= csrf_meta_tags %>
+
+<%= stylesheet_link_tag    "style", :media => "all" %>
+<%= stylesheet_link_tag    "layout", :media => "all" %>
+<%= stylesheet_link_tag    "icc", :media => "all" %>
+
+<script>
+</script>
+<script>
+
+
+</script>
 </head>
-<body>
-
-  <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-          <div class="navbar-header">
-            <%= link_to "Neptus-Blueprint", major_select_welcome_path, :class=>"navbar-brand" %>
-          </div>
-          <div class="navbar-collapse collapse">
-           
-            <ul class="nav navbar-nav">
-              <li><%= link_to "Home", major_select_welcome_path %></li>
-
-              <%if user_signed_in? %>
-                <li><%= link_to "My profile", profilepage_index_path %></li>
-              <% end %>
-              
-              <li><%= link_to "About", about_index_path %></li>
-              <li><%= link_to "Contact", contact_index_path%></li>
-
-            </ul>
-            
-                <div class="navbar-right">
-                  <%if user_signed_in? %>
-                   <ul class="nav navbar-nav">
-                     <div class="dropdown">
-                     
-                       <div class="btn-group">
-                         <button type="button" class="btn btn-info"><%= "#{current_user.username}" %></button>
-                         <button type="button" id="drop" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-                           <span class="caret"></span>
-                           <span class="sr-only">Toggle Dropdown</span>
-                         </button>
-                          <ul class="dropdown-menu" role="menu" aria-labelledby="drop">
-                            <li><%= link_to "#{current_user.username}" %></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "Not-you" %></li>
-                          </ul>
-                       </div>  
-                     </div>
-                     </li>
-                   </ul>
-
-                  <% else %>
-                   <%= link_to "Sign up", new_user_registration_path, :class => "btn btn-info" %> or <%= link_to "sign in", new_user_session_path, :class => "btn btn-info" %>
-                  <% end %>
-
-
-                </div>
-            
-          </div><!--/.navbar-collapse -->
-        </div>
-      </div>
-
-    <div class="container">
-    
+<body id="page1">
+<div class="site_center">
+  <!-- header  -->
+  <!-- <div class="bg_logo"><img src="/assets/images/logo.png" alt="logo" /></div> -->
+  <div class="bg_logo"><%= image_tag "logo.png" %></div>
+<div class="menu">
+      
+      <ul class="navigation">
+        <li><a href="#">What is this?</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Add a college</a></li>
+      </ul>
+  </div>
+  <!-- content -->
+  <div class="content">
+                <!--left_col-->
+    <div class="col_1">
       <%= yield %>
     </div>
+  </div>
 
 
-    <hr>
-    <footer>
-    <p class ="col-md-6 col-md-offset-3">Created by Kaiqi Cen, Sijia Liu, Zhuoyong Jing, Jiachen Jiang, Alexander Chen</p>
-    </footer>
-    
+  
+
+  
+</div>
 </body>
 </html>
+

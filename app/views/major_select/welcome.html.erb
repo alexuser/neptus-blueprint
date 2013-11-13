@@ -1,18 +1,15 @@
-<div class="welcome">
-  <h1 class="headline">Welcome to Neptus Blueprint</h1>
-  <p>Choose your class wisely</p>
 
-	<p>Please choose your major</p>
 
-	<%= select_tag :user_college_id, options_from_collection_for_select(College.all, "id", "name"), { :prompt => "-- Select A College --"} %>
+<p>Please choose your major</p>
 
-	<div id="versionsDiv">
-	  <%= render :partial => 'majors', :locals => { :object => @majors } %>
-	</div>
+<%= select_tag :user_college_id, options_from_collection_for_select(College.all, "id", "name"), { :prompt => "-- Select A College --"} %>
 
-	<%= link_to "Next", new_user_session_path, :class => "btn btn-success"%>
+<div id="versionsDiv">
+  <%= render :partial => 'majors', :locals => { :object => @majors } %>
 </div>
 
+
+<button type="submit" class="btn btn-success">Next</button>
 
 
 
