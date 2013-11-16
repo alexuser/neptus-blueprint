@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/saasbook/169proj/neptus-blueprint/app/models/user.rb": [
+      "/home/saasbook/neptus/neptus/app/models/user.rb": [
         1,
         null,
         null,
@@ -30,48 +30,48 @@
         null,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/controllers/application_controller.rb": [
+      "/home/saasbook/neptus/neptus/app/controllers/application_controller.rb": [
         1,
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/helpers/application_helper.rb": [
+      "/home/saasbook/neptus/neptus/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/helpers/about_helper.rb": [
+      "/home/saasbook/neptus/neptus/app/helpers/about_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/helpers/contact_helper.rb": [
+      "/home/saasbook/neptus/neptus/app/helpers/contact_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/helpers/home_helper.rb": [
+      "/home/saasbook/neptus/neptus/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/helpers/major_select_helper.rb": [
+      "/home/saasbook/neptus/neptus/app/helpers/major_select_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/helpers/profilepage_helper.rb": [
+      "/home/saasbook/neptus/neptus/app/helpers/profilepage_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/controllers/about_controller.rb": [
+      "/home/saasbook/neptus/neptus/app/controllers/about_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/controllers/contact_controller.rb": [
+      "/home/saasbook/neptus/neptus/app/controllers/contact_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/controllers/major_select_controller.rb": [
+      "/home/saasbook/neptus/neptus/app/controllers/major_select_controller.rb": [
         1,
         1,
         0,
@@ -87,7 +87,7 @@
         null,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/controllers/profilepage_controller.rb": [
+      "/home/saasbook/neptus/neptus/app/controllers/profilepage_controller.rb": [
         1,
         1,
         null,
@@ -143,7 +143,7 @@
         null,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/mailers/user_mailer.rb": [
+      "/home/saasbook/neptus/neptus/app/mailers/user_mailer.rb": [
         null,
         null,
         1,
@@ -157,19 +157,19 @@
         null,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/models/campus_requirement.rb": [
+      "/home/saasbook/neptus/neptus/app/models/campus_requirement.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/models/college.rb": [
+      "/home/saasbook/neptus/neptus/app/models/college.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/models/course.rb": [
+      "/home/saasbook/neptus/neptus/app/models/course.rb": [
         1,
         1,
         1,
@@ -274,30 +274,30 @@
         null,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/models/ls_college_requirement.rb": [
+      "/home/saasbook/neptus/neptus/app/models/ls_college_requirement.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/models/major.rb": [
+      "/home/saasbook/neptus/neptus/app/models/major.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/models/university_requirement.rb": [
+      "/home/saasbook/neptus/neptus/app/models/university_requirement.rb": [
         1,
         1,
         1,
         null
       ]
     },
-    "timestamp": 1384137977
+    "timestamp": 1384478751
   },
   "Cucumber Features": {
     "coverage": {
-      "/home/saasbook/169proj/neptus-blueprint/app/models/user.rb": [
+      "/home/saasbook/neptus/neptus/app/models/user.rb": [
         1,
         null,
         null,
@@ -326,48 +326,48 @@
         null,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/controllers/application_controller.rb": [
+      "/home/saasbook/neptus/neptus/app/controllers/application_controller.rb": [
         1,
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/helpers/application_helper.rb": [
+      "/home/saasbook/neptus/neptus/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/helpers/about_helper.rb": [
+      "/home/saasbook/neptus/neptus/app/helpers/about_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/helpers/contact_helper.rb": [
+      "/home/saasbook/neptus/neptus/app/helpers/contact_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/helpers/home_helper.rb": [
+      "/home/saasbook/neptus/neptus/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/helpers/major_select_helper.rb": [
+      "/home/saasbook/neptus/neptus/app/helpers/major_select_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/helpers/profilepage_helper.rb": [
+      "/home/saasbook/neptus/neptus/app/helpers/profilepage_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/controllers/about_controller.rb": [
+      "/home/saasbook/neptus/neptus/app/controllers/about_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/controllers/contact_controller.rb": [
+      "/home/saasbook/neptus/neptus/app/controllers/contact_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/controllers/major_select_controller.rb": [
+      "/home/saasbook/neptus/neptus/app/controllers/major_select_controller.rb": [
         1,
         1,
         24,
@@ -383,7 +383,7 @@
         null,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/controllers/profilepage_controller.rb": [
+      "/home/saasbook/neptus/neptus/app/controllers/profilepage_controller.rb": [
         1,
         1,
         null,
@@ -439,7 +439,7 @@
         null,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/mailers/user_mailer.rb": [
+      "/home/saasbook/neptus/neptus/app/mailers/user_mailer.rb": [
         null,
         null,
         1,
@@ -453,19 +453,19 @@
         null,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/models/campus_requirement.rb": [
+      "/home/saasbook/neptus/neptus/app/models/campus_requirement.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/models/college.rb": [
+      "/home/saasbook/neptus/neptus/app/models/college.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/models/course.rb": [
+      "/home/saasbook/neptus/neptus/app/models/course.rb": [
         1,
         1,
         1,
@@ -570,25 +570,25 @@
         null,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/models/ls_college_requirement.rb": [
+      "/home/saasbook/neptus/neptus/app/models/ls_college_requirement.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/models/major.rb": [
+      "/home/saasbook/neptus/neptus/app/models/major.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/saasbook/169proj/neptus-blueprint/app/models/university_requirement.rb": [
+      "/home/saasbook/neptus/neptus/app/models/university_requirement.rb": [
         1,
         1,
         1,
         null
       ]
     },
-    "timestamp": 1384138160
+    "timestamp": 1384478732
   }
 }
