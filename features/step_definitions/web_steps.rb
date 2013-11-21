@@ -43,6 +43,16 @@ And /^I am signed up$/ do
   end
 end
 
+And /^I signed in$/ do
+  fill_in 'user_username', :with => 'JackCen' 
+  fill_in 'user_email', :with => 'foobar@gmail.com' 
+  fill_in 'user_password', :with => '12341234'
+  fill_in 'user_password_confirmation', :with => '12341234'
+  within('#sign_up') do
+    click_button 'Sign up' 
+  end
+end
+
 
 
 
