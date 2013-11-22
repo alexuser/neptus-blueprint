@@ -13,7 +13,7 @@
         <div class="panel-body">
           <div class="progress progress-striped">
             <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow= "60" aria-valuemin="0" aria-valuemax="100" style= "width: <%= @university_req_rate %>%" >
-              <span> <%= @university_req_rate %>% Completed</span>
+              <span><strong><%= @university_req_rate %>% Completed</strong></span>
             </div>
           </div>
 
@@ -37,7 +37,7 @@
         <div class="panel-body">
           <div class="progress progress-striped">
             <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow= "60" aria-valuemin="0" aria-valuemax="100" style= "width: <%= @campus_req_rate %>%" >
-              <span> <%= @campus_req_rate %>% Completed</span>
+              <span><strong><%= @campus_req_rate %>% Completed</strong></span>
             </div>
           </div>
           <%= hidden_field_tag 'requirements[american_cultures]', 0 %>
@@ -55,7 +55,7 @@
         <div class="panel-body">
           <div class="progress progress-striped">
             <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow= "60" aria-valuemin="0" aria-valuemax="100" style= "width: <%= @ls_college_req_rate %>%" >
-              <span> <%= @ls_college_req_rate %>% Completed</span>
+              <span><strong><%= @ls_college_req_rate %>% Completed</strong></span>
             </div>
           </div>
 
@@ -112,32 +112,57 @@
         </div>
         <!-- End of LS College Requirements -->
 
-      
+
       </div>
 
-      <%= submit_tag 'Save', :id => 'requirements_submit', :class => "btn btn-success" %>  
+      <%= submit_tag 'Save', :id => 'requirements_submit', :class => "btn btn-primary btn-block" %>  
       <% end -%>
     </div>  
 
-    <div class="col-md-3">
-      <div class="list-group">
-        <h5><span class="list-group-item">Name</span></h5>
-        <%= label_tag(:user_name,"Alex") %>
-        <h5><span class="list-group-item">College</span></h5>
-        <%= label_tag(:college_name,"College of Foolishness") %>
-        <h5><span class="list-group-item">Entrance Year</span></h5>
-        <%= label_tag(:entrance_year,"2011") %>
-        <h5><span class="list-group-item">Expected year of Graduation</span></h5>
-        <%= label_tag(:expected_graduation_year,"2999") %>
-        <h5><span class="list-group-item">Major</span></h5>
-        <%= label_tag(:major,"Naivete") %>
-        <h5><span class="list-group-item">BluePrint</span></h5>
-        <%= link_to 'Edit Information', 'editprofile', :class => "btn edit-profile"%> 
+    <div class="col-md-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Student Profile</h3>
+        </div>
+
+        <div class="panel-body">
+
+          <div class="panel panel-default">
+            <div class="panel-heading">Name</div>
+            <div class="panel-body">
+              <%= @user.email %>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">College</div>
+            <div class="panel-body">
+              <%= @user.email %>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">Entrance Year</div>
+            <div class="panel-body">
+              <%= @user.email %>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">Expected Year of Graduation</div>
+            <div class="panel-body">
+              <%= @user.email %>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">Major</div>
+            <div class="panel-body">
+              <%= @user.email %>
+            </div>
+          </div>
+
+          <%= button_to 'Edit Information', 'editprofile', :class => "btn btn-primary btn-block"%> 
+        </div>
       </div>
-
     </div>
-
   </div>
 
 
-<%= params %>
+  <%= params %>
