@@ -11,8 +11,6 @@ class Course < ActiveRecord::Base
       if course == nil
         return false
       end
-      puts self.name
-      puts course.american_cultures
       return  course.american_cultures
     
     elsif (requirement == 'american_history_and_institutions')

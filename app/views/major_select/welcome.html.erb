@@ -6,10 +6,12 @@
 
 	<%= select_tag :user_college_id, options_from_collection_for_select(College.all, "id", "name"), { :prompt => "-- Select A College --"} %>
 
+	<br>
 	<div id="versionsDiv">
 	  <%= render :partial => 'majors', :locals => { :object => @majors } %>
 	</div>
 
+	<br>
 	<%= link_to "Next", new_user_session_path, :class => "btn btn-success"%>
 </div>
 
