@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131122064722) do
+ActiveRecord::Schema.define(:version => 20131122200650) do
 
   create_table "campus_requirements", :force => true do |t|
     t.integer  "course_id"
@@ -46,6 +46,11 @@ ActiveRecord::Schema.define(:version => 20131122064722) do
     t.boolean  "social_and_behavioral_sciences", :default => false
     t.datetime "created_at",                                        :null => false
     t.datetime "updated_at",                                        :null => false
+  end
+
+  create_table "major_requirements", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "majors", :force => true do |t|
@@ -95,6 +100,27 @@ ActiveRecord::Schema.define(:version => 20131122064722) do
     t.date     "entrance_year"
     t.date     "expected_year"
     t.string   "major"
+    t.boolean  "cs_sixtyonea",                      :default => false
+    t.boolean  "cs_sixtyoneb",                      :default => false
+    t.boolean  "cs_sixtyonec",                      :default => false
+    t.boolean  "math_onea",                         :default => false
+    t.boolean  "math_oneb",                         :default => false
+    t.boolean  "math_fiftyfour",                    :default => false
+    t.boolean  "cs_seventy",                        :default => false
+    t.boolean  "ee_fourty",                         :default => false
+    t.boolean  "ee_twenty",                         :default => false
+    t.boolean  "ee_fourtytwo",                      :default => false
+    t.boolean  "cs_oneseventy",                     :default => false
+    t.boolean  "cs_onesixtytwo",                    :default => false
+    t.boolean  "cs_onefifty",                       :default => false
+    t.boolean  "cs_onefiftytwo",                    :default => false
+    t.boolean  "cs_onesixty",                       :default => false
+    t.boolean  "cs_onesixtyone",                    :default => false
+    t.boolean  "cs_onesixtyfour",                   :default => false
+    t.boolean  "cs_onesixtynine",                   :default => false
+    t.boolean  "cs_oneeightyfour",                  :default => false
+    t.boolean  "cs_oneeightysix",                   :default => false
+    t.boolean  "cs_oneeightyeight",                 :default => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

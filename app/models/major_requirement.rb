@@ -1,0 +1,149 @@
+class MajorRequirement < ActiveRecord::Base
+	belongs_to :course
+	attr_accessible :course_id
+
+	attr_accessible :cs_sixtyonea
+	attr_accessible :cs_sixtyoneb
+	attr_accessible :cs_sixtyonec
+	attr_accessible :math_onea
+	attr_accessible :math_oneb
+	attr_accessible :math_fiftyfour
+	attr_accessible :cs_seventy
+	attr_accessible :ee_fourty
+	attr_accessible :ee_twenty
+	attr_accessible :ee_fourtytwo
+	attr_accessible :cs_oneseventy
+	attr_accessible :cs_onesixtytwo
+	attr_accessible :cs_onefifty
+	attr_accessible :cs_onefiftytwo 
+	attr_accessible :cs_onesixty
+	attr_accessible :cs_onesixtyone
+	attr_accessible :cs_onesixtyfour
+	attr_accessible :cs_onesixtynine
+	attr_accessible :cs_oneeightyfour
+	attr_accessible :cs_oneeightysix
+	attr_accessible :cs_oneeightyeight
+
+  # This method takes a hash and a user object 
+  # And it will set the requirements based on the user object
+  def self.set_requirements(output_requirements, input_requirements) 
+  	output_requirements[:cs_sixtyonea] = input_requirements[:cs_sixtyonea]
+  	output_requirements[:cs_sixtyoneb] = input_requirements[:cs_sixtyoneb]
+  	output_requirements[:cs_sixtyonec] = input_requirements[:cs_sixtyonec]
+  	output_requirements[:math_onea] = input_requirements[:math_onea]
+  	output_requirements[:math_oneb] = input_requirements[:math_oneb]
+  	output_requirements[:math_fiftyfour] = input_requirements[:math_fiftyfour]
+  	output_requirements[:cs_seventy] = input_requirements[:cs_seventy]
+  	output_requirements[:ee_fourty] = input_requirements[:ee_fourty]
+  	output_requirements[:ee_twenty] = input_requirements[:ee_twenty]
+  	output_requirements[:ee_fourtytwo] = input_requirements[:ee_fourtytwo]
+  	output_requirements[:cs_oneseventy] = input_requirements[:cs_oneseventy]
+  	output_requirements[:cs_onesixtytwo] = input_requirements[:cs_onesixtytwo]
+  	output_requirements[:cs_onefifty] = input_requirements[:cs_onefifty]
+  	output_requirements[:cs_onefiftytwo ] = input_requirements[:cs_onefiftytwo]
+  	output_requirements[:cs_onesixty] = input_requirements[:cs_onesixty]
+  	output_requirements[:cs_onesixtyone] = input_requirements[:cs_onesixtyone]
+  	output_requirements[:cs_onesixtyfour] = input_requirements[:cs_onesixtyfour]
+  	output_requirements[:cs_onesixtynine] = input_requirements[:cs_onesixtynine]
+  	output_requirements[:cs_oneeightyfour] = input_requirements[:cs_oneeightyfour]
+  	output_requirements[:cs_oneeightysix] = input_requirements[:cs_oneeightysix]
+  	output_requirements[:cs_oneeightyeight] = input_requirements[:cs_oneeightyeight]
+  end 
+
+  def self.progress(user)
+  	finished_rate = 0
+  	#TODO 
+
+  	return finished_rate
+  end
+
+  def self.get_courses(fufilled_requirements)
+  	course_ids = []
+
+  	if (fufilled_requirements[:cs_sixtyonea] == false)
+  		course_ids << Course.find_by_name("CS 61A")
+  	end 
+
+    if (fufilled_requirements[:cs_sixtyoneb] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+
+    if (fufilled_requirements[:cs_sixtyonec] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+
+    if (fufilled_requirements[:math_onea] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+
+    if (fufilled_requirements[:math_oneb] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+
+    if (fufilled_requirements[:math_fiftyfour] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+
+    if (fufilled_requirements[:cs_seventy] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+
+    if (fufilled_requirements[:ee_fourty] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+
+    if (fufilled_requirements[:ee_twenty] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+
+    if (fufilled_requirements[:ee_fourtytwo] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+
+    if (fufilled_requirements[:cs_oneseventy] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+
+    if (fufilled_requirements[:cs_onesixtytwo] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+
+    if (fufilled_requirements[:cs_onefifty] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+
+    if (fufilled_requirements[:cs_onefiftytwo] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+
+    if (fufilled_requirements[:cs_onesixty] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+
+    if (fufilled_requirements[:cs_onesixtyone] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+
+    if (fufilled_requirements[:cs_onesixtyfour] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+
+    if (fufilled_requirements[:cs_onesixtynine] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+
+    if (fufilled_requirements[:cs_oneeightyfour] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+
+    if (fufilled_requirements[:cs_oneeightysix] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+
+    if (fufilled_requirements[:cs_oneeightyeight] == false)
+      course_ids << Course.find_by_name("CS 61A")
+    end 
+  	return course_ids
+  end 
+
+end

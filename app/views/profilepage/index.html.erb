@@ -135,7 +135,98 @@
                 </div>
               </div>
 
-              
+              <div class="col-lg-9">
+                <h5>Lower Division Requirements</h5>
+                <%= hidden_field_tag 'requirements[cs_sixtyonea]', 0 %>
+                <%= check_box_tag 'requirements[cs_sixtyonea]', 1,@user[:cs_sixtyonea], :id => 'requirements_cs_sixtyonea' %>
+                <%= 'CS 61A Requirements Satisfied' %>
+                <br>
+                <%= hidden_field_tag 'requirements[cs_sixtyoneb]', 0 %>
+                <%= check_box_tag 'requirements[cs_sixtyoneb]', 1,@user[:cs_sixtyoneb], :id => 'requirements_cs_sixtyoneb' %>
+                <%= 'CS 61B Requirements Satisfied' %>
+                <br>
+                <%= hidden_field_tag 'requirements[cs_sixtyonec]', 0 %>
+                <%= check_box_tag 'requirements[cs_sixtyonec]', 1,@user[:cs_sixtyonec], :id => 'requirements_cs_sixtyonec' %>
+                <%= 'CS 61C Requirements Satisfied' %>
+                <br>
+                <%= hidden_field_tag 'requirements[math_onea]', 0 %>
+                <%= check_box_tag 'requirements[math_onea]', 1,@user[:math_onea], :id => 'requirements_math_onea' %>
+                <%= 'Math 1A Requirements Satisfied' %>              
+                <br>
+                <%= hidden_field_tag 'requirements[math_oneb]', 0 %>
+                <%= check_box_tag 'requirements[math_oneb]', 1,@user[:math_oneb], :id => 'requirements_math_oneb' %>
+                <%= 'Math 1B Requirements Satisfied' %>
+                <br>
+                <%= hidden_field_tag 'requirements[math_fiftyfour]', 0 %>
+                <%= check_box_tag 'requirements[math_fiftyfour]', 1,@user[:math_fiftyfour], :id => 'requirements_math_fiftyfour' %>
+                <%= 'Math 54 Requirements Satisfied' %>
+                <br>
+                <%= hidden_field_tag 'requirements[cs_seventy]', 0 %>
+                <%= check_box_tag 'requirements[cs_seventy]', 1,@user[:cs_seventy], :id => 'requirements_cs_seventy' %>
+                <%= 'CS 70 Requirements Satisfied' %>
+                <br>
+                <%= hidden_field_tag 'requirements[ee_twenty]', 0 %>
+                <%= check_box_tag 'requirements[ee_twenty]', 1,@user[:ee_twenty], :id => 'requirements_ee_twenty' %>
+                <%= 'EE 20 Requirements Satisfied' %>
+                <br>
+                <%= hidden_field_tag 'requirements[ee_fourty]', 0 %>
+                <%= check_box_tag 'requirements[ee_fourty]', 1,@user[:ee_fourty], :id => 'requirements_ee_fourty' %>
+                <%= 'EE 40 Requirements Satisfied' %>
+                <br>
+                <%= hidden_field_tag 'requirements[ee_fourtytwo]', 0 %>
+                <%= check_box_tag 'requirements[ee_fourtytwo]', 1,@user[:ee_fourtytwo], :id => 'requirements_ee_fourtytwo' %>
+                <%= 'EE 42 Requirements Satisfied' %>
+              </div>      
+
+              <div class="col-lg-9">
+                <h5>Upper Division Required Courses</h5>
+                <%= hidden_field_tag 'requirements[cs_oneseventy]', 0 %>
+                <%= check_box_tag 'requirements[cs_oneseventy]', 1,@user[:cs_oneseventy], :id => 'requirements_cs_oneseventy' %>
+                <%= 'CS 170 Requirements Satisfied' %>
+                <br>
+                <%= hidden_field_tag 'requirements[cs_onesixtytwo]', 0 %>
+                <%= check_box_tag 'requirements[cs_onesixtytwo]', 1,@user[:cs_onesixtytwo], :id => 'requirements_cs_onesixtytwo' %>
+                <%= 'CS 162 Requirements Satisfied' %>
+              </div>      
+
+              <div class="col-lg-9">
+                <h5>Breadth Courses</h5>
+                <%= hidden_field_tag 'requirements[cs_onefifty]', 0 %>
+                <%= check_box_tag 'requirements[cs_onefifty]', 1,@user[:cs_onefifty], :id => 'requirements_cs_onefifty' %>
+                <%= 'CS 150 Requirements Satisfied' %>
+                <br>
+                <%= hidden_field_tag 'requirements[cs_onefiftytwo]', 0 %>
+                <%= check_box_tag 'requirements[cs_onefiftytwo]', 1,@user[:cs_onefiftytwo], :id => 'requirements_cs_onefiftytwo' %>
+                <%= 'CS 152 Requirements Satisfied' %>
+                <br>
+                <%= hidden_field_tag 'requirements[cs_onesixty]', 0 %>
+                <%= check_box_tag 'requirements[cs_onesixty]', 1,@user[:cs_onesixty], :id => 'requirements_cs_onesixty' %>
+                <%= 'CS 160 Requirements Satisfied' %>
+                <br>
+                <%= hidden_field_tag 'requirements[cs_onesixtyone]', 0 %>
+                <%= check_box_tag 'requirements[cs_onesixtyone]', 1,@user[:cs_onesixtyone], :id => 'requirements_cs_onesixtyone' %>
+                <%= 'CS 161 Requirements Satisfied' %>              
+                <br>
+                <%= hidden_field_tag 'requirements[cs_onesixtyfour]', 0 %>
+                <%= check_box_tag 'requirements[cs_onesixtyfour]', 1,@user[:cs_onesixtyfour], :id => 'requirements_cs_onesixtyfour' %>
+                <%= 'CS 164 Requirements Satisfied' %>
+                <br>
+                <%= hidden_field_tag 'requirements[cs_onesixtynine]', 0 %>
+                <%= check_box_tag 'requirements[cs_onesixtynine]', 1,@user[:cs_onesixtynine], :id => 'requirements_cs_onesixtynine' %>
+                <%= 'CS 169 Requirements Satisfied' %>
+                <br>
+                <%= hidden_field_tag 'requirements[cs_oneeightyfour]', 0 %>
+                <%= check_box_tag 'requirements[cs_oneeightyfour]', 1,@user[:cs_oneeightyfour], :id => 'requirements_cs_oneeightyfour' %>
+                <%= 'CS 184 Requirements Satisfied' %>
+                <br>
+                <%= hidden_field_tag 'requirements[cs_oneeightysix]', 0 %>
+                <%= check_box_tag 'requirements[cs_oneeightysix]', 1,@user[:cs_oneeightysix], :id => 'requirements_cs_oneeightysix' %>
+                <%= 'CS 186 Requirements Satisfied' %>
+                <br>
+                <%= hidden_field_tag 'requirements[cs_oneeightyeight]', 0 %>
+                <%= check_box_tag 'requirements[cs_oneeightyeight]', 1,@user[:cs_oneeightyeight], :id => 'requirements_cs_oneeightyeight' %>
+                <%= 'CS 188 Requirements Satisfied' %>
+              </div>   
             </div>
           </div>
 

@@ -8,6 +8,7 @@ class ProfilepageController < ApplicationController
             CampusRequirement.set_requirements(@user, params[:requirements])
             LsCollegeRequirement.set_requirements(@user, params[:requirements])
             UniversityRequirement.set_requirements(@user, params[:requirements])
+            MajorRequirement.set_requirements(@user, params[:requirements])
             @user.save
             flash[:notice] = "Your requirements have been successfully saved"
         end 
@@ -15,7 +16,7 @@ class ProfilepageController < ApplicationController
         @university_req_rate = UniversityRequirement.progress(@user)
         @campus_req_rate = CampusRequirement.progress(@user)
         @ls_college_req_rate = LsCollegeRequirement.progress(@user)
-    
+        
     end
 
     def report
