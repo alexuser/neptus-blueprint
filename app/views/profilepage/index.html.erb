@@ -130,35 +130,35 @@
           <div class="panel panel-default">
             <div class="panel-heading">Name</div>
             <div class="panel-body">
-              <%= @user.email %>
+              <%= @user.name %>
             </div>
           </div>
           <div class="panel panel-default">
             <div class="panel-heading">College</div>
             <div class="panel-body">
-              <%= @user.email %>
+              <%= @user.college %>
             </div>
           </div>
           <div class="panel panel-default">
             <div class="panel-heading">Entrance Year</div>
             <div class="panel-body">
-              <%= @user.email %>
+              <%= @user.entrance_year %>
             </div>
           </div>
           <div class="panel panel-default">
             <div class="panel-heading">Expected Year of Graduation</div>
             <div class="panel-body">
-              <%= @user.email %>
+              <%= @user.expected_year %>
             </div>
           </div>
           <div class="panel panel-default">
             <div class="panel-heading">Major</div>
             <div class="panel-body">
-              <%= @user.email %>
+              <%= @user.major %>
             </div>
           </div>
 
-          <%= button_to 'Edit Information', 'editprofile', :class => "btn btn-primary btn-block"%> 
+          <%= link_to 'Edit Information', edit_user_registration_path, :class => "btn btn-primary btn-block"%> 
         </div>
       </div>
     </div>

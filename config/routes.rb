@@ -1,17 +1,14 @@
 Neptus::Application.routes.draw do
-  get "contact/index"
 
+  match '/contact' => 'welcome#contact'
+  match '/home' => 'welcome#home'
+  match '/about' => 'welcome#about'
 
+  devise_for :users                              
 
-  devise_for :users
   resources :profilepage
-  resources :about
-  resources :contact
-  resources :editprofile
 
-  root :to => 'major_select#welcome'
-  
-  
+  root :to => 'welcome#home'
   
   get "major_select/welcome"
   match 'major_select/update_majors' => 'major_select#update_majors'

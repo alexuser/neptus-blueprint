@@ -10,67 +10,41 @@
 <body>
 
   <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-          <div class="navbar-header">
-            <%= link_to "Neptus Blueprint", major_select_welcome_path, :class=>"navbar-brand" %>
-          </div>
-          <div class="navbar-collapse collapse">
-           
-            <ul class="nav navbar-nav">
-              <li><%= link_to "Home", major_select_welcome_path %></li>
+    <div class="container">
+      <div class="navbar-header">
+        <%= link_to "Neptus Blueprint", major_select_welcome_path, :class=>"navbar-brand" %>
+      </div>
+      <div class="navbar-collapse collapse">
 
-              <%if user_signed_in? %>
-                <li><%= link_to "My profile", profilepage_index_path %></li>
-              <% end %>
-              
-              <li><%= link_to "About", about_index_path %></li>
-              <li><%= link_to "Contact", contact_index_path%></li>
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Home", major_select_welcome_path %></li>
 
-            </ul>
-            
-                <div class="navbar-right">
-                  <%if user_signed_in? %>
-                   <ul class="nav navbar-nav">
-                     <div class="dropdown">
-                     
-                       <div class="btn-group">
-                         <button type="button" class="btn btn-info"><%= "#{current_user.username}" %></button>
-                         <button type="button" id="drop" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-                           <span class="caret"></span>
-                           <span class="sr-only">Toggle Dropdown</span>
-                         </button>
-                          <ul class="dropdown-menu" role="menu" aria-labelledby="drop">
-                            <li><%= link_to "#{current_user.username}" %></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "Not-you" %></li>
-                          </ul>
-                       </div>  
-                     </div>
-                     </li>
-                   </ul>
+          <%if user_signed_in? %>
+          <li><%= link_to "My profile", profilepage_index_path %></li>
+          <% end %>
 
-                  <% else %>
-                   <%= link_to "Sign up", new_user_registration_path, :class => "btn btn-info" %>  <%= link_to "sign in", new_user_session_path, :class => "btn btn-info" %>
-                  <% end %>
+          <li><%= link_to "About", about_path %></li>
+          <li><%= link_to "Contact", contact_path%></li>
 
+        </ul>
 
-                </div>
-            
-          </div><!--/.navbar-collapse -->
-        </div>
+        <%= render 'layouts/devise_header' %>
       </div>
 
-    <div class="container">
-    
-      <%= yield %>
-    </div>
+    </div><!--/.navbar-collapse -->
+  </div>
+</div>
+
+<div class="container">
+
+  <%= yield %>
+</div>
 
 
-    <hr>
-    <footer>
-    <p class ="col-md-7 col-md-offset-2">Created by Kaiqi Cen, Sijia Liu, Zhuoyong Jing, Jiachen Jiang, Alexander Chen, Gerald Green</p>
-    </footer>
-    
+<hr>
+<footer>
+  <p class ="col-md-7 col-md-offset-2">Created by Kaiqi Cen, Sijia Liu, Zhuoyong Jing, Jiachen Jiang, Alexander Chen, Gerald Green</p>
+</footer>
+
 </body>
 </html>

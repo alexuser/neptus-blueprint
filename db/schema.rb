@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131122015842) do
+ActiveRecord::Schema.define(:version => 20131122064722) do
 
   create_table "campus_requirements", :force => true do |t|
     t.integer  "course_id"
@@ -90,6 +90,11 @@ ActiveRecord::Schema.define(:version => 20131122015842) do
     t.boolean  "philosophy_and_values",             :default => false
     t.boolean  "physical_science",                  :default => false
     t.boolean  "social_and_behavioral_sciences",    :default => false
+    t.string   "name"
+    t.string   "college"
+    t.date     "entrance_year"
+    t.date     "expected_year"
+    t.string   "major"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
