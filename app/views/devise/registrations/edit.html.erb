@@ -21,22 +21,32 @@
       <% end %>
 
       <%= f.label :name %><br />
-      <%= f.text_field :name, :class => "form-control" %>
+      <%= f.text_field :name, :class => "form-control" %><br>
+
       <br>
-      <%= f.label :entrance_year %>
-      <%= f.date_select :entrance_year, :start_year => Time.now.year - 2, :end_year => Time.now.year + 20, :discard_day => true, :discard_month => true %>
-      <br>
-      
-      <%= f.label :expected_year %>
-      <%= f.date_select :expected_year, :start_year => Time.now.year - 2, :end_year => Time.now.year + 20, :discard_day => true, :discard_month => true %>
-      
-      <br>
-      <%= f.label :major %>
-      <%= f.text_field :major, :class => "form-control", :placeholder => "Enter your major" %>
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h5 class="panel-title">School Information</h5>
+        </div>
+        <div class="panel-body">
+
+          <%= f.label :entrance_year %>
+          <%= f.date_select :entrance_year, :start_year => Time.now.year - 2, :end_year => Time.now.year + 20, :discard_day => true, :discard_month => true %>
+          <br>
+          <%= f.label :expected_year %>
+          <%= f.date_select :expected_year, :start_year => Time.now.year - 2, :end_year => Time.now.year + 20, :discard_day => true, :discard_month => true %>
+          <br>
+          <%= f.label :college %>
+          <%= f.select :college, College.all.collect {|p| [ p.name] } %>
+          <br>
+          <%= f.label :major %>
+          <%= f.select :major, Major.all.collect {|p| [p.name]} %>
+        </div>
+      </div>
 
       <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
       <%= f.password_field :password, :autocomplete => "off" , :class => "form-control"%>
-
+      <br>
       <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation , :autocomplete => "off", :class => "form-control"%>
 
@@ -57,5 +67,5 @@
   </div>
 
 </div>
-
+</div>
 
