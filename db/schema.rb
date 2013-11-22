@@ -11,13 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131109221155) do
+ActiveRecord::Schema.define(:version => 20131122015842) do
 
   create_table "campus_requirements", :force => true do |t|
     t.integer  "course_id"
-    t.boolean  "american_cultures"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.boolean  "american_cultures", :default => false
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
   end
 
   create_table "colleges", :force => true do |t|
@@ -34,18 +34,18 @@ ActiveRecord::Schema.define(:version => 20131109221155) do
 
   create_table "ls_college_requirements", :force => true do |t|
     t.integer  "course_id"
-    t.boolean  "reading_and_composition"
-    t.boolean  "quantitative_reasoning"
-    t.boolean  "foreign_language_breadth"
-    t.boolean  "arts_and_literature"
-    t.boolean  "biological_science"
-    t.boolean  "historical_studies"
-    t.boolean  "international_studies"
-    t.boolean  "philosophy_and_values"
-    t.boolean  "physical_science"
-    t.boolean  "social_and_behavioral_sciences"
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
+    t.boolean  "reading_and_composition",        :default => false
+    t.boolean  "quantitative_reasoning",         :default => false
+    t.boolean  "foreign_language_breadth",       :default => false
+    t.boolean  "arts_and_literature",            :default => false
+    t.boolean  "biological_science",             :default => false
+    t.boolean  "historical_studies",             :default => false
+    t.boolean  "international_studies",          :default => false
+    t.boolean  "philosophy_and_values",          :default => false
+    t.boolean  "physical_science",               :default => false
+    t.boolean  "social_and_behavioral_sciences", :default => false
+    t.datetime "created_at",                                        :null => false
+    t.datetime "updated_at",                                        :null => false
   end
 
   create_table "majors", :force => true do |t|
@@ -57,26 +57,39 @@ ActiveRecord::Schema.define(:version => 20131109221155) do
 
   create_table "university_requirements", :force => true do |t|
     t.integer  "course_id"
-    t.boolean  "entry_level_writing"
-    t.boolean  "american_history_and_institutions"
-    t.datetime "created_at",                        :null => false
-    t.datetime "updated_at",                        :null => false
+    t.boolean  "entry_level_writing",               :default => false
+    t.boolean  "american_history_and_institutions", :default => false
+    t.datetime "created_at",                                           :null => false
+    t.datetime "updated_at",                                           :null => false
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "email",                             :default => "",    :null => false
+    t.string   "encrypted_password",                :default => "",    :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          :default => 0,  :null => false
+    t.integer  "sign_in_count",                     :default => 0,     :null => false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
+    t.datetime "created_at",                                           :null => false
+    t.datetime "updated_at",                                           :null => false
     t.string   "username"
+    t.boolean  "entry_level_writing",               :default => false
+    t.boolean  "american_history_and_institutions", :default => false
+    t.boolean  "american_cultures",                 :default => false
+    t.boolean  "reading_and_composition",           :default => false
+    t.boolean  "quantitative_reasoning",            :default => false
+    t.boolean  "foreign_language_breadth",          :default => false
+    t.boolean  "arts_and_literature",               :default => false
+    t.boolean  "biological_science",                :default => false
+    t.boolean  "historical_studies",                :default => false
+    t.boolean  "international_studies",             :default => false
+    t.boolean  "philosophy_and_values",             :default => false
+    t.boolean  "physical_science",                  :default => false
+    t.boolean  "social_and_behavioral_sciences",    :default => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

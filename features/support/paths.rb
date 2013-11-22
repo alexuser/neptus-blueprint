@@ -18,6 +18,7 @@ module NavigationHelpers
     when /^Contact page/ then contact_index_path
     when /^profilepage/ then profilepage_index_path
     when /^the profilepage/ then profilepage_index_path
+    when /^the edit profile page/ then editprofile_index_path
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
