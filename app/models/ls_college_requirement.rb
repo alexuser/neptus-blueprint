@@ -16,4 +16,22 @@ class LsCollegeRequirement < ActiveRecord::Base
   	output_requirements[:reading_and_composition] =        input_requirements[:reading_and_composition]
   	output_requirements[:social_and_behavioral_sciences] = input_requirements[:social_and_behavioral_sciences]
   end 
+
+  def self.progress(user)
+    finished_rate = 0
+
+    finished_rate += 10 if user[:arts_and_literature] == true
+    finished_rate += 10 if user[:biological_science]  == true
+    finished_rate += 10 if user[:foreign_language_breadth] == true
+    finished_rate += 10 if user[:historical_studies] == true
+    finished_rate += 10 if user[:international_studies] == true
+    finished_rate += 10 if user[:philosophy_and_values] == true
+    finished_rate += 10 if user[:physical_science] == true
+    finished_rate += 10 if user[:quantitative_reasoning] == true
+    finished_rate += 10 if user[:reading_and_composition] == true
+    finished_rate += 10 if user[:social_and_behavioral_sciences] == true
+
+    return finished_rate
+  end 
+
 end

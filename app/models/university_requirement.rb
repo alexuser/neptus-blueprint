@@ -8,4 +8,13 @@ class UniversityRequirement < ActiveRecord::Base
   	output_requirements[:american_history_and_institutions] = input_requirements[:american_history_and_institutions]
   	output_requirements[:entry_level_writing] =               input_requirements[:entry_level_writing]
   end 
+
+  def self.progress(user)
+  	finished_rate = 0
+
+  	finished_rate += 50 if user[:american_history_and_institutions] == true
+  	finished_rate += 50 if user[:entry_level_writing] == true
+
+  	return finished_rate
+  end 
 end

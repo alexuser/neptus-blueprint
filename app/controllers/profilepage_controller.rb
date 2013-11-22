@@ -5,45 +5,17 @@ class ProfilepageController < ApplicationController
      def index
         @user = current_user
         
-        if (params[:requirements].present?) # user checks the requirements         
+        if (params[:requirements].present?) # user makes some changes to the requirements         
             CampusRequirement.set_requirements(@user, params[:requirements])
             LsCollegeRequirement.set_requirements(@user, params[:requirements])
             UniversityRequirement.set_requirements(@user, params[:requirements])
             @user.save
         end 
 
-        @completed_requirements = Hash.new(false)
-
-        @university_req_rate = 100
-        @campus_req_rate = 100
-        @ls_college_req_rate = 100
-        @req_array = Array.new
-        @completed_requirements.each do |req|
-            @req_array << req[0]
-        end
+        @university_req_rate = UniversityRequirement.progress(@user)
+        @campus_req_rate = CampusRequirement.progress(@user)
+        @ls_college_req_rate = LsCollegeRequirement.progress(@user)
         
-        @courses_hash = filter(@req_array)
-        @courses_hash = @courses_hash.sort_by {|key, value| -value.size}
-            /case req[0]
-            when 'entry_level_writing'
-            when 'american_history_and_institutions'
-                @university_req_rate += 1
-            when 'american_cultures'
-                @campus_req_rate += 1
-            when 'reading_and_Composition_requirements'
-            when 'quantitative_reasoning_requirements'
-            when 'foreign_language_requirements'
-            when 'arts_and_literature'
-            when 'biological_science'
-            when 'historical_studies'
-            when 'international_studies'
-            when 'philosophy_and_values'
-            when 'physical_science'
-            when 'social_and_behavioral_sciences'
-                @ls_college_req_rate += 1
-            end/
-        
-
      end
 
      def filter(requirements)
