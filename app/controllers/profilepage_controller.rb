@@ -1,18 +1,22 @@
 class ProfilepageController < ApplicationController
      before_filter :authenticate_user!
 
+
      def index
         @user = current_user
+        
+        if (params[:requirements].present?) # user checks the requirements         
+            CampusRequirement.set_requirements(@user, params[:requirements])
+            LsCollegeRequirement.set_requirements(@user, params[:requirements])
+            UniversityRequirement.set_requirements(@user, params[:requirements])
+            @user.save
+        end 
+
         @completed_requirements = Hash.new(false)
 
-        CampusRequirement.set_requirements(@completed_requirements, @user)
-        LsCollegeRequirement.set_requirements(@completed_requirements, @user)
-        UniversityRequirement.set_requirements(@completed_requirements, @user)
-
-
-        @university_req_rate = 0
-        @campus_req_rate = 0
-        @ls_college_req_rate = 0
+        @university_req_rate = 100
+        @campus_req_rate = 100
+        @ls_college_req_rate = 100
         @req_array = Array.new
         @completed_requirements.each do |req|
             @req_array << req[0]
@@ -39,6 +43,7 @@ class ProfilepageController < ApplicationController
                 @ls_college_req_rate += 1
             end/
         
+
      end
 
      def filter(requirements)

@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(:version => 20131122015842) do
     t.datetime "created_at",                                           :null => false
     t.datetime "updated_at",                                           :null => false
     t.string   "username"
-    t.boolean  "entry_level_requirement",           :default => false
+    t.boolean  "entry_level_writing",               :default => false
     t.boolean  "american_history_and_institutions", :default => false
     t.boolean  "american_cultures",                 :default => false
     t.boolean  "reading_and_composition",           :default => false

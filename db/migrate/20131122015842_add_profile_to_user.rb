@@ -1,7 +1,7 @@
 class AddProfileToUser < ActiveRecord::Migration
   def change
   	# university requirements
-  	add_column :users, :entry_level_requirement,           :boolean, :default => false
+  	add_column :users, :entry_level_writing,               :boolean, :default => false
   	add_column :users, :american_history_and_institutions, :boolean, :default => false
 
   	# campus requirement 

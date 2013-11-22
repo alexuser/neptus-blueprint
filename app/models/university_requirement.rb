@@ -4,8 +4,8 @@ class UniversityRequirement < ActiveRecord::Base
 
   # This method takes a hash and a user object 
   # And it will set the requirements based on the user object
-  def self.set_requirements(completed_requirements, user) 
-  	completed_requirements[:american_history_and_institutions] = user[:american_history_and_institutions]
-  	completed_requirements[:entry_level_writing] = user[:entry_level_writing]
+  def self.set_requirements(output_requirements, input_requirements) 
+  	output_requirements[:american_history_and_institutions] = input_requirements[:american_history_and_institutions]
+  	output_requirements[:entry_level_writing] =               input_requirements[:entry_level_writing]
   end 
 end

@@ -1,158 +1,114 @@
 
+
 <div class="container">
 
   <div class="row">
     <div class="col-md-8">
 
-      <div class="panel-group" id="accordion">
-      <%= form_tag profilepage_index_path, :method => :get, :id => 'requirements_form' do -%>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">
-              <a id="uni-req" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">University Requirements</a>
-            </h3>
-          </div>
-          <div class="progress progress-striped active">
-            <div class="progress-bar"  role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: #{@university_req_rate}%">
-              <span class="sr-only">50% Complete</span>
+      <!--  University Requirements  -->     
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">University Requirements</h3>
+        </div>
+        <div class="panel-body">
+          <div class="progress progress-striped">
+            <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow= "60" aria-valuemin="0" aria-valuemax="100" style= "width: <%= @university_req_rate %>%" >
+              <span> <%= @university_req_rate %>% Completed</span>
             </div>
           </div>
-          <div id="collapseOne" class="panel-collapse collapse in">
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-lg-6">
+          <%= check_box_tag "requirements[entry_level_writing]", 1, @user[:entry_level_writing], :id => "requirements_entry_level_writing" %>
+          <%= 'Entry-Level Writing Satisfied' %>
+          <br>
+          <%= check_box_tag 'requirements[american_history_and_institutions]', 1, @user[:american_history_and_institutions],:id => 'requirements_american_history_and_institutions' %>
+          <%= 'American History and Institutions Satisfied' %>
+        </div>
+      </div>
+      <!-- End of University Requirements -->
 
-                  <%= check_box_tag "requirements[entry_level_writing]", 1, @completed_requirements.include?('entry_level_writing'), :id => "requirements_entry_level_writing" %>
-                  <%= 'Entry-Level Writing Satisfied' %>
-                  <br>
-                  <%= check_box_tag 'requirements[american_history_and_institutions]', 1, @completed_requirements.include?('american_history_and_institutions'),:id => 'requirements_american_history_and_institutions' %>
-                  <%= 'American History and Institutions Satisfied' %>
-
-                </div><!-- /.col-lg-6 -->
-              </div>
+      <!-- Campus Requirements -->
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Campus Requirements</h3>
+        </div>
+        <div class="panel-body">
+          <div class="progress progress-striped">
+            <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow= "60" aria-valuemin="0" aria-valuemax="100" style= "width: <%= @campus_req_rate %>%" >
+              <span> <%= @campus_req_rate %>% Completed</span>
             </div>
           </div>
-        </div>  
+          <%= check_box_tag 'requirements[american_cultures]', 1,@user[:american_cultures], :id => 'requirements_american_cultures' %>
+          <%= 'American Cultures Satisfied' %>
+        </div>
+      </div>
+      <!-- End of Campus Requirements -->
 
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h2 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Campus Requirement</a>
-            </h2>
+      <!-- LS College Requirements -->
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">L&S College Requirements</h3>
+        </div>
+        <div class="panel-body">
+          <div class="progress progress-striped">
+            <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow= "60" aria-valuemin="0" aria-valuemax="100" style= "width: <%= @university_req_rate %>%" >
+              <span> <%= @university_req_rate %>% Completed</span>
+            </div>
           </div>
-          <div class="progress progress-striped active">
-            <div class="progress-bar"  role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-              <span class="sr-only">100% Complete</span>
-            </div>
-          </div>    
-          <div id="collapseTwo" class="panel-collapse collapse">
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-lg-6">
-                  <%= check_box_tag 'requirements[american_cultures]', 1,@completed_requirements.include?('american_cultures'), :id => 'requirements_american_cultures' %>
-                  <%= 'American Cultures Satisfied' %>
-                </div><!-- /.col-lg-6 -->
-              </div>
-            </div>
+          <%= check_box_tag 'requirements[reading_and_composition_requirements]', 1,@user[:reading_and_composition_requirements], :id => 'requirements_reading_and_composition_requirements' %>
+          <%= 'Reading & Composition Requirements Satisfied' %>
+          <br>
+          <%= check_box_tag 'requirements[quantitative_reasoning_requirements]', 1,@user[:quantitative_reasoning_requirements], :id => 'requirements_quantitative_reasoning_requirements' %>
+          <%= 'Quantitative Reasoning Requirements Satisfied' %>
+          <br>
+          <%= check_box_tag 'requirements[foreign_language_requirements]', 1,@user[:foreign_language_requirements], :id => 'requirements_foreign_language_requirements' %>
+          <%= 'Foreign Language Requirements Satisfied' %>
+          <div class="col-lg-9">
+            <h4>Seven Breath Requirements</h4>
+            <%= check_box_tag 'requirements[arts_and_literature]', 1,@user[:arts_and_literature], :id => 'requirements_arts_and_literature' %>
+            <%= 'Arts and Literature Satisfied' %>
+            <br>
+            <%= check_box_tag 'requirements[biological_science]', 1,@user[:biological_science], :id => 'requirements_biological_science' %>
+            <%= 'Biological Science Satisfied' %>
+            <br>
+            <%= check_box_tag 'requirements[historical_studies]', 1,@user[:historical_studies], :id => 'requirements_historical_studies'%>
+            <%= 'Historical Studies Satisfied' %>
+            <br>
+            <%= check_box_tag 'requirements[international_studies]', 1,@user[:international_studies], :id => 'requirements_international_studies'%>
+            <%= 'International Studies Satisfied' %>
+            <br>
+            <%= check_box_tag 'requirements[philosophy_and_values]', 1,@user[:philosophy_and_values], :id => 'requirements_philosophy_and_values' %>
+            <%= 'Philosophy and Values Satisfied' %>
+            <br>
+            <%= check_box_tag 'requirements[physical_science]', 1,@user[:physical_science], :id => 'requirements_physical_science'%>
+            <%= 'Physical Science Satisfied' %>
+            <br>
+            <%= check_box_tag 'requirements[social_and_behavioral_sciences]', 1,@user[:social_and_behavioral_sciences], :id => 'requirements_social_and_behavioral_sciences' %>
+            <%= 'Social and Behavioral Sciences Satisfied' %>
           </div>
         </div>
+        <!-- End of LS College Requirements -->
 
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h2 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">L&S College Requirements</a>
-            </h2>
-          </div>
-          <div class="progress progress-striped active">
-            <div class="progress-bar"  role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
-              <span class="sr-only">35% Complete</span>
-            </div>
-          </div>    
-          <div id="collapseThree" class="panel-collapse collapse">
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-lg-9">
-                  <%= check_box_tag 'requirements[reading_and_composition_requirements]', 1,@completed_requirements.include?('reading_and_composition_requirements'), :id => 'requirements_reading_and_composition_requirements' %>
-                  <%= 'Reading & Composition Requirements Satisfied' %>
-                  <br>
-                  <%= check_box_tag 'requirements[quantitative_reasoning_requirements]', 1,@completed_requirements.include?('quantitative_reasoning_requirements'), :id => 'requirements_quantitative_reasoning_requirements' %>
-                  <%= 'Quantitative Reasoning Requirements Satisfied' %>
-                  <br>
-                  <%= check_box_tag 'requirements[foreign_language_requirements]', 1,@completed_requirements.include?('foreign_language_requirements'), :id => 'requirements_foreign_language_requirements' %>
-                  <%= 'Foreign Language Requirements Satisfied' %>
-                  <div class="col-lg-9">
-                    <h4>Seven Breath Requirements</h4>
-                      <%= check_box_tag 'requirements[arts_and_literature]', 1,@completed_requirements.include?('arts_and_literature'), :id => 'requirements_arts_and_literature' %>
-                      <%= 'Arts and Literature Satisfied' %>
-                      <br>
-                      <%= check_box_tag 'requirements[biological_science]', 1,@completed_requirements.include?('biological_science'), :id => 'requirements_biological_science' %>
-                      <%= 'Biological Science Satisfied' %>
-                      <br>
-                      <%= check_box_tag 'requirements[historical_studies]', 1,@completed_requirements.include?('historical_studies'), :id => 'requirements_historical_studies'%>
-                      <%= 'Historical Studies Satisfied' %>
-                      <br>
-                      <%= check_box_tag 'requirements[international_studies]', 1,@completed_requirements.include?('international_studies'), :id => 'requirements_international_studies'%>
-                      <%= 'International Studies Satisfied' %>
-                      <br>
-                      <%= check_box_tag 'requirements[philosophy_and_values]', 1,@completed_requirements.include?('philosophy_and_values'), :id => 'requirements_philosophy_and_values' %>
-                      <%= 'Philosophy and Values Satisfied' %>
-                      <br>
-                      <%= check_box_tag 'requirements[physical_science]', 1,@completed_requirements.include?('physical_science'), :id => 'requirements_physical_science'%>
-                      <%= 'Physical Science Satisfied' %>
-                      <br>
-                      <%= check_box_tag 'requirements[social_and_behavioral_sciences]', 1,@completed_requirements.include?('social_and_behavioral_sciences'), :id => 'requirements_social_and_behavioral_sciences' %>
-                      <%= 'Social and Behavioral Sciences Satisfied' %>
-                  </div>
-                </div><!-- /.col-lg-6 -->
-              </div>
-            </div>
-          </div> 
-        </div> 
-        <%= submit_tag 'Save', :id => 'requirements_submit', :class => "btn btn-success" %>  
-      <% end -%>
-      <%= "here is the sorted courses:"%>
-      <br>
-      <% @courses_hash.each do |key, value| %>
-        <% if value.size > 1 %>
-          <%= key.name + ": " %>
-          <% value.each do |req| %>
-            <%= req + " " %>
-          <% end %>
-          <br>
-          <br>
-        <% end %>
-      <% end %>
+        
       </div>
+      <%= submit_tag 'Save', :id => 'requirements_submit', :class => "btn btn-success" %>  
     </div>  
 
     <div class="col-md-3">
       <div class="list-group">
-		<h5><span class="list-group-item">Name</span></h5>
-		<%= label_tag(:user_name,"Alex") %>
-		<h5><span class="list-group-item">College</span></h5>
-		<%= label_tag(:college_name,"College of Foolishness") %>
-		<h5><span class="list-group-item">Entrance Year</span></h5>
-		<%= label_tag(:entrance_year,"2011") %>
-		<h5><span class="list-group-item">Expected year of Graduation</span></h5>
-		<%= label_tag(:expected_graduation_year,"2999") %>
-		<h5><span class="list-group-item">Major</span></h5>
-		<%= label_tag(:major,"Naivete") %>
+        <h5><span class="list-group-item">Name</span></h5>
+        <%= label_tag(:user_name,"Alex") %>
+        <h5><span class="list-group-item">College</span></h5>
+        <%= label_tag(:college_name,"College of Foolishness") %>
+        <h5><span class="list-group-item">Entrance Year</span></h5>
+        <%= label_tag(:entrance_year,"2011") %>
+        <h5><span class="list-group-item">Expected year of Graduation</span></h5>
+        <%= label_tag(:expected_graduation_year,"2999") %>
+        <h5><span class="list-group-item">Major</span></h5>
+        <%= label_tag(:major,"Naivete") %>
         <h5><span class="list-group-item">BluePrint</span></h5>
-		<%= link_to 'Edit Information', 'editprofile', :class => "btn edit-profile"%> 
+        <%= link_to 'Edit Information', 'editprofile', :class => "btn edit-profile"%> 
+      </div>
+
     </div>
 
   </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
 

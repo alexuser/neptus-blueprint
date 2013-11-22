@@ -3,8 +3,8 @@ class CampusRequirement < ActiveRecord::Base
   attr_accessible :american_cultures, :course_id
 
 
-  def self.set_requirements(completed_requirements, user) 
-  	completed_requirements[:american_cultures] = user[:american_cultures]
+  def self.set_requirements(output_requirements, input_requirements) 
+  	output_requirements[:american_cultures] = input_requirements[:american_cultures]
   end 
 
 end
