@@ -18,7 +18,13 @@
 						</tr>
 						<% end %>
 					</table>
+					<table class ="table table-striped"> 
+						<th> Major Course Name</th>
 
+						<% @major_courses.each do |course| %>
+						<tr><td><%= course.name  if course.present?%></td></tr>
+						<% end %>
+					</table>
 					<br>
 				</div>
 			</div>

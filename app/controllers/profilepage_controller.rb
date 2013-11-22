@@ -23,11 +23,14 @@ class ProfilepageController < ApplicationController
         @user = current_user
         @course_ids = []
         @courses = []
+        @major_courses = []
 
         UniversityRequirement.get_courses(@user).each {|course_id| @course_ids << course_id}
         CampusRequirement.get_courses(@user).each {|course_id| @course_ids << course_id}
         LsCollegeRequirement.get_courses(@user).each {|course_id| @course_ids << course_id}
-
         @course_ids.each {|course| @courses << Course.find_by_id(course.course_id)}
+
+        MajorRequirement.get_courses(@user).each {|course| @major_courses << course}
+
     end 
 end

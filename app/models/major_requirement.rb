@@ -1,6 +1,4 @@
 class MajorRequirement < ActiveRecord::Base
-	belongs_to :course
-	attr_accessible :course_id
 
 	attr_accessible :cs_sixtyonea
 	attr_accessible :cs_sixtyoneb
@@ -65,84 +63,85 @@ class MajorRequirement < ActiveRecord::Base
   	end 
 
     if (fufilled_requirements[:cs_sixtyoneb] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("CS 61B")
     end 
 
     if (fufilled_requirements[:cs_sixtyonec] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("CS 61C")
     end 
 
     if (fufilled_requirements[:math_onea] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("Math 1A")
     end 
 
     if (fufilled_requirements[:math_oneb] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("Math 1B")
     end 
 
     if (fufilled_requirements[:math_fiftyfour] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("Math 54")
     end 
 
     if (fufilled_requirements[:cs_seventy] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("CS 70")
     end 
 
     if (fufilled_requirements[:ee_fourty] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("EE 40")
     end 
 
     if (fufilled_requirements[:ee_twenty] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("EE 20")
     end 
 
     if (fufilled_requirements[:ee_fourtytwo] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("EE 42")
     end 
 
     if (fufilled_requirements[:cs_oneseventy] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("CS 170")
     end 
 
     if (fufilled_requirements[:cs_onesixtytwo] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("CS 162")
     end 
 
     if (fufilled_requirements[:cs_onefifty] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("CS 150")
     end 
 
     if (fufilled_requirements[:cs_onefiftytwo] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("CS 152")
     end 
 
     if (fufilled_requirements[:cs_onesixty] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("CS 160")
     end 
 
     if (fufilled_requirements[:cs_onesixtyone] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("CS 161")
     end 
 
     if (fufilled_requirements[:cs_onesixtyfour] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("CS 164")
     end 
 
     if (fufilled_requirements[:cs_onesixtynine] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("CS 169")
     end 
 
     if (fufilled_requirements[:cs_oneeightyfour] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("CS 184")
     end 
 
     if (fufilled_requirements[:cs_oneeightysix] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("CS 186")
     end 
 
     if (fufilled_requirements[:cs_oneeightyeight] == false)
-      course_ids << Course.find_by_name("CS 61A")
+      course_ids << Course.find_by_name("CS 188")
     end 
+
   	return course_ids
   end 
 

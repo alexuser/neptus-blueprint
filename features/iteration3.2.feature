@@ -1,18 +1,25 @@
 Feature: Major Requirements
 
-As a student
-So that I can fulfill my major requirements
-I want to see the courses I need to take in a graphical format to display to help me complete my major requirements.
+        As a student
+        So that I can fulfill my major requirements
+        I want to see the courses I need to take in a graphical format to display to help me complete my major requirements.
 
 Background: I'm already signed in and have a profile I can save to
 
-Given I am on the profile page
+        Given I am on the home page
+        And I am signed up
 
 Scenario: Finish "CS 61A"
-        Given the "CS 61A" button is "gray"
-        When I press the "CS 61A" button
-        Then the "CS 61A" button should be "green"
-        
+        When I go to the profile page
+        And I should see "CS 61A Requirements Satisfied"
+        And I check "requirements_cs_sixtyonea"
+        And I press "Save"
+        Then I should see "Your requirements have been successfully saved"
+        Then the "requirements_cs_sixtyonea" checkbox should be checked
+        Then I go to the report page
+        Then I should not see "CS 61A"
+        And I should see "CS 61B"
+
 Scenario: Finish "CS 61B"
         Given the "CS 61B" button is "gray"
         When I press the "CS 61B" button
@@ -31,7 +38,7 @@ Scenario: Finish "Math 1A"
 Scenario: Finish "Math 1B"
         Given the "Math 1B" button is "gray"
         When I press the "Math 1B" button
-        Then the "Math 1B" button should be "green"
+        Then the "Math 1B" button should be "green
         
 Scenario: Finish Math 54
         Given the "Math 54" button is "gray"

@@ -14,11 +14,13 @@ module NavigationHelpers
     case page_name
 
     when /^"Next"/ then '/users/sign_in'
-    when /^About page/ then about_index_path
-    when /^Contact page/ then contact_index_path
-    when /^profilepage/ then profilepage_index_path
-    when /^the profilepage/ then profilepage_index_path
-    when /^the edit profile page/ then editprofile_index_path
+    when /^the About page$/i then about_path
+    when /^the Contact page$/i then contact_path
+    when /^Profile page$/i then profile_path
+    when /^the Profile page$/i then profile_path
+    when /^the Edit Profile page/i then edit_user_registration_path
+      
+    when /^the Report page$/i then report_path
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

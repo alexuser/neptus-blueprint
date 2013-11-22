@@ -1,20 +1,19 @@
 Feature: Save the Personal Profile
 
-As a current user
-So that I can save my personal information and my blueprints
-I want to be able to save my settings such as my year, major, course history, etc. so I don't have to re-enter my information again and again.
+        As a current user
+        So that I can save my personal information and my blueprints
+        I want to be able to save my settings such as my year, major, course history, etc. so I don't have to re-enter my information again and again.
 
 Background: User is already logged in
 
-		
-        Given I am on the major select welcome page
-		And I am signed up
-		Then I am on the edit profile page
+        Given I am on the home page
+	And I am signed up
         
 Scenario: update name
+        When I go to Edit Profile page
         When I fill in "user_name" with "New Name"
         And I press "Save"
-        Then I should be on the profilepage
+        Then I should be on the profile page
         And I should see "New Name"
         
 Scenario: update college

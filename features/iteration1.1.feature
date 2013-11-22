@@ -1,16 +1,13 @@
-Feature: use navigation bar to navigate
-As a user
-So that I can go to different page quickly
-I want to use a navigation bar to navigate
+Feature: use the navigation bar to navigate
 
-Scenario: go to About page
+	As a user
+	So that I can go to different page quickly
+	I want to use a navigation bar to navigate
 
-  When I go to About page
+Scenario: go to About page 
+  When I go to the About page
+  Then I am on the About page
 
-  Then I am on the about index page
-
-Scenario: go to Contact page
-
-  When I go to Contact page
-
-  Then I am on the contact index page
+Scenario: go to Contact
+  When I go to the Contact page
+  Then I am on the Contact page

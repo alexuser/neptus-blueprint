@@ -34,13 +34,13 @@ World(WithinHelpers)
 
 And /^I am signed up$/ do
   click_link 'Sign up' 
-  fill_in 'user_username', :with => 'JackCen' 
-  fill_in 'user_email', :with => 'foobar@gmail.com' 
+  fill_in 'user_username', :with => 'jerry' 
+  select '2013', :from => 'user_entrance_year_1i'
+  select '2016', :from => 'user_expected_year_1i'
+  fill_in 'user_email', :with => 'jerry@gmail.com' 
   fill_in 'user_password', :with => '12341234'
   fill_in 'user_password_confirmation', :with => '12341234'
-  within('#sign_up') do
-    click_button 'Sign up' 
-  end
+  click_button 'Sign up' 
 end
 
 And /^I signed in$/ do
