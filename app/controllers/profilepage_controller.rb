@@ -1,38 +1,32 @@
 class ProfilepageController < ApplicationController
-     before_filter :authenticate_user!
+ before_filter :authenticate_user!
 
-
-     def index
+    def index
         @user = current_user
-        
+
         if (params[:requirements].present?) # user makes some changes to the requirements         
             CampusRequirement.set_requirements(@user, params[:requirements])
             LsCollegeRequirement.set_requirements(@user, params[:requirements])
             UniversityRequirement.set_requirements(@user, params[:requirements])
             @user.save
+            flash[:notice] = "Your requirements have been successfully saved"
         end 
 
         @university_req_rate = UniversityRequirement.progress(@user)
         @campus_req_rate = CampusRequirement.progress(@user)
         @ls_college_req_rate = LsCollegeRequirement.progress(@user)
-        
-     end
-
-     def filter(requirements)
-            results = Hash.new([])
-            courses = Course.all
-            courses.each do |course|
-                list = Array.new
-                requirements.each do |requirement|
-                    if course.fullfilled_requirement?(requirement)
-                        list << requirement
-                    end
-                end
-                if not list.empty?
-                    results[course] = list
-                end
-            end
-            /results.sort_by{|_key, value| -value.length}/
-            return results
+    
     end
+
+    def report
+        @user = current_user
+        @course_ids = []
+        @courses = []
+
+        UniversityRequirement.get_courses(@user).each {|course_id| @course_ids << course_id}
+        CampusRequirement.get_courses(@user).each {|course_id| @course_ids << course_id}
+        LsCollegeRequirement.get_courses(@user).each {|course_id| @course_ids << course_id}
+
+        @course_ids.each {|course| @courses << Course.find_by_id(course.course_id)}
+    end 
 end

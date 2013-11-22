@@ -6,8 +6,10 @@ Neptus::Application.routes.draw do
 
   devise_for :users                              
 
-  resources :profilepage
-
+  #resources :profilepage
+  match '/profile' => 'profilepage#index'
+  match '/report' => 'profilepage#report'
+  
   root :to => 'welcome#home'
   
   get "major_select/welcome"

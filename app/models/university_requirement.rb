@@ -16,5 +16,19 @@ class UniversityRequirement < ActiveRecord::Base
   	finished_rate += 50 if user[:entry_level_writing] == true
 
   	return finished_rate
+  end
+
+  def self.get_courses(fufilled_requirements)
+    course_ids = []
+
+    if (fufilled_requirements[:entry_level_writing] == false)
+      UniversityRequirement.where(:entry_level_writing => true).each {|course_id| course_ids << course_id}
+    end 
+
+    if (fufilled_requirements[:american_history_and_institutions] == false)
+      UniversityRequirement.where(:american_history_and_institutions => true).each {|course_id| course_ids << course_id}
+    end 
+    
+    return course_ids
   end 
 end

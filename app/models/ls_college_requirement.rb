@@ -34,4 +34,51 @@ class LsCollegeRequirement < ActiveRecord::Base
     return finished_rate
   end 
 
+
+  def self.get_courses(fufilled_requirements)
+    course_ids = []
+
+    if (fufilled_requirements[:reading_and_composition] == false)
+      LsCollegeRequirement.where(:reading_and_composition => true).each {|course_id| course_ids << course_id}
+    end 
+
+    if (fufilled_requirements[:quantitative_reasoning] == false)
+      LsCollegeRequirement.where(:quantitative_reasoning => true).each {|course_id| course_ids << course_id}
+    end 
+
+    if (fufilled_requirements[:foreign_language_breadth] == false)
+      LsCollegeRequirement.where(:foreign_language_breadth => true).each {|course_id| course_ids << course_id}
+    end 
+
+    if (fufilled_requirements[:arts_and_literature] == false)
+      LsCollegeRequirement.where(:arts_and_literature => true).each {|course_id| course_ids << course_id}
+    end 
+
+    if (fufilled_requirements[:biological_science] == false)
+      LsCollegeRequirement.where(:biological_science => true).each {|course_id| course_ids << course_id}
+    end 
+
+    if (fufilled_requirements[:historical_studies] == false)
+      LsCollegeRequirement.where(:historical_studies => true).each {|course_id| course_ids << course_id}
+    end 
+
+    if (fufilled_requirements[:international_studies] == false)
+      LsCollegeRequirement.where(:international_studies => true).each {|course_id| course_ids << course_id}
+    end 
+
+    if (fufilled_requirements[:philosophy_and_values] == false)
+      LsCollegeRequirement.where(:philosophy_and_values => true).each {|course_id| course_ids << course_id}
+    end 
+
+    if (fufilled_requirements[:physical_science] == false)
+      LsCollegeRequirement.where(:physical_science => true).each {|course_id| course_ids << course_id}
+    end 
+
+    if (fufilled_requirements[:social_and_behavioral_sciences] == false)
+      LsCollegeRequirement.where(:social_and_behavioral_sciences => true).each {|course_id| course_ids << course_id}
+    end 
+
+    return course_ids
+  end 
+
 end
