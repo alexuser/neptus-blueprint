@@ -7,6 +7,31 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
  
 
+
+college0 = College.create(:name => "College of Letter & Science")
+college1 = College.create(:name => "Haas School of Business")
+college2 = College.create(:name => "College of Chemistry")
+college3 = College.create(:name => "Graduate School of Education")
+college4 = College.create(:name => "College of Engineering")
+college5 = College.create(:name => "College of Environmental Design")
+college6 = College.create(:name => "School of Information")
+college7 = College.create(:name => "Graduate School of Journalism")
+college8 = College.create(:name => "School of Law")
+college9 = College.create(:name => "College of Natural Resources")
+college10 = College.create(:name => "School of Optometry")
+college11 = College.create(:name => "School of Public Health")
+college12 = College.create(:name => "Richard & Rhoda Goldman School of Public Policy")
+college13 = College.create(:name => "School of Social Welfare")
+
+major0 = Major.create(:name => "Chemistry", :college_id => college2.id)
+major1 = Major.create(:name => "Chemical Biology", :college_id => college2.id)
+major2 = Major.create(:name => "EECS", :college_id => college4.id)
+major3 = Major.create(:name => "Nuclear Engineering", :college_id => college4.id)
+major4 = Major.create(:name => "Chinese", :college_id => college0.id)
+major5 = Major.create(:name => "Computer Science", :college_id => college0.id)
+major6 = Major.create(:name => "Microbial Biology", :college_id => college9.id)
+
+
 # entry_level_writing
 c0 = Course.create(:name => "Entry Level Writing 1A")
 c1 = Course.create(:name => "Entry Level Writing 2A")
