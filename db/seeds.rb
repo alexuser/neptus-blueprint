@@ -6,8 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
  
-	# entry_level_writing
-	c0 = Course.create(:name => "Entry Level Writing 1A")
+
+# entry_level_writing
+c0 = Course.create(:name => "Entry Level Writing 1A")
 c1 = Course.create(:name => "Entry Level Writing 2A")
 
 # american_history_and_institutions
