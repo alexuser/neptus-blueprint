@@ -137,6 +137,7 @@ m24 = LsCollegeRequirement.create(:course_id => c24.id, :social_and_behavioral_s
 m25 = LsCollegeRequirement.create(:course_id => c25.id, :social_and_behavioral_sciences => true)
 
 
+# major requriements, so far we only have requirements for LS CS
 c26 = Course.create(:name => "CS 61A")
 c27 = Course.create(:name => "CS 61B")
 c28 = Course.create(:name => "CS 61C")

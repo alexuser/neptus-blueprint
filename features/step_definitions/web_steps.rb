@@ -34,9 +34,11 @@ World(WithinHelpers)
 
 And /^I am signed up$/ do
   click_link 'Sign up' 
-  fill_in 'user_username', :with => 'jerry' 
+  fill_in 'user_username', :with => 'Jerry' 
   select '2013', :from => 'user_entrance_year_1i'
   select '2016', :from => 'user_expected_year_1i'
+  select 'College of Letter & Science', :from => 'user_college', :match => :first
+  select 'Computer Science', :from => 'user_major', :match => :first
   fill_in 'user_email', :with => 'jerry@gmail.com' 
   fill_in 'user_password', :with => '12341234'
   fill_in 'user_password_confirmation', :with => '12341234'
@@ -44,15 +46,12 @@ And /^I am signed up$/ do
 end
 
 And /^I signed in$/ do
-  fill_in 'user_username', :with => 'JackCen' 
-  fill_in 'user_email', :with => 'foobar@gmail.com' 
+  fill_in 'user_username', :with => 'Jerry' 
+  fill_in 'user_email', :with => 'jerry@gmail.com' 
   fill_in 'user_password', :with => '12341234'
   fill_in 'user_password_confirmation', :with => '12341234'
-  within('#sign_up') do
-    click_button 'Sign up' 
-  end
+  click_button 'Sign up' 
 end
-
 
 
 
@@ -108,7 +107,7 @@ When /^(?:|I )fill in the following:$/ do |fields|
 end
 
 When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |value, field|
-  select(value, :from => field)
+  select(value, :from => field, :match => :first)
 end
 
 When /^(?:|I )check "([^"]*)"$/ do |field|

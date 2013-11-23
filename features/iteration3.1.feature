@@ -8,34 +8,56 @@ Background: User is already logged in
 
         Given I am on the home page
 	And I am signed up
-        
+
+Scenario: sign up 
+        When I am on the profile page
+        And I should see "Jerry"
+        And I should see "College of Letter & Science"
+        And I should see "Computer Science"
+        And I should see "2013"
+        And I should see "2016"
+
 Scenario: update name
-        When I go to Edit Profile page
-        When I fill in "user_name" with "New Name"
-        And I press "Save"
-        Then I should be on the profile page
+        When I go to the Edit Profile page
+        And I fill in "user_name" with "New Name"
+        And I fill in "user_current_password" with "12341234"
+        And I press "Update"
+        Then I should be on the user root page
+        And I should see "You updated your account successfully"
         And I should see "New Name"
         
 Scenario: update college
-        When I fill in "college_name" with "New College"
-        And I press "Save"
-        Then I should be on the profilepage
-        And I should see "New College"
+        When I go to the Edit profile page
+        And I select "College of Chemistry" from "user_college"
+        And I fill in "user_current_password" with "12341234"
+        And I press "Update"
+        Then I should be on the user root page
+        And I should see "You updated your account successfully"
+        And I should see "College of Chemistry"
         
 Scenario: update Entrance Year
-        When I fill in "entrance_year" with "2069"
-        And I press "Save"
-        Then I should be on the profilepage
-        And I should see "2069"
+        When I go to the Edit profile page
+        And I select "2014" from "user_entrance_year_1i"
+        And I fill in "user_current_password" with "12341234"
+        And I press "Update"
+        Then I should be on the user root page
+        And I should see "You updated your account successfully"
+        And I should see "2014"
         
 Scenario: update Expected Year of Graduation
-        When I fill in "expected_graduation_year" with "2073"
-        And I press "Save"
-        Then I should be on the profilepage
-        And I should see "2073"
+        When I go to the Edit profile page
+        And I select "2020" from "user_expected_year_1i"
+        And I fill in "user_current_password" with "12341234"
+        And I press "Update"
+        Then I should be on the user root page
+        And I should see "You updated your account successfully"
+        And I should see "2020"
         
 Scenario: update Major
-        When I fill in "major" with "Gender and Women's Studies"
-        And I press "Save"
-        Then I should be on the profilepage
-        And I should see "Gender and Women's Studies"
+        When I go to the Edit profile page
+        And I select "Chemistry" from "user_major"
+        And I fill in "user_current_password" with "12341234"
+        And I press "Update"
+        Then I should be on the user root page
+        And I should see "You updated your account successfully"
+        And I should see "Chemistry"

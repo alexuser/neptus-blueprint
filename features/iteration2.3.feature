@@ -9,28 +9,23 @@ Background: The user has created a profile, and now he or she wants to see what 
   Given I am on the home page
   And I am signed up
 
- Scenario: user can see requirement joint courses after checked requirements and pressed Save button
- 	When I on the profile page
+ Scenario: the user can see the progress of his or her requirements.
+ 	When I go to the profile page
+ 	
  	And I check "requirements_american_history_and_institutions"
+ 	
  	And I check "requirements_american_cultures"
+
  	And I check "requirements_quantitative_reasoning"
- 	And I check "requirements_foreign_language_breadth"
  	And I check "requirements_arts_and_literature"
  	And I check "requirements_historical_studies"
- 	And I check "requirements_philosophy_and_values"
  	And I check "requirements_physical_science"
 
  	And I press "Save"
 
- 	Then I should see "African American Studies 4A: american_history_and_institutions arts_and_literature historical_studies "
-
- 	And I should see "Letters and Science 123: arts_and_literature historical_studies philosophy_and_values"
-
- 	And I should see "German 176: arts_and_literature historical_studies philosophy_and_values"
- 
- 	And I should see "South Asian 151: historical_studies philosophy_and_values"
-
- 	And I should see "French 145: arts_and_literature historical_studies"
+ 	Then I should see "50% Completed"
+ 	And I should see "100% Completed"
+ 	And I should see "40% Completed"
 
 
 

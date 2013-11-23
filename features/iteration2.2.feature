@@ -34,7 +34,7 @@ Scenario: Use drop down button
 
   When I press "drop"
 
-  Then I should see "jerry"
+  Then I should see "Jerry"
 
   And I should not see "alex"
 

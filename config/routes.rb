@@ -5,7 +5,7 @@ Neptus::Application.routes.draw do
   match '/about' => 'welcome#about'
 
   devise_for :users                              
-
+  match 'user_root' => 'profilepage#index'
   #resources :profilepage
   match '/profile' => 'profilepage#index'
   match '/report' => 'profilepage#report'

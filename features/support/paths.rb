@@ -21,7 +21,8 @@ module NavigationHelpers
     when /^the Edit Profile page/i then edit_user_registration_path
       
     when /^the Report page$/i then report_path
-
+    when /^the user page $/i then user_root_path
+      
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
