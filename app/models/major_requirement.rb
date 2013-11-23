@@ -51,8 +51,29 @@ class MajorRequirement < ActiveRecord::Base
   def self.progress(user)
   	finished_rate = 0
   	#TODO 
+    finished_rate += 1 if user[:cs_sixtyonea] == true
+    finished_rate += 1 if user[:cs_sixtyoneb] == true
+    finished_rate += 1 if user[:cs_sixtyonec] ==  true
+    finished_rate += 1 if user[:math_onea] == true
+    finished_rate += 1 if user[:math_oneb] == true
+    finished_rate += 1 if user[:math_fiftyfour] == true
+    finished_rate += 1 if user[:cs_seventy] == true
+    finished_rate += 1 if user[:ee_fourty] == true
+    finished_rate += 1 if user[:ee_twenty] == true
+    finished_rate += 1 if user[:ee_fourtytwo] == true
+    finished_rate += 1 if user[:cs_oneseventy] == true
+    finished_rate += 1 if user[:cs_onesixtytwo] == true
+    finished_rate += 1 if user[:cs_onefifty] == true
+    finished_rate += 1 if user[:cs_onefiftytwo] == true
+    finished_rate += 1 if user[:cs_onesixty] == true
+    finished_rate += 1 if user[:cs_onesixtyone] == true
+    finished_rate += 1 if user[:cs_onesixtyfour] == true
+    finished_rate += 1 if user[:cs_onesixtynine] == true
+    finished_rate += 1 if user[:cs_oneeightyfour] == true
+    finished_rate += 1 if user[:cs_oneeightysix] == true
+    finished_rate += 1 if user[:cs_oneeightyeight] == true
 
-  	return finished_rate
+  	return finished_rate*100/21
   end
 
   def self.get_courses(fufilled_requirements)
