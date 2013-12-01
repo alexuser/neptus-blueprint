@@ -12,12 +12,16 @@
   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
+        <% if user_signed_in? %>
+        <%= link_to "Neptus Blueprint", profile_path, :class=>"navbar-brand"%>
+        <% else %>
         <%= link_to "Neptus Blueprint", home_path, :class=>"navbar-brand" %>
+        <% end %>
       </div>
       <div class="navbar-collapse collapse">
 
         <ul class="nav navbar-nav">
-          
+
 
           <%if user_signed_in? %>
           <li><%= link_to "My Profile", profile_path %></li>
@@ -45,9 +49,5 @@
 
 
 <hr>
-<footer>
-  <p class ="col-md-7 col-md-offset-2">Created by Kaiqi Cen, Sijia Liu, Zhuoyong Jing, Jiachen Jiang, Alexander Chen, Gerald Green</p>
-</footer>
-
 </body>
 </html>

@@ -6,21 +6,97 @@
 					<h3 class="panel-title">Your Report</h3>
 				</div>
 				<div class="panel-body">
-					<table class="table table-striped">
-						<th>
-							Course Name
-						</th>
-						<!-- Fufill which requirements? -->
-
-						<% @courses.each do |course| %>
-						<tr> 
-							<td><%= course.name %></td>
-						</tr>
-						<% end %>
+					<table class ="table table-striped table-bordered">
+						<thead>
+							<tr><th>University Requirements</th>
+								<th>Entry Level Writing</th>
+								<th>American History and Institutions</th>
+							</tr>
+						</thead>
+						<tbody>							
+							<% @university_courses.each do |course| %>
+							<tr> 
+								<td><%= course.name %></td>
+								<td><%= "\u2714"  if course.instance_variable_get(:@entry_level_writing) %></td>
+								<td><%= "\u2714"  if course.instance_variable_get(:@american_history_and_institutions) %></td>
+							</tr>
+							<% end %>
+						</tbody>
 					</table>
-					<table class ="table table-striped"> 
-						<th> Major Course Name</th>
 
+					<table class ="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th>Campus Requirements</th>
+								<th>American Cultures</th>
+							</tr>
+						</thead>
+						<tbody>							
+							<% @campus_courses.each do |course| %>
+							<tr> 
+								<td><%= course.name %></td>
+								<td><%= "\u2714"  if course.instance_variable_get(:@american_cultures) %></td>
+							</tr>
+							<% end %>
+						</tbody>
+					</table>
+
+					<table class ="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th>L&S College Requirements</th>
+
+								<th>Reading & Composition</th>
+								<th>Quantitative Reasoning</th>
+								<th>Foreign Language</th>
+							</tr>
+						</thead>
+						<tbody>							
+							<% @ls_courses.each do |course| %>
+							<tr> 
+								<td><%= course.name %></td>
+								<td><%= "\u2714"  if course.instance_variable_get(:@reading_and_composition) %></td>
+								<td><%= "\u2714"  if course.instance_variable_get(:@quantitative_reasoning) %></td>
+								<td><%= "\u2714"  if course.instance_variable_get(:@foreign_language_breadth) %></td>
+							</tr>
+							<% end %>
+						</tbody>
+					</table>
+
+					<table class ="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th>Seven Breath</th>
+								<th>Arts & Literature</th>
+								<th>Biological Science</th>
+								<th>Historical Studies</th>
+								<th>International Studies</th>
+								<th>Philosophy & Values</th>
+								<th>Physical Science</th>
+								<th>Social & Behavioral Sciences</th>
+							</tr>
+						</thead>
+						<tbody>							
+							<% @seven_breadth.each do |course| %>
+							<tr> 
+								<td><%= course.name %></td>
+								<td><%= "\u2714"  if course.instance_variable_get(:@arts_and_literature) %></td>
+								<td><%= "\u2714"  if course.instance_variable_get(:@biological_science) %></td>
+								<td><%= "\u2714"  if course.instance_variable_get(:@historical_studies) %></td>
+								<td><%= "\u2714"  if course.instance_variable_get(:@international_studies) %></td>
+								<td><%= "\u2714"  if course.instance_variable_get(:@philosophy_and_values) %></td>
+								<td><%= "\u2714"  if course.instance_variable_get(:@physical_science) %></td>
+								<td><%= "\u2714"  if course.instance_variable_get(:@social_and_behavioral_sciences) %></td>
+							</tr>
+							<% end %>
+						</tbody>
+					</table>
+
+
+					<table class ="table table-striped table-bordered"> 
+						<thead>
+							<tr><th> Major Course Name</th></tr>
+						</thead>
 						<% @major_courses.each do |course| %>
 						<tr><td><%= course.name  if course.present?%></td></tr>
 						<% end %>
