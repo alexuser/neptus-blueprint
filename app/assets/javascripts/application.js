@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require_tree .
 //= require bootstrap
-
 $(function(){
 	var $university_req_rate =$('#university_req_rate'),
 	university_percent = parseInt($university_req_rate.data('percent')),
