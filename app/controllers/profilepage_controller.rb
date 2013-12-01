@@ -36,10 +36,23 @@ class ProfilepageController < ApplicationController
             @university_courses << new_course
         end 
 
+        if @university_courses.count == 0
+            course = Course.create(:name => "You have fulfilled the requirement")
+            course.instance_variable_set(:@entry_level_writing, true)
+            course.instance_variable_set(:@american_history_and_institutions, true)
+            @university_courses << course
+        end 
+
         CampusRequirement.get_courses(@user).each do |course| 
             new_course = Course.find_by_id(course.course_id)
             new_course.instance_variable_set(:@american_cultures, CampusRequirement.fulfill_requirement?(course, :american_cultures))
             @campus_courses << new_course
+        end 
+
+        if @campus_courses.count == 0
+            course = Course.create(:name => "You have fulfilled the requirement")
+            course.instance_variable_set(:@american_cultures, true)
+            @campus_courses << course
         end 
 
         LsCollegeRequirement.get_courses(@user, false).each do |course| 
@@ -57,6 +70,14 @@ class ProfilepageController < ApplicationController
             @ls_courses << new_course 
         end 
 
+        if @ls_courses.count == 0
+            course = Course.create(:name => "You have fulfilled the requirement")
+            course.instance_variable_set(:@reading_and_composition, true)
+            course.instance_variable_set(:@quantitative_reasoning, true)
+            course.instance_variable_set(:@foreign_language_breadth, true)
+            @ls_courses << course
+        end 
+
         LsCollegeRequirement.get_courses(@user, true).each do |course| 
             new_course = Course.find_by_id(course.course_id)
             new_course.instance_variable_set(:@arts_and_literature, LsCollegeRequirement.fulfill_requirement?(course, :arts_and_literature))
@@ -67,6 +88,18 @@ class ProfilepageController < ApplicationController
             new_course.instance_variable_set(:@physical_science, LsCollegeRequirement.fulfill_requirement?(course, :physical_science))
             new_course.instance_variable_set(:@social_and_behavioral_sciences, LsCollegeRequirement.fulfill_requirement?(course, :social_and_behavioral_sciences))
             @seven_breadth << new_course 
+        end 
+
+        if @seven_breadth.count == 0
+            course = Course.create(:name => "You have fulfilled the requirement")
+            course.instance_variable_set(:@arts_and_literature, true)
+            course.instance_variable_set(:@biological_science, true)
+            course.instance_variable_set(:@historical_studies, true)
+            course.instance_variable_set(:@international_studies, true)
+            course.instance_variable_set(:@philosophy_and_values, true)
+            course.instance_variable_set(:@physical_science, true)
+            course.instance_variable_set(:@social_and_behavioral_sciences, true)
+            @seven_breadth << course
         end 
 
         MajorRequirement.get_courses(@user).each {|course| @major_courses << course}
