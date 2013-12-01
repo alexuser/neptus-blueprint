@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require_tree .
 //= require bootstrap
+alert('some-unique-string')
 $(function(){
 	var $university_req_rate =$('#university_req_rate'),
 	university_percent = parseInt($university_req_rate.data('percent')),
@@ -52,4 +53,4 @@ $(function(){
 	}
 	$('#major_req_rate .ppc-progress-fill').css('transform','rotate('+ major_deg +'deg)');
 	$('#major_req_rate .ppc-percents span').html(major_percent+'%');
-}).call(this)
+});
