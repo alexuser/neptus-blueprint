@@ -6,6 +6,7 @@
     <%= value %>
   </div>
   <% end %>
+
   <div class="row">
     <div class="col-md-8">
 
@@ -24,6 +25,17 @@
             <div class="panel-body">
               <section class="tasks">
 
+                <div class="progress-pie-chart" data-percent="<%=@university_req_rate %>">
+                  <div class="ppc-progress">
+                    <div class="ppc-progress-fill"></div>
+                  </div>
+                  <div class="ppc-percents">
+                    <div class="pcc-percents-wrapper">
+                      <span>%</span>
+                    </div>
+                  </div>
+                </div>
+
                 <fieldset class="tasks-list">
                   <%= hidden_field_tag 'requirements[entry_level_writing]', 0 %>
                   <label class="tasks-list-item">
@@ -36,7 +48,7 @@
                   <label class="tasks-list-item">
                     <%= check_box_tag 'requirements[american_history_and_institutions]', 1, @user[:american_history_and_institutions],:id => 'requirements_american_history_and_institutions' , :class =>"tasks-list-cb"%>
                     <span class="tasks-list-mark"></span>
-                    <span class="tasks-list-desc">American History and Instituions</span>
+                    <span class="tasks-list-desc">American History and Institutions</span>
                   </label>
 
                 </fieldset>
@@ -52,12 +64,23 @@
             </div>
             <div class="panel-body">
               <section class="tasks">
+                <div class="progress-pie-chart" data-percent="<%=@campus_req_rate %>">
+                  <div class="ppc-progress">
+                    <div class="ppc-progress-fill"></div>
+                  </div>
+                  <div class="ppc-percents">
+                    <div class="pcc-percents-wrapper">
+                      <span>%</span>
+                    </div>
+                  </div>
+                </div>
+
                 <fieldset class="tasks-list">
                   <%= hidden_field_tag 'requirements[american_cultures]', 0 %>
                   <label class="tasks-list-item">
                     <%= check_box_tag 'requirements[american_cultures]', 1, @user[:american_cultures], :id => 'requirements_american_cultures', :class => "tasks-list-cb" %>
                     <span class="tasks-list-mark"></span>
-                    <span class="tasks-list-desc">American History and Instituions</span>
+                    <span class="tasks-list-desc">American Cultures</span>
                   </label>
                 </fieldset>
               </section>
@@ -73,6 +96,16 @@
             <div class="panel-body">
               <section class="tasks">
 
+                <div class="progress-pie-chart" data-percent="<%=@ls_college_req_rate %>">
+                  <div class="ppc-progress">
+                    <div class="ppc-progress-fill"></div>
+                  </div>
+                  <div class="ppc-percents">
+                    <div class="pcc-percents-wrapper">
+                      <span>%</span>
+                    </div>
+                  </div>
+                </div>
                 <fieldset class="tasks-list">
                   <%= hidden_field_tag 'requirements[reading_and_composition]', 0 %>
                   <label class="tasks-list-item">
@@ -186,14 +219,26 @@
           <!-- Major Requirements -->
           <div class="panel panel-info">
             <div class="panel-heading">
-              <h3 class="panel-title">Major Requirements (Progress: <%= @major_req_rate %></h3>
+              <h3 class="panel-title">Major Requirements</h3>
             </div>
             <div class="panel-body">
+
+
 
               <div class="col-lg-9">
                 <h5>Lower Division Requirements</h5>
 
                 <section class="tasks">
+                  <div class="progress-pie-chart" data-percent="<%=@major_req_rate %>">
+                    <div class="ppc-progress">
+                      <div class="ppc-progress-fill"></div>
+                    </div>
+                    <div class="ppc-percents">
+                      <div class="pcc-percents-wrapper">
+                        <span>%</span>
+                      </div>
+                    </div>
+                  </div>
                   <fieldset class="tasks-list">
                     <%= hidden_field_tag 'requirements[cs_sixtyonea]', 0 %>
                     <%= hidden_field_tag 'requirements[cs_sixtyoneb]', 0 %>
