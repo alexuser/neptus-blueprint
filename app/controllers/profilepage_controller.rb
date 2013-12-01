@@ -16,6 +16,7 @@ class ProfilepageController < ApplicationController
         @university_req_rate = UniversityRequirement.progress(@user)
         @campus_req_rate = CampusRequirement.progress(@user)
         @ls_college_req_rate = LsCollegeRequirement.progress(@user)
+        @major_req_rate = MajorRequirement.progress(@user)
         
     end
 

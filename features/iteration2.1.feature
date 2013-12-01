@@ -13,13 +13,13 @@ Background: Courses have been added to database.
 Scenario: see how much the user have fulfilled the university requirements
 	When I go to the Profile page
 	
-	Then I should see "Entry-Level Writing Satisfied"
+	Then I should see "Entry Level Writing"
 	When I check "requirements_entry_level_writing"
 	And I press "Save"
 	Then the "requirements_entry_level_writing" checkbox should be checked
 
 	
-	And I should see "American History and Institutions Satisfied"
+	And I should see "American History and Institutions"
 	When I check "requirements_american_history_and_institutions"
 	And I press "Save"
 	Then the "requirements_american_history_and_institutions" checkbox should be checked
@@ -30,7 +30,7 @@ Scenario: see how much the user have fulfilled the university requirements
 Scenario: see if the user have fulfilled the campus requirement
 	When I go to the Profile page
 
-	Then I should see "American Cultures Satisfied" 
+	Then I should see "American Cultures" 
 
 	When I check "requirements_american_cultures"
 
@@ -47,27 +47,26 @@ Scenario: see if the user have fulfilled the campus requirement
 Scenario: see how much the user have fulfilled the College requirement
 	When I go to the Profile page
 
-	Then I should see "Reading & Composition Requirements Satisfied" 
+	Then I should see "Reading & Composition Requirements" 
 
-	And I should see "Quantitative Reasoning Requirements Satisfied" 
+	And I should see "Quantitative Reasoning Requirements" 
 
-	And I should see "Foreign Language Requirements Satisfied"
-
+	And I should see "Foreign Language Requirements"
 	And I should see "Seven Breath Requirements"
 
-	And I should see "Arts and Literature Satisfied" 
+	And I should see "Arts and Literature" 
 
-	And I should see "Biological Science Satisfied" 
+	And I should see "Biological Science" 
 
-	And I should see "Historical Studies Satisfied"
+	And I should see "Historical Studies"
 
-	And I should see "International Studies Satisfied" 
+	And I should see "International Studies" 
 
-	And I should see "Philosophy and Values Satisfied" 
+	And I should see "Philosophy and Values" 
 
-	And I should see "Physical Science Satisfied" 
+	And I should see "Physical Science" 
 
-	And I should see "Social and Behavioral Sciences Satisfied" 
+	And I should see "Social and Behavioral Sciences" 
 
 	When I check "requirements_reading_and_composition"
 
