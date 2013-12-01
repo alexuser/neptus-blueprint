@@ -6,7 +6,7 @@
     <%= value %>
   </div>
   <% end %>
-  
+
   <div class="row">
     <div class="col-md-8">
 
@@ -238,34 +238,31 @@
                   </div>
                   <fieldset class="tasks-list">
                     <%= hidden_field_tag 'requirements[cs_sixtyonea]', 0 %>
-                    <%= hidden_field_tag 'requirements[cs_sixtyoneb]', 0 %>
-                    <%= hidden_field_tag 'requirements[cs_sixtyonec]', 0 %>
-                    <%= hidden_field_tag 'requirements[math_onea]', 0 %>
-                    <%= hidden_field_tag 'requirements[math_oneb]', 0 %>
-                    <%= hidden_field_tag 'requirements[math_fiftyfour]', 0 %>
-                    <%= hidden_field_tag 'requirements[cs_seventy]', 0 %>
-                    <%= hidden_field_tag 'requirements[ee_twenty]', 0 %>
-                    <%= hidden_field_tag 'requirements[ee_fourty]', 0 %>
-                    <%= hidden_field_tag 'requirements[ee_fourtytwo]', 0 %>
-
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[cs_sixtyonea]', 1,@user[:cs_sixtyonea], :id => 'requirements_cs_sixtyonea', :class => "tasks-list-cb"  %>
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc">CS 61A</span>
                     </label>
+                  </fieldset>
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[cs_sixtyoneb]', 0 %>
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[cs_sixtyoneb]', 1,@user[:cs_sixtyoneb], :id => 'requirements_cs_sixtyoneb', :class => "tasks-list-cb"  %>
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc">CS 61B</span>
                     </label>
-
+                  </fieldset>
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[cs_sixtyonec]', 0 %>
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[cs_sixtyonec]', 1,@user[:cs_sixtyonec], :id => 'requirements_cs_sixtyonec', :class => "tasks-list-cb"  %>
 
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc">CS 61C</span>
                     </label>
-
+                  </fieldset>
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[math_onea]', 0 %>
 
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[math_onea]', 1,@user[:math_onea], :id => 'requirements_math_onea' , :class => "tasks-list-cb" %>
@@ -273,6 +270,9 @@
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc">Math 1A</span>
                     </label>
+                  </fieldset>
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[math_oneb]', 0 %>
 
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[math_oneb]', 1,@user[:math_oneb], :id => 'requirements_math_oneb', :class => "tasks-list-cb"  %>
@@ -280,6 +280,9 @@
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc">Math 1B</span>
                     </label>
+                  </fieldset>
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[math_fiftyfour]', 0 %>
 
                     <label class="tasks-list-item">                
                       <%= check_box_tag 'requirements[math_fiftyfour]', 1,@user[:math_fiftyfour], :id => 'requirements_math_fiftyfour', :class => "tasks-list-cb"  %>
@@ -287,6 +290,9 @@
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc">Math 54</span>
                     </label>
+                  </fieldset>
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[cs_seventy]', 0 %>
 
                     <label class="tasks-list-item">                
                       <%= check_box_tag 'requirements[cs_seventy]', 1,@user[:cs_seventy], :id => 'requirements_cs_seventy', :class => "tasks-list-cb"  %>
@@ -294,6 +300,9 @@
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc">CS 70</span>
                     </label>
+                  </fieldset>
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[ee_twenty]', 0 %>
 
                     <label class="tasks-list-item">                
                       <%= check_box_tag 'requirements[ee_twenty]', 1,@user[:ee_twenty], :id => 'requirements_ee_twenty', :class => "tasks-list-cb"  %>
@@ -301,6 +310,9 @@
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc">EE 20</span>
                     </label>
+                  </fieldset>
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[ee_fourty]', 0 %>
 
                     <label class="tasks-list-item">                
                       <%= check_box_tag 'requirements[ee_fourty]', 1,@user[:ee_fourty], :id => 'requirements_ee_fourty', :class => "tasks-list-cb"  %>
@@ -308,15 +320,14 @@
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc">EE 40</span>
                     </label>
-
+                  </fieldset>
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[ee_fourtytwo]', 0 %>
                     <label class="tasks-list-item">                
                       <%= check_box_tag 'requirements[ee_fourtytwo]', 1,@user[:ee_fourtytwo], :id => 'requirements_ee_fourtytwo', :class => "tasks-list-cb"  %>
-
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc">EE 42</span>
                     </label>
-
-
                   </fieldset>
                 </section>
               </div>      
@@ -336,6 +347,9 @@
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc">CS 170</span>
                     </label>
+
+                  </fieldset>
+                  <fieldset class="tasks-list">
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[cs_onesixtytwo]', 1,@user[:cs_onesixtytwo], :id => 'requirements_cs_onesixtytwo' , :class => "tasks-list-cb"  %>
 
@@ -377,49 +391,64 @@
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc">CS 150</span>
                     </label>
-
+                  </fieldset>
+                  <fieldset class="tasks-list">
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[cs_onefiftytwo]', 1,@user[:cs_onefiftytwo], :id => 'requirements_cs_onefiftytwo', :class => "tasks-list-cb"   %>
 
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc">CS 152</span>
                     </label>
+                  </fieldset>
+                  <fieldset class="tasks-list">
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[cs_onesixty]', 1,@user[:cs_onesixty], :id => 'requirements_cs_onesixty', :class => "tasks-list-cb"   %>
 
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc">CS 160</span>
                     </label>
+                  </fieldset>
+                  <fieldset class="tasks-list">
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[cs_onesixtyone]', 1,@user[:cs_onesixtyone], :id => 'requirements_cs_onesixtyone', :class => "tasks-list-cb"   %>
 
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc">CS 161</span>
                     </label>
+                  </fieldset>
+                  <fieldset class="tasks-list">
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[cs_onesixtyfour]', 1,@user[:cs_onesixtyfour], :id => 'requirements_cs_onesixtyfour', :class => "tasks-list-cb"   %>
                       <span class="tasks-list-mark"></span>
 
                       <span class="tasks-list-desc">CS 164</span>
                     </label>
+                  </fieldset>
+                  <fieldset class="tasks-list">
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[cs_onesixtynine]', 1,@user[:cs_onesixtynine], :id => 'requirements_cs_onesixtynine', :class => "tasks-list-cb"   %>
                       <span class="tasks-list-mark"></span>
 
                       <span class="tasks-list-desc">CS 169</span>
                     </label>
+                  </fieldset>
+                  <fieldset class="tasks-list">
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[cs_oneeightyfour]', 1,@user[:cs_oneeightyfour], :id => 'requirements_cs_oneeightyfour', :class => "tasks-list-cb"   %>
                       <span class="tasks-list-mark"></span>
 
                       <span class="tasks-list-desc">CS 184</span>
                     </label>
+                  </fieldset>
+                  <fieldset class="tasks-list">
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[cs_oneeightysix]', 1,@user[:cs_oneeightysix], :id => 'requirements_cs_oneeightysix', :class => "tasks-list-cb"   %>
 
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc">CS 186</span>
                     </label>
+                  </fieldset>
+                  <fieldset class="tasks-list">
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[cs_oneeightyeight]', 1,@user[:cs_oneeightyeight], :id => 'requirements_cs_oneeightyeight', :class => "tasks-list-cb"   %>
 
