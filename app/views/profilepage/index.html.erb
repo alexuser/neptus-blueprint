@@ -15,26 +15,32 @@
         </div>
         <div class="panel-body">
           <%= form_tag profile_path, :method => :post, :id => 'requirements_form' do -%>
+
           <!--  University Requirements  -->     
           <div class="panel panel-info">
             <div class="panel-heading">
               <h3 class="panel-title">University Requirements</h3>
             </div>
             <div class="panel-body">
-              <div class="progress progress-striped">
-                <div class="progress-bar progress-bar-info"  role="progressbar" aria-valuenow= "60" aria-valuemin="0" aria-valuemax="100" style= "width: <%= @university_req_rate %>%" >
-                  <span><strong><%= @university_req_rate %>% Completed</strong></span>
-                </div>
-              </div>
+              <section class="tasks">
 
-              <%= hidden_field_tag 'requirements[entry_level_writing]', 0 %>
-              <%= check_box_tag "requirements[entry_level_writing]", 1, @user[:entry_level_writing], :id => "requirements_entry_level_writing" %>
-              <%= 'Entry-Level Writing Satisfied' %>
+                <fieldset class="tasks-list">
+                  <%= hidden_field_tag 'requirements[entry_level_writing]', 0 %>
+                  <label class="tasks-list-item">
+                    <%= check_box_tag "requirements[entry_level_writing]", 1, @user[:entry_level_writing], :id => "requirements_entry_level_writing", :class =>"tasks-list-cb" %>
+                    <span class="tasks-list-mark"></span>
+                    <span class="tasks-list-desc">Entry Level Writing</span>
+                  </label>
 
-              <br>
-              <%= hidden_field_tag 'requirements[american_history_and_institutions]', 0 %>
-              <%= check_box_tag 'requirements[american_history_and_institutions]', 1, @user[:american_history_and_institutions],:id => 'requirements_american_history_and_institutions' %>
-              <%= 'American History and Institutions Satisfied' %>
+                  <%= hidden_field_tag 'requirements[american_history_and_institutions]', 0 %>
+                  <label class="tasks-list-item">
+                    <%= check_box_tag 'requirements[american_history_and_institutions]', 1, @user[:american_history_and_institutions],:id => 'requirements_american_history_and_institutions' , :class =>"tasks-list-cb"%>
+                    <span class="tasks-list-mark"></span>
+                    <span class="tasks-list-desc">American History and Instituions</span>
+                  </label>
+
+                </fieldset>
+              </section>
             </div>
           </div>
           <!-- End of University Requirements -->
@@ -45,14 +51,16 @@
               <h3 class="panel-title">Campus Requirements</h3>
             </div>
             <div class="panel-body">
-              <div class="progress progress-striped">
-                <div class="progress-bar progress-bar-info"  role="progressbar" aria-valuenow= "60" aria-valuemin="0" aria-valuemax="100" style= "width: <%= @campus_req_rate %>%" >
-                  <span><strong><%= @campus_req_rate %>% Completed</strong></span>
-                </div>
-              </div>
-              <%= hidden_field_tag 'requirements[american_cultures]', 0 %>
-              <%= check_box_tag 'requirements[american_cultures]', 1, @user[:american_cultures], :id => 'requirements_american_cultures' %>
-              <%= 'American Cultures Satisfied' %>
+              <section class="tasks">
+                <fieldset class="tasks-list">
+                  <%= hidden_field_tag 'requirements[american_cultures]', 0 %>
+                  <label class="tasks-list-item">
+                    <%= check_box_tag 'requirements[american_cultures]', 1, @user[:american_cultures], :id => 'requirements_american_cultures', :class => "tasks-list-cb" %>
+                    <span class="tasks-list-mark"></span>
+                    <span class="tasks-list-desc">American History and Instituions</span>
+                  </label>
+                </fieldset>
+              </section>
             </div>
           </div>
           <!-- End of Campus Requirements -->
@@ -63,62 +71,114 @@
               <h3 class="panel-title">L&S College Requirements</h3>
             </div>
             <div class="panel-body">
-              <div class="progress progress-striped">
-                <div class="progress-bar progress-bar-info"  role="progressbar" aria-valuenow= "60" aria-valuemin="0" aria-valuemax="100" style= "width: <%= @ls_college_req_rate %>%" >
-                  <span><strong><%= @ls_college_req_rate %>% Completed</strong></span>
+              <section class="tasks">
+
+                <fieldset class="tasks-list">
+                  <%= hidden_field_tag 'requirements[reading_and_composition]', 0 %>
+                  <label class="tasks-list-item">
+                    <%= check_box_tag 'requirements[reading_and_composition]', 1,@user[:reading_and_composition], :id => 'requirements_reading_and_composition', :class => "tasks-list-cb" %>
+                    <span class="tasks-list-mark"></span>
+                    <span class="tasks-list-desc">Reading & Composition Requirements</span>
+                  </label>
+                </fieldset>
+
+                <fieldset class="tasks-list">
+                  <%= hidden_field_tag 'requirements[quantitative_reasoning]', 0 %>
+
+                  <label class="tasks-list-item">
+                    <%= check_box_tag 'requirements[quantitative_reasoning]', 1,@user[:quantitative_reasoning], :id => 'requirements_quantitative_reasoning', :class => "tasks-list-cb"  %>
+                    <span class="tasks-list-mark"></span>
+                    <span class="tasks-list-desc">Quantitative Reasoning Requirements</span>
+                  </label>
+                </fieldset>
+
+                <fieldset class="tasks-list">
+                  <%= hidden_field_tag 'requirements[foreign_language_breadth]', 0 %>
+
+                  <label class="tasks-list-item">
+                    <%= check_box_tag 'requirements[foreign_language_breadth]', 1,@user[:foreign_language_breadth], :id => 'requirements_foreign_language_breadth', :class => "tasks-list-cb"  %>
+                    <span class="tasks-list-mark"></span>
+                    <span class="tasks-list-desc">Foreign Language Requirements</span>
+                  </label>
+                </fieldset>
+
+                <div class="col-lg-9">
+                  <h5>Seven Breath Requirements</h5>
+
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[arts_and_literature]', 0 %>
+
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[arts_and_literature]', 1,@user[:arts_and_literature], :id => 'requirements_arts_and_literature', :class => "tasks-list-cb"  %>
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">Arts and Literature</span>
+                    </label>
+                  </fieldset>
+
+
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[biological_science]', 0 %>
+
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[biological_science]', 1,@user[:biological_science], :id => 'requirements_biological_science', :class => "tasks-list-cb"  %>
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">Biological Science</span>
+                    </label>
+                  </fieldset>
+
+
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[historical_studies]', 0 %>
+
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[historical_studies]', 1,@user[:historical_studies], :id => 'requirements_historical_studies', :class => "tasks-list-cb" %>
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">Historical Studies</span>
+                    </label>
+                  </fieldset>
+
+
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[international_studies]', 0 %>
+
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[international_studies]', 1,@user[:international_studies], :id => 'requirements_international_studies', :class => "tasks-list-cb" %>
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">International Studies</span>
+                    </label>
+                  </fieldset>
+
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[philosophy_and_values]', 0 %>
+
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[philosophy_and_values]', 1,@user[:philosophy_and_values], :id => 'requirements_philosophy_and_values', :class => "tasks-list-cb"  %>
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">Philosophy and Values</span>
+                    </label>
+                  </fieldset>
+
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[physical_science]', 0 %>
+
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[physical_science]', 1,@user[:physical_science], :id => 'requirements_physical_science', :class => "tasks-list-cb" %>
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">Physical Science</span>
+                    </label>
+                  </fieldset>
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[social_and_behavioral_sciences]', 0 %>
+
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[social_and_behavioral_sciences]', 1,@user[:social_and_behavioral_sciences], :id => 'requirements_social_and_behavioral_sciences', :class => "tasks-list-cb"  %>
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">Social and Behavioral Sciences</span>
+                    </label>
+                  </fieldset>
+
                 </div>
-              </div>
-
-              <%= hidden_field_tag 'requirements[reading_and_composition]', 0 %>
-              <%= check_box_tag 'requirements[reading_and_composition]', 1,@user[:reading_and_composition], :id => 'requirements_reading_and_composition' %>
-              <%= 'Reading & Composition Requirements Satisfied' %>
-
-              <br>
-              <%= hidden_field_tag 'requirements[quantitative_reasoning]', 0 %>
-              <%= check_box_tag 'requirements[quantitative_reasoning]', 1,@user[:quantitative_reasoning], :id => 'requirements_quantitative_reasoning' %>
-              <%= 'Quantitative Reasoning Requirements Satisfied' %>
-
-              <br>
-              <%= hidden_field_tag 'requirements[foreign_language_breadth]', 0 %>
-              <%= check_box_tag 'requirements[foreign_language_breadth]', 1,@user[:foreign_language_breadth], :id => 'requirements_foreign_language_breadth' %>
-              <%= 'Foreign Language Requirements Satisfied' %>
-
-              <div class="col-lg-9">
-                <h5>Seven Breath Requirements</h5>
-                <%= hidden_field_tag 'requirements[arts_and_literature]', 0 %>
-                <%= check_box_tag 'requirements[arts_and_literature]', 1,@user[:arts_and_literature], :id => 'requirements_arts_and_literature' %>
-                <%= 'Arts and Literature Satisfied' %>
-
-                <br>
-                <%= hidden_field_tag 'requirements[biological_science]', 0 %>
-                <%= check_box_tag 'requirements[biological_science]', 1,@user[:biological_science], :id => 'requirements_biological_science' %>
-                <%= 'Biological Science Satisfied' %>
-
-                <br>
-                <%= hidden_field_tag 'requirements[historical_studies]', 0 %>
-                <%= check_box_tag 'requirements[historical_studies]', 1,@user[:historical_studies], :id => 'requirements_historical_studies'%>
-                <%= 'Historical Studies Satisfied' %>
-
-                <br>
-                <%= hidden_field_tag 'requirements[international_studies]', 0 %>
-                <%= check_box_tag 'requirements[international_studies]', 1,@user[:international_studies], :id => 'requirements_international_studies'%>
-                <%= 'International Studies Satisfied' %>
-
-                <br>
-                <%= hidden_field_tag 'requirements[philosophy_and_values]', 0 %>
-                <%= check_box_tag 'requirements[philosophy_and_values]', 1,@user[:philosophy_and_values], :id => 'requirements_philosophy_and_values' %>
-                <%= 'Philosophy and Values Satisfied' %>
-
-                <br>
-                <%= hidden_field_tag 'requirements[physical_science]', 0 %>
-                <%= check_box_tag 'requirements[physical_science]', 1,@user[:physical_science], :id => 'requirements_physical_science'%>
-                <%= 'Physical Science Satisfied' %>
-
-                <br>
-                <%= hidden_field_tag 'requirements[social_and_behavioral_sciences]', 0 %>
-                <%= check_box_tag 'requirements[social_and_behavioral_sciences]', 1,@user[:social_and_behavioral_sciences], :id => 'requirements_social_and_behavioral_sciences' %>
-                <%= 'Social and Behavioral Sciences Satisfied' %>
-              </div>
+              </section>
             </div>
           </div>
           <!-- End of LS College Requirements -->
@@ -126,106 +186,206 @@
           <!-- Major Requirements -->
           <div class="panel panel-info">
             <div class="panel-heading">
-              <h3 class="panel-title">Major Requirements</h3>
+              <h3 class="panel-title">Major Requirements (Progress: <%= @major_req_rate %></h3>
             </div>
             <div class="panel-body">
-              <div class="progress progress-striped">
-                <div class="progress-bar progress-bar-info"  role="progressbar" aria-valuenow= "60" aria-valuemin="0" aria-valuemax="100" style= "width: <%= @major_req_rate %>%" >
-                  <span><strong><%= @major_req_rate %>% Completed</strong></span>
-                </div>
-              </div>
 
               <div class="col-lg-9">
                 <h5>Lower Division Requirements</h5>
-                <%= hidden_field_tag 'requirements[cs_sixtyonea]', 0 %>
-                <%= check_box_tag 'requirements[cs_sixtyonea]', 1,@user[:cs_sixtyonea], :id => 'requirements_cs_sixtyonea' %>
-                <%= 'CS 61A Requirements Satisfied' %>
-                <br>
-                <%= hidden_field_tag 'requirements[cs_sixtyoneb]', 0 %>
-                <%= check_box_tag 'requirements[cs_sixtyoneb]', 1,@user[:cs_sixtyoneb], :id => 'requirements_cs_sixtyoneb' %>
-                <%= 'CS 61B Requirements Satisfied' %>
-                <br>
-                <%= hidden_field_tag 'requirements[cs_sixtyonec]', 0 %>
-                <%= check_box_tag 'requirements[cs_sixtyonec]', 1,@user[:cs_sixtyonec], :id => 'requirements_cs_sixtyonec' %>
-                <%= 'CS 61C Requirements Satisfied' %>
-                <br>
-                <%= hidden_field_tag 'requirements[math_onea]', 0 %>
-                <%= check_box_tag 'requirements[math_onea]', 1,@user[:math_onea], :id => 'requirements_math_onea' %>
-                <%= 'Math 1A Requirements Satisfied' %>              
-                <br>
-                <%= hidden_field_tag 'requirements[math_oneb]', 0 %>
-                <%= check_box_tag 'requirements[math_oneb]', 1,@user[:math_oneb], :id => 'requirements_math_oneb' %>
-                <%= 'Math 1B Requirements Satisfied' %>
-                <br>
-                <%= hidden_field_tag 'requirements[math_fiftyfour]', 0 %>
-                <%= check_box_tag 'requirements[math_fiftyfour]', 1,@user[:math_fiftyfour], :id => 'requirements_math_fiftyfour' %>
-                <%= 'Math 54 Requirements Satisfied' %>
-                <br>
-                <%= hidden_field_tag 'requirements[cs_seventy]', 0 %>
-                <%= check_box_tag 'requirements[cs_seventy]', 1,@user[:cs_seventy], :id => 'requirements_cs_seventy' %>
-                <%= 'CS 70 Requirements Satisfied' %>
-                <br>
-                <%= hidden_field_tag 'requirements[ee_twenty]', 0 %>
-                <%= check_box_tag 'requirements[ee_twenty]', 1,@user[:ee_twenty], :id => 'requirements_ee_twenty' %>
-                <%= 'EE 20 Requirements Satisfied' %>
-                <br>
-                <%= hidden_field_tag 'requirements[ee_fourty]', 0 %>
-                <%= check_box_tag 'requirements[ee_fourty]', 1,@user[:ee_fourty], :id => 'requirements_ee_fourty' %>
-                <%= 'EE 40 Requirements Satisfied' %>
-                <br>
-                <%= hidden_field_tag 'requirements[ee_fourtytwo]', 0 %>
-                <%= check_box_tag 'requirements[ee_fourtytwo]', 1,@user[:ee_fourtytwo], :id => 'requirements_ee_fourtytwo' %>
-                <%= 'EE 42 Requirements Satisfied' %>
+
+                <section class="tasks">
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[cs_sixtyonea]', 0 %>
+                    <%= hidden_field_tag 'requirements[cs_sixtyoneb]', 0 %>
+                    <%= hidden_field_tag 'requirements[cs_sixtyonec]', 0 %>
+                    <%= hidden_field_tag 'requirements[math_onea]', 0 %>
+                    <%= hidden_field_tag 'requirements[math_oneb]', 0 %>
+                    <%= hidden_field_tag 'requirements[math_fiftyfour]', 0 %>
+                    <%= hidden_field_tag 'requirements[cs_seventy]', 0 %>
+                    <%= hidden_field_tag 'requirements[ee_twenty]', 0 %>
+                    <%= hidden_field_tag 'requirements[ee_fourty]', 0 %>
+                    <%= hidden_field_tag 'requirements[ee_fourtytwo]', 0 %>
+
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_sixtyonea]', 1,@user[:cs_sixtyonea], :id => 'requirements_cs_sixtyonea', :class => "tasks-list-cb"  %>
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">CS 61A</span>
+                    </label>
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_sixtyoneb]', 1,@user[:cs_sixtyoneb], :id => 'requirements_cs_sixtyoneb', :class => "tasks-list-cb"  %>
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">CS 61B</span>
+                    </label>
+
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_sixtyonec]', 1,@user[:cs_sixtyonec], :id => 'requirements_cs_sixtyonec', :class => "tasks-list-cb"  %>
+
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">CS 61C</span>
+                    </label>
+
+
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[math_onea]', 1,@user[:math_onea], :id => 'requirements_math_onea' , :class => "tasks-list-cb" %>
+
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">Math 1A</span>
+                    </label>
+
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[math_oneb]', 1,@user[:math_oneb], :id => 'requirements_math_oneb', :class => "tasks-list-cb"  %>
+
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">Math 1B</span>
+                    </label>
+
+                    <label class="tasks-list-item">                
+                      <%= check_box_tag 'requirements[math_fiftyfour]', 1,@user[:math_fiftyfour], :id => 'requirements_math_fiftyfour', :class => "tasks-list-cb"  %>
+
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">Math 54</span>
+                    </label>
+
+                    <label class="tasks-list-item">                
+                      <%= check_box_tag 'requirements[cs_seventy]', 1,@user[:cs_seventy], :id => 'requirements_cs_seventy', :class => "tasks-list-cb"  %>
+
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">CS 70</span>
+                    </label>
+
+                    <label class="tasks-list-item">                
+                      <%= check_box_tag 'requirements[ee_twenty]', 1,@user[:ee_twenty], :id => 'requirements_ee_twenty', :class => "tasks-list-cb"  %>
+
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">EE 20</span>
+                    </label>
+
+                    <label class="tasks-list-item">                
+                      <%= check_box_tag 'requirements[ee_fourty]', 1,@user[:ee_fourty], :id => 'requirements_ee_fourty', :class => "tasks-list-cb"  %>
+
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">EE 40</span>
+                    </label>
+
+                    <label class="tasks-list-item">                
+                      <%= check_box_tag 'requirements[ee_fourtytwo]', 1,@user[:ee_fourtytwo], :id => 'requirements_ee_fourtytwo', :class => "tasks-list-cb"  %>
+
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">EE 42</span>
+                    </label>
+
+
+                  </fieldset>
+                </section>
               </div>      
 
               <div class="col-lg-9">
                 <h5>Upper Division Required Courses</h5>
-                <%= hidden_field_tag 'requirements[cs_oneseventy]', 0 %>
-                <%= check_box_tag 'requirements[cs_oneseventy]', 1,@user[:cs_oneseventy], :id => 'requirements_cs_oneseventy' %>
-                <%= 'CS 170 Requirements Satisfied' %>
-                <br>
-                <%= hidden_field_tag 'requirements[cs_onesixtytwo]', 0 %>
-                <%= check_box_tag 'requirements[cs_onesixtytwo]', 1,@user[:cs_onesixtytwo], :id => 'requirements_cs_onesixtytwo' %>
-                <%= 'CS 162 Requirements Satisfied' %>
+
+                <section class="tasks">
+
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[cs_oneseventy]', 0 %>
+                    <%= hidden_field_tag 'requirements[cs_onesixtytwo]', 0 %>
+
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_oneseventy]', 1,@user[:cs_oneseventy], :id => 'requirements_cs_oneseventy' , :class => "tasks-list-cb"  %>
+
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">CS 170</span>
+                    </label>
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_onesixtytwo]', 1,@user[:cs_onesixtytwo], :id => 'requirements_cs_onesixtytwo' , :class => "tasks-list-cb"  %>
+
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">CS 162</span>
+                    </label>
+                  </fieldset>
+                </section>
               </div>      
 
               <div class="col-lg-9">
                 <h5>Breadth Courses</h5>
-                <%= hidden_field_tag 'requirements[cs_onefifty]', 0 %>
-                <%= check_box_tag 'requirements[cs_onefifty]', 1,@user[:cs_onefifty], :id => 'requirements_cs_onefifty' %>
-                <%= 'CS 150 Requirements Satisfied' %>
-                <br>
-                <%= hidden_field_tag 'requirements[cs_onefiftytwo]', 0 %>
-                <%= check_box_tag 'requirements[cs_onefiftytwo]', 1,@user[:cs_onefiftytwo], :id => 'requirements_cs_onefiftytwo' %>
-                <%= 'CS 152 Requirements Satisfied' %>
-                <br>
-                <%= hidden_field_tag 'requirements[cs_onesixty]', 0 %>
-                <%= check_box_tag 'requirements[cs_onesixty]', 1,@user[:cs_onesixty], :id => 'requirements_cs_onesixty' %>
-                <%= 'CS 160 Requirements Satisfied' %>
-                <br>
-                <%= hidden_field_tag 'requirements[cs_onesixtyone]', 0 %>
-                <%= check_box_tag 'requirements[cs_onesixtyone]', 1,@user[:cs_onesixtyone], :id => 'requirements_cs_onesixtyone' %>
-                <%= 'CS 161 Requirements Satisfied' %>              
-                <br>
-                <%= hidden_field_tag 'requirements[cs_onesixtyfour]', 0 %>
-                <%= check_box_tag 'requirements[cs_onesixtyfour]', 1,@user[:cs_onesixtyfour], :id => 'requirements_cs_onesixtyfour' %>
-                <%= 'CS 164 Requirements Satisfied' %>
-                <br>
-                <%= hidden_field_tag 'requirements[cs_onesixtynine]', 0 %>
-                <%= check_box_tag 'requirements[cs_onesixtynine]', 1,@user[:cs_onesixtynine], :id => 'requirements_cs_onesixtynine' %>
-                <%= 'CS 169 Requirements Satisfied' %>
-                <br>
-                <%= hidden_field_tag 'requirements[cs_oneeightyfour]', 0 %>
-                <%= check_box_tag 'requirements[cs_oneeightyfour]', 1,@user[:cs_oneeightyfour], :id => 'requirements_cs_oneeightyfour' %>
-                <%= 'CS 184 Requirements Satisfied' %>
-                <br>
-                <%= hidden_field_tag 'requirements[cs_oneeightysix]', 0 %>
-                <%= check_box_tag 'requirements[cs_oneeightysix]', 1,@user[:cs_oneeightysix], :id => 'requirements_cs_oneeightysix' %>
-                <%= 'CS 186 Requirements Satisfied' %>
-                <br>
-                <%= hidden_field_tag 'requirements[cs_oneeightyeight]', 0 %>
-                <%= check_box_tag 'requirements[cs_oneeightyeight]', 1,@user[:cs_oneeightyeight], :id => 'requirements_cs_oneeightyeight' %>
-                <%= 'CS 188 Requirements Satisfied' %>
+
+                <section class="tasks">
+
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[cs_onefifty]', 0 %>
+
+                    <%= hidden_field_tag 'requirements[cs_onefiftytwo]', 0 %>
+
+                    <%= hidden_field_tag 'requirements[cs_onesixty]', 0 %>
+
+                    <%= hidden_field_tag 'requirements[cs_onesixtyone]', 0 %>
+
+                    <%= hidden_field_tag 'requirements[cs_onesixtyfour]', 0 %>
+
+                    <%= hidden_field_tag 'requirements[cs_onesixtynine]', 0 %>
+
+                    <%= hidden_field_tag 'requirements[cs_oneeightyfour]', 0 %>
+
+                    <%= hidden_field_tag 'requirements[cs_oneeightysix]', 0 %>
+
+                    <%= hidden_field_tag 'requirements[cs_oneeightyeight]', 0 %>
+
+
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_onefifty]', 1,@user[:cs_onefifty], :id => 'requirements_cs_onefifty', :class => "tasks-list-cb"   %>
+
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">CS 150</span>
+                    </label>
+
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_onefiftytwo]', 1,@user[:cs_onefiftytwo], :id => 'requirements_cs_onefiftytwo', :class => "tasks-list-cb"   %>
+
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">CS 152</span>
+                    </label>
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_onesixty]', 1,@user[:cs_onesixty], :id => 'requirements_cs_onesixty', :class => "tasks-list-cb"   %>
+
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">CS 160</span>
+                    </label>
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_onesixtyone]', 1,@user[:cs_onesixtyone], :id => 'requirements_cs_onesixtyone', :class => "tasks-list-cb"   %>
+
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">CS 161</span>
+                    </label>
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_onesixtyfour]', 1,@user[:cs_onesixtyfour], :id => 'requirements_cs_onesixtyfour', :class => "tasks-list-cb"   %>
+                      <span class="tasks-list-mark"></span>
+
+                      <span class="tasks-list-desc">CS 164</span>
+                    </label>
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_onesixtynine]', 1,@user[:cs_onesixtynine], :id => 'requirements_cs_onesixtynine', :class => "tasks-list-cb"   %>
+                      <span class="tasks-list-mark"></span>
+
+                      <span class="tasks-list-desc">CS 169</span>
+                    </label>
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_oneeightyfour]', 1,@user[:cs_oneeightyfour], :id => 'requirements_cs_oneeightyfour', :class => "tasks-list-cb"   %>
+                      <span class="tasks-list-mark"></span>
+
+                      <span class="tasks-list-desc">CS 184</span>
+                    </label>
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_oneeightysix]', 1,@user[:cs_oneeightysix], :id => 'requirements_cs_oneeightysix', :class => "tasks-list-cb"   %>
+
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">CS 186</span>
+                    </label>
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_oneeightyeight]', 1,@user[:cs_oneeightyeight], :id => 'requirements_cs_oneeightyeight', :class => "tasks-list-cb"   %>
+
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">CS 188</span>
+                    </label>
+                  </fieldset>
+                </section>
               </div>   
             </div>
           </div>
@@ -237,7 +397,7 @@
         </div>
       </div>
 
-      
+
       <%= link_to 'Generate Report', report_path, :id=> 'requirement_generate', :class =>"btn btn-success btn-block" %>
 
     </div>  
@@ -288,4 +448,4 @@
   </div>
 
 
-<!--   <%= params %> -->
+<!--   <%= params %>  -->
