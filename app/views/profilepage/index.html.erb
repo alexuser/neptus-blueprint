@@ -25,7 +25,7 @@
             <div class="panel-body">
               <section class="tasks">
 
-                <div class="progress-pie-chart" data-percent="<%=@university_req_rate %>">
+                <div class="progress-pie-chart" data-percent="<%=@university_req_rate %>" id="university_req_rate">
                   <div class="ppc-progress">
                     <div class="ppc-progress-fill"></div>
                   </div>
@@ -64,7 +64,7 @@
             </div>
             <div class="panel-body">
               <section class="tasks">
-                <div class="progress-pie-chart" data-percent="<%=@campus_req_rate %>">
+                <div class="progress-pie-chart" data-percent="<%=@campus_req_rate %>" id="campus_req_rate">
                   <div class="ppc-progress">
                     <div class="ppc-progress-fill"></div>
                   </div>
@@ -96,7 +96,7 @@
             <div class="panel-body">
               <section class="tasks">
 
-                <div class="progress-pie-chart" data-percent="<%=@ls_college_req_rate %>">
+                <div class="progress-pie-chart" data-percent="<%=@ls_college_req_rate %>" id="ls_college_req_rate">
                   <div class="ppc-progress">
                     <div class="ppc-progress-fill"></div>
                   </div>
@@ -222,14 +222,11 @@
               <h3 class="panel-title">Major Requirements</h3>
             </div>
             <div class="panel-body">
-
-
-
               <div class="col-lg-9">
                 <h5>Lower Division Requirements</h5>
 
                 <section class="tasks">
-                  <div class="progress-pie-chart" data-percent="<%=@major_req_rate %>">
+                  <div class="progress-pie-chart" data-percent="<%=@major_req_rate %>" id="major_req_rate">
                     <div class="ppc-progress">
                       <div class="ppc-progress-fill"></div>
                     </div>
