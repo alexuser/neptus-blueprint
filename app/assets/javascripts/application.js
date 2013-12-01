@@ -52,4 +52,4 @@ $(function(){
 	}
 	$('#major_req_rate .ppc-progress-fill').css('transform','rotate('+ major_deg +'deg)');
 	$('#major_req_rate .ppc-percents span').html(major_percent+'%');
-});
+}).call(this)
