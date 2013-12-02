@@ -8,7 +8,7 @@ public class Generate {
         }
 
         public enum LevelTwoRequirement {
-                READINGANDCOMPOSITION, QUANTITATIVEREASONING, FOREIGNLANGUAGE, ARTSANDLITERATURE, BIOLOGICALSCIENCE, HISTORICALSTUDIES, INTERNATIONALSTUDIES, PHYSICALSCIENCE, PHILOSOPHYANDVALUES, SOCIALANDBEHAVIORALSCIENCES, ENTRYLEVELWRITING, AMERICANHISTORYANDINSTITUTIONS
+                READINGANDCOMPOSITION, QUANTITATIVEREASONING, FOREIGNLANGUAGE, ARTSANDLITERATURE, BIOLOGICALSCIENCE, HISTORICALSTUDIES, INTERNATIONALSTUDIES, PHYSICALSCIENCE, PHILOSOPHYANDVALUES, SOCIALANDBEHAVIORALSCIENCES, ENTRYLEVELWRITING, AMERICANHISTORYANDINSTITUTIONS, AMERICANCULTURES
         }
 
         public static void readRequirementsFile(String file, List<Course> courses,
@@ -17,7 +17,7 @@ public class Generate {
                         BufferedReader br = new BufferedReader(new FileReader(file));
                         String line;
 						int counter = 0;
-                        while ((line = br.readLine()) != null && counter <= 1000) {
+                        while ((line = br.readLine()) != null && counter <= 10000) {
                                 if (courses.contains(new Course(line))) {
                                         Course course = courses.get(courses
                                                         .indexOf(new Course(line)));
@@ -101,6 +101,10 @@ public class Generate {
                         course.isAmericanHistoryAndInstitutions = true;
                         course.requirementsSatisfied ++;
                         break;
+                case AMERICANCULTURES:
+                		course.isAmericanCulture = true;
+                		course.requirementsSatisfied ++;
+                		break;
                 }
         }
 
@@ -119,6 +123,7 @@ public class Generate {
                 String read2 = root + "ReadingCompositionB.txt";
                 String americanhistory = root + "AmericanHistoryInstitutions.txt";
     			String entry = root + "EntryLevelWriting.txt";
+    			String americancultures = root + "AmericanCultures.txt";
     
                 // here is the LS requirements
                 readRequirementsFile(arts, courses, LevelOneRequirement.LSCOLLEGE,
@@ -148,36 +153,51 @@ public class Generate {
                                 LevelTwoRequirement.AMERICANHISTORYANDINSTITUTIONS);
                 readRequirementsFile(entry, courses, LevelOneRequirement.UNIVERSITY,
                     LevelTwoRequirement.ENTRYLEVELWRITING);
+                
+                
+                //here are the campus requirements
+                readRequirementsFile(americancultures, courses, LevelOneRequirement.CAMPUS,
+                        LevelTwoRequirement.AMERICANCULTURES);
+                
 
                 int course_counter = 0;
+                int total= 1000;
                 int requirement_counter = 0;
-                
+                int universityOutputCount = 100;
+                int campusOutputCount = 100;
+                int lsOutputCount = 400;
                 Collections.sort(courses);
                 for (Course course : courses) {
-                		if (course_counter>=200){
+                		
+                	if (course_counter>=total){
                 			break;
                 		}
-                        System.out.println(String.format(
-                                        "c%d = Course.create(:name => \"%s\")", course_counter,
-                                        course.name));
 
-                        if (course.isUniversityRequirement) {
+                        if (course.isUniversityRequirement && universityOutputCount>0) {
+                        		printCourse(course_counter, course);
                                 System.out
                                                 .println(String
                                                                 .format("r%d = UniversityRequirement.create(:course_id => c%d.id, :entry_level_writing => %b, :american_history_and_institutions => %b)",
                                                                                 requirement_counter++, course_counter,
                                                                                 course.isEntryLevelWriting,
                                                                                 course.isAmericanHistoryAndInstitutions));
+                                course_counter++;
+                                universityOutputCount --;
+                                
                         }
 
-                        if (course.isCampusRequirement) {
+                        if (course.isCampusRequirement && campusOutputCount >0) {
+                        		printCourse(course_counter, course);
                                 System.out
                                                 .println(String
                                                                 .format("r%d = CampusRequirement.create(:course_id => c%d.id, :american_cultures => true)",
                                                                                 requirement_counter++, course_counter));
+                                campusOutputCount --;
+                                course_counter++;
                         }
 
-                        if (course.isLSCollegeRequirement) {
+                        if (course.isLSCollegeRequirement && lsOutputCount > 0) {
+                        		printCourse(course_counter, course);
                                 System.out
                                                 .println(String
                                                                 .format("r%d = LsCollegeRequirement.create(:course_id => c%d.id, :arts_and_literature => %b, :biological_science => %b, :foreign_language_breadth => %b, :historical_studies => %b, :international_studies => %b, :philosophy_and_values => %b, :physical_science => %b, :quantitative_reasoning => %b, :reading_and_composition => %b, :social_and_behavioral_sciences => %b)",
@@ -192,11 +212,19 @@ public class Generate {
                                                                                 course.isQuantitativeReasoning,
                                                                                 course.isReadingAndComposition,
                                                                                 course.isSocialAndBehavioralSciences));
+                                lsOutputCount --;
+                                course_counter++;
                         }
 
-                        course_counter++;
+                        
                 }
         }
+
+		private static void printCourse(int course_counter, Course course) {
+			System.out.println(String.format(
+			                "c%d = Course.create(:name => \"%s\")", course_counter,
+			                course.name));
+		}
 }
 
 class Course implements Comparable<Course> {
@@ -210,6 +238,7 @@ class Course implements Comparable<Course> {
         public boolean isAmericanHistoryAndInstitutions;
 
         // Campus Requirements
+        public boolean isAmericanCulture;
 
         // L&S Requirements
         public boolean isReadingAndComposition;
