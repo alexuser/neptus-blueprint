@@ -4,7 +4,7 @@
   <title>Neptus</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
-
+  <%= javascript_include_tag :high_charts %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -29,7 +29,7 @@
           <%else %>
           <li><%= link_to "Home", home_path %></li>
           <% end %>
-
+          <li><%= link_to "Job Outlook", outlook_path %></li>
           <li><%= link_to "About", about_path %></li>
           <li><%= link_to "Contact", contact_path%></li>
 
