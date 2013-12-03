@@ -4,7 +4,6 @@
   <title>Neptus</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
-
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -12,22 +11,27 @@
   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <%= link_to "Neptus Blueprint", home_path, :class=>"navbar-brand" %>
+        <% if user_signed_in? %>
+        <%= link_to "Neptus Blueprint", main_app.profile_path, :class=>"navbar-brand"%>
+        <% else %>
+        <%= link_to "Neptus Blueprint", main_app.home_path, :class=>"navbar-brand" %>
+        <% end %>
       </div>
       <div class="navbar-collapse collapse">
 
         <ul class="nav navbar-nav">
-          
+
 
           <%if user_signed_in? %>
-          <li><%= link_to "My Profile", profile_path %></li>
-          <li><%= link_to "My Report", report_path %></li>
+          <li><%= link_to "My Profile", main_app.profile_path %></li>
+          <li><%= link_to "My Report", main_app.report_path %></li>
           <%else %>
-          <li><%= link_to "Home", home_path %></li>
+          <li><%= link_to "Home", main_app.home_path %></li>
           <% end %>
-
-          <li><%= link_to "About", about_path %></li>
-          <li><%= link_to "Contact", contact_path%></li>
+          <li><%= link_to "Job Outlook", main_app.outlook_path %></li>
+          <li><%= link_to "Discussion", forem.root_path %></li>
+          <li><%= link_to "About", main_app.about_path %></li>
+          <li><%= link_to "Contact", main_app.contact_path%></li>
 
         </ul>
 

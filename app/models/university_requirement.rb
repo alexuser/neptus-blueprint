@@ -18,17 +18,21 @@ class UniversityRequirement < ActiveRecord::Base
   	return finished_rate
   end
 
-  def self.get_courses(fufilled_requirements)
+  def self.get_courses(fulfilled_requirements)
     course_ids = []
 
-    if (fufilled_requirements[:entry_level_writing] == false)
+    if (fulfilled_requirements[:entry_level_writing] == false)
       UniversityRequirement.where(:entry_level_writing => true).each {|course_id| course_ids << course_id}
     end 
 
-    if (fufilled_requirements[:american_history_and_institutions] == false)
+    if (fulfilled_requirements[:american_history_and_institutions] == false)
       UniversityRequirement.where(:american_history_and_institutions => true).each {|course_id| course_ids << course_id}
     end 
     
     return course_ids
+  end 
+
+  def self.fulfill_requirement?(course_id, requirement) 
+    return UniversityRequirement.find_by_id(course_id).send(requirement)
   end 
 end

@@ -20,6 +20,10 @@ end
 gem 'devise'
 gem 'haml'
 gem 'bootstrap-sass', '2.3.2.0'
+gem 'lazy_high_charts'
+
+gem 'forem', :github => "radar/forem"
+gem 'kaminari', '0.14.1'
 
 group :production do
   gem 'pg'
