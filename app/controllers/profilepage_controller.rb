@@ -57,16 +57,9 @@ class ProfilepageController < ApplicationController
 
         LsCollegeRequirement.get_courses(@user, false).each do |course| 
             new_course = Course.find_by_id(course.course_id)
-            new_course.instance_variable_set(:@arts_and_literature, LsCollegeRequirement.fulfill_requirement?(course, :arts_and_literature))
-            new_course.instance_variable_set(:@biological_science, LsCollegeRequirement.fulfill_requirement?(course, :biological_science))
             new_course.instance_variable_set(:@foreign_language_breadth, LsCollegeRequirement.fulfill_requirement?(course, :foreign_language_breadth))
-            new_course.instance_variable_set(:@historical_studies, LsCollegeRequirement.fulfill_requirement?(course, :historical_studies))
-            new_course.instance_variable_set(:@international_studies, LsCollegeRequirement.fulfill_requirement?(course, :international_studies))
-            new_course.instance_variable_set(:@philosophy_and_values, LsCollegeRequirement.fulfill_requirement?(course, :philosophy_and_values))
-            new_course.instance_variable_set(:@physical_science, LsCollegeRequirement.fulfill_requirement?(course, :physical_science))
             new_course.instance_variable_set(:@quantitative_reasoning, LsCollegeRequirement.fulfill_requirement?(course, :quantitative_reasoning))
             new_course.instance_variable_set(:@reading_and_composition, LsCollegeRequirement.fulfill_requirement?(course, :reading_and_composition))
-            new_course.instance_variable_set(:@social_and_behavioral_sciences, LsCollegeRequirement.fulfill_requirement?(course, :social_and_behavioral_sciences))
             @ls_courses << new_course 
         end 
 
