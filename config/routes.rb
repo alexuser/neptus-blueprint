@@ -3,7 +3,8 @@ Neptus::Application.routes.draw do
   match '/contact' => 'welcome#contact'
   match '/home' => 'welcome#home'
   match '/about' => 'welcome#about'
-
+  match '/outlook' => 'welcome#outlook'
+  
   devise_for :users                              
   match 'user_root' => 'profilepage#index'
   #resources :profilepage

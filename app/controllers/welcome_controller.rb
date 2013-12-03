@@ -7,4 +7,8 @@ class WelcomeController < ApplicationController
 
 	def about
 	end 
+	
+	def outlook
+	  
+	end 
 end
