@@ -69,5 +69,8 @@ class User < ActiveRecord::Base
       end
   end
 
-
+  def to_s
+    :name
+  end
+  
 end
