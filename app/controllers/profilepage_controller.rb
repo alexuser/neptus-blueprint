@@ -1,6 +1,5 @@
 class ProfilepageController < ApplicationController
    before_filter :authenticate_user!
-
    def index
     @user = current_user
 
@@ -20,15 +19,8 @@ class ProfilepageController < ApplicationController
         
     end
 
-    def report
-        @user = current_user
-
+    def ureport 
         @university_courses = []
-        @campus_courses = []
-        @ls_courses = []
-        @seven_breadth = []
-        @major_courses = []
-
         UniversityRequirement.get_courses(@user).each do |course|
             new_course = Course.find_by_id(course.course_id)
             new_course.instance_variable_set(:@entry_level_writing, UniversityRequirement.fulfill_requirement?(course, :entry_level_writing))
@@ -42,7 +34,10 @@ class ProfilepageController < ApplicationController
             course.instance_variable_set(:@american_history_and_institutions, true)
             @university_courses << course
         end 
+    end
 
+    def creport
+        @campus_courses = []
         CampusRequirement.get_courses(@user).each do |course| 
             new_course = Course.find_by_id(course.course_id)
             new_course.instance_variable_set(:@american_cultures, CampusRequirement.fulfill_requirement?(course, :american_cultures))
@@ -54,7 +49,10 @@ class ProfilepageController < ApplicationController
             course.instance_variable_set(:@american_cultures, true)
             @campus_courses << course
         end 
+    end
 
+    def ls3report
+        @ls_courses = []
         LsCollegeRequirement.get_courses(@user, false).each do |course| 
             new_course = Course.find_by_id(course.course_id)
             new_course.instance_variable_set(:@foreign_language_breadth, LsCollegeRequirement.fulfill_requirement?(course, :foreign_language_breadth))
@@ -70,31 +68,34 @@ class ProfilepageController < ApplicationController
             course.instance_variable_set(:@foreign_language_breadth, true)
             @ls_courses << course
         end 
+    end
 
+    def sevenbreath
+        @seven_breadth = []
+        category={:@arts_and_literature => :arts_and_literature,:@biological_science=>:biological_science,:@historical_studies=>:historical_studies,:@international_studies=>:international_studies,:@philosophy_and_values=>:philosophy_and_values,:@physical_science=>:physical_science,:@social_and_behavioral_sciences=>:social_and_behavioral_sciences}
         LsCollegeRequirement.get_courses(@user, true).each do |course| 
             new_course = Course.find_by_id(course.course_id)
-            new_course.instance_variable_set(:@arts_and_literature, LsCollegeRequirement.fulfill_requirement?(course, :arts_and_literature))
-            new_course.instance_variable_set(:@biological_science, LsCollegeRequirement.fulfill_requirement?(course, :biological_science))
-            new_course.instance_variable_set(:@historical_studies, LsCollegeRequirement.fulfill_requirement?(course, :historical_studies))
-            new_course.instance_variable_set(:@international_studies, LsCollegeRequirement.fulfill_requirement?(course, :international_studies))
-            new_course.instance_variable_set(:@philosophy_and_values, LsCollegeRequirement.fulfill_requirement?(course, :philosophy_and_values))
-            new_course.instance_variable_set(:@physical_science, LsCollegeRequirement.fulfill_requirement?(course, :physical_science))
-            new_course.instance_variable_set(:@social_and_behavioral_sciences, LsCollegeRequirement.fulfill_requirement?(course, :social_and_behavioral_sciences))
+            category.each{|key, value| new_course.instance_variable_set(key, LsCollegeRequirement.fulfill_requirement?(course, value))}
             @seven_breadth << new_course 
         end 
 
         if @seven_breadth.count == 0
             course = Course.create(:name => "You have fulfilled the requirement")
-            course.instance_variable_set(:@arts_and_literature, true)
-            course.instance_variable_set(:@biological_science, true)
-            course.instance_variable_set(:@historical_studies, true)
-            course.instance_variable_set(:@international_studies, true)
-            course.instance_variable_set(:@philosophy_and_values, true)
-            course.instance_variable_set(:@physical_science, true)
-            course.instance_variable_set(:@social_and_behavioral_sciences, true)
+            category.each{|key,value| course.instance_variable_set(key, true)}
             @seven_breadth << course
         end 
+    end
 
+    def report
+        @user = current_user
+        @major_courses = []
+        ureport
+
+        creport
+
+        ls3report
+
+        sevenbreath
         MajorRequirement.get_courses(@user).each {|course| @major_courses << course}
 
     end 
