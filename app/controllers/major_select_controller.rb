@@ -5,10 +5,10 @@ class MajorSelectController < ApplicationController
   	end
   end
   
-  def update_majors
-    @majors = Major.where("college_id = #{params[:college_id]}")
-
-    render :partial => "majors", :locals => {:object => @majors}
-    
-  end
+  # def update_majors
+  #   @majors = Major.where("college_id = #{params[:college_id]}")
+  # 
+  #   render :partial => "majors", :locals => {:object => @majors}
+  #   
+  # end
 end

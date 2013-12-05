@@ -53,7 +53,9 @@ And /^I signed in$/ do
   click_button 'Sign up' 
 end
 
-
+Given(/^I sign out$/) do
+  click_link "Sign out"
+end
 
 # Single-line step scoper
 When /^(.*) within (.*[^:])$/ do |step, parent|

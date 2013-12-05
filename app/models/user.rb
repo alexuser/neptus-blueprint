@@ -70,7 +70,13 @@ class User < ActiveRecord::Base
   end
 
   def to_s
-    :name
+    read_attribute(:name)
   end
+  
+  def email
+    read_attribute(:email)
+  end
+    
+  
   
 end
