@@ -10,7 +10,8 @@
   <% end %>
 
   <div class="row">
-    <div class="col-md-8">
+    <!-- changed it to 'col-md-9' instead of 8 -->
+    <div class="col-md-9">
 
       <div class="panel panel-primary">
         <div class="panel-heading">
@@ -218,68 +219,23 @@
           </div>
           <!-- End of LS College Requirements -->
 
-
-
-
-          <p>foobar</p>
-
-
           <!-- Major Requirements -->
           <div class="panel panel-info">
             <div class="panel-heading">
               <h3 class="panel-title">Major Requirements</h3>
             </div>
             <div class="panel-body">
+
+              <div class="col-md-4" id="circular-progress">
+              </div>  
+                
+                <div class="col-md-4" id="foo">
+                </div> 
+
+                <div class="col-md-4" id="bar">
+                </div> 
               <div class="col-lg-9">
                 <h5>Lower Division Requirements</h5>
-                <!--math -->
-                <div class="col-md-4">
-                  <canvas id="canvas1" width="100" height="100" style="border:0px solid #000000;">
-                    Your browser does not support the HTML5 canvas tag.
-                  </canvas>
-                </div>
-                <div class="col-md-4">
-                  <canvas id="canvas2" width="100" height="100" style="border:0px solid #000000;">
-                    Your browser does not support the HTML5 canvas tag.
-                  </canvas>
-                </div>
-                <div class="col-md-4">
-                  <canvas id="canvas3" width="100" height="100" style="border:0px solid #000000;">
-                    Your browser does not support the HTML5 canvas tag.
-                  </canvas>
-                  
-                </div>
-                <!--math -->
-                
-
-                <!--cs61abc -->
-                <div class="col-md-4">
-                  <canvas id="canvas4" width="100" height="100" style="border:0px solid #000000;">
-                    Your browser does not support the HTML5 canvas tag.
-                  </canvas>
-                </div>
-                <div class="col-md-4">
-                  <canvas id="canvas5" width="100" height="100" style="border:0px solid #000000;">
-                    Your browser does not support the HTML5 canvas tag.
-                  </canvas>
-                </div>
-                <div class="col-md-4">
-                  <canvas id="canvas6" width="100" height="100" style="border:0px solid #000000;">
-                    Your browser does not support the HTML5 canvas tag.
-                  </canvas>
-                </div>
-                <!--cs61abc -->
-                
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-                    <path fill="none" stroke="#7f99bf" stroke-width="15" d="M200,175A25,25,0,1,1,182.322,217.678" />
-                    <path fill="none" stroke="#7f99bf" stroke-width="15" d="M200,160A40,40,0,1,1,199.302,160.006" />
-                </svg> 
-                
-                 <div class="col-md-5" id="circular-progress">
-                 </div>                       
-
-                
-
                 <section class="tasks">
                   <div class="progress-pie-chart" data-percent="<%=@major_req_rate %>" id="major_req_rate">
                     <div class="ppc-progress">
@@ -299,8 +255,6 @@
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc">CS 61A</span>
                       
-
-                      <span> what the heck</span>
                     </label>
                   </fieldset>
                   <fieldset class="tasks-list">
@@ -391,47 +345,20 @@
                 </section>
               </div>      
 
+              <!-- changed the upper required courses list -->
               <div class="col-lg-9">
-                <h5>Upper Division Required Courses</h5>
-
+                <h5>Upper Division Design Courses</h5>
                 <section class="tasks">
-
                   <fieldset class="tasks-list">
-                    <%= hidden_field_tag 'requirements[cs_oneseventy]', 0 %>
-                    <%= hidden_field_tag 'requirements[cs_onesixtytwo]', 0 %>
+                    <%= hidden_field_tag 'requirements[cs_conefourtynine]', 0 %>
 
-                    <label class="tasks-list-item">
-                      <%= check_box_tag 'requirements[cs_oneseventy]', 1,@user[:cs_oneseventy], :id => 'requirements_cs_oneseventy' , :class => "tasks-list-cb"  %>
-
-                      <span class="tasks-list-mark"></span>
-                      <span class="tasks-list-desc">CS 170</span>
-                    </label>
-
-                  </fieldset>
-                  <fieldset class="tasks-list">
-                    <label class="tasks-list-item">
-                      <%= check_box_tag 'requirements[cs_onesixtytwo]', 1,@user[:cs_onesixtytwo], :id => 'requirements_cs_onesixtytwo' , :class => "tasks-list-cb"  %>
-
-                      <span class="tasks-list-mark"></span>
-                      <span class="tasks-list-desc">CS 162</span>
-                    </label>
-                  </fieldset>
-                </section>
-              </div>      
-
-              <div class="col-lg-9">
-                <h5>Breadth Courses</h5>
-
-                <section class="tasks">
-
-                  <fieldset class="tasks-list">
                     <%= hidden_field_tag 'requirements[cs_onefifty]', 0 %>
 
                     <%= hidden_field_tag 'requirements[cs_onefiftytwo]', 0 %>
 
                     <%= hidden_field_tag 'requirements[cs_onesixty]', 0 %>
 
-                    <%= hidden_field_tag 'requirements[cs_onesixtyone]', 0 %>
+                    <%= hidden_field_tag 'requirements[cs_onesixtytwo]', 0 %>
 
                     <%= hidden_field_tag 'requirements[cs_onesixtyfour]', 0 %>
 
@@ -441,9 +368,15 @@
 
                     <%= hidden_field_tag 'requirements[cs_oneeightysix]', 0 %>
 
-                    <%= hidden_field_tag 'requirements[cs_oneeightyeight]', 0 %>
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_conefourtynine]', 1,@user[:cs_conefourtynine], :id => 'requirements_cs_conefourtynine', :class => "tasks-list-cb"   %>
 
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">CS C149</span>
+                    </label>
+                  </fieldset>
 
+                  <fieldset class="tasks-list">
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[cs_onefifty]', 1,@user[:cs_onefifty], :id => 'requirements_cs_onefifty', :class => "tasks-list-cb"   %>
 
@@ -451,6 +384,7 @@
                       <span class="tasks-list-desc">CS 150</span>
                     </label>
                   </fieldset>
+
                   <fieldset class="tasks-list">
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[cs_onefiftytwo]', 1,@user[:cs_onefiftytwo], :id => 'requirements_cs_onefiftytwo', :class => "tasks-list-cb"   %>
@@ -459,6 +393,7 @@
                       <span class="tasks-list-desc">CS 152</span>
                     </label>
                   </fieldset>
+
                   <fieldset class="tasks-list">
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[cs_onesixty]', 1,@user[:cs_onesixty], :id => 'requirements_cs_onesixty', :class => "tasks-list-cb"   %>
@@ -467,7 +402,66 @@
                       <span class="tasks-list-desc">CS 160</span>
                     </label>
                   </fieldset>
+
+                  
                   <fieldset class="tasks-list">
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_onesixtytwo]', 1,@user[:cs_onesixtytwo], :id => 'requirements_cs_onesixtytwo' , :class => "tasks-list-cb"  %>
+
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">CS 162</span>
+                    </label>
+                  </fieldset>
+
+                  <fieldset class="tasks-list">
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_onesixtyfour]', 1,@user[:cs_onesixtyfour], :id => 'requirements_cs_onesixtyfour', :class => "tasks-list-cb"   %>
+                      <span class="tasks-list-mark"></span>
+
+                      <span class="tasks-list-desc">CS 164</span>
+                    </label>
+                  </fieldset>
+
+                  <fieldset class="tasks-list">
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_onesixtynine]', 1,@user[:cs_onesixtynine], :id => 'requirements_cs_onesixtynine', :class => "tasks-list-cb"   %>
+                      <span class="tasks-list-mark"></span>
+
+                      <span class="tasks-list-desc">CS 169</span>
+                    </label>
+                  </fieldset>
+
+                  <fieldset class="tasks-list">
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_oneeightyfour]', 1,@user[:cs_oneeightyfour], :id => 'requirements_cs_oneeightyfour', :class => "tasks-list-cb"   %>
+                      <span class="tasks-list-mark"></span>
+
+                      <span class="tasks-list-desc">CS 184</span>
+                    </label>
+                  </fieldset>
+
+                  <fieldset class="tasks-list">
+                    <label class="tasks-list-item">
+                      <%= check_box_tag 'requirements[cs_oneeightysix]', 1,@user[:cs_oneeightysix], :id => 'requirements_cs_oneeightysix', :class => "tasks-list-cb"   %>
+
+                      <span class="tasks-list-mark"></span>
+                      <span class="tasks-list-desc">CS 186</span>
+                    </label>
+                  </fieldset>
+                </section>
+              </div>      
+
+
+              <!-- changed the breadth courses list -->
+              <div class="col-lg-9">
+                <h5>Breadth Courses</h5>
+
+                <section class="tasks">
+                  <fieldset class="tasks-list">
+                    <%= hidden_field_tag 'requirements[cs_onesixtyone]', 0 %>
+                    <%= hidden_field_tag 'requirements[cs_oneeightyeight]', 0 %>
+                    <%= hidden_field_tag 'requirements[cs_oneseventy]', 0 %>
+
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[cs_onesixtyone]', 1,@user[:cs_onesixtyone], :id => 'requirements_cs_onesixtyone', :class => "tasks-list-cb"   %>
 
@@ -477,40 +471,14 @@
                   </fieldset>
                   <fieldset class="tasks-list">
                     <label class="tasks-list-item">
-                      <%= check_box_tag 'requirements[cs_onesixtyfour]', 1,@user[:cs_onesixtyfour], :id => 'requirements_cs_onesixtyfour', :class => "tasks-list-cb"   %>
+                      <%= check_box_tag 'requirements[cs_oneseventy]', 1,@user[:cs_oneseventy], :id => 'requirements_cs_oneseventy' , :class => "tasks-list-cb"  %>
                       <span class="tasks-list-mark"></span>
-
-                      <span class="tasks-list-desc">CS 164</span>
-                    </label>
-                  </fieldset>
-                  <fieldset class="tasks-list">
-                    <label class="tasks-list-item">
-                      <%= check_box_tag 'requirements[cs_onesixtynine]', 1,@user[:cs_onesixtynine], :id => 'requirements_cs_onesixtynine', :class => "tasks-list-cb"   %>
-                      <span class="tasks-list-mark"></span>
-
-                      <span class="tasks-list-desc">CS 169</span>
-                    </label>
-                  </fieldset>
-                  <fieldset class="tasks-list">
-                    <label class="tasks-list-item">
-                      <%= check_box_tag 'requirements[cs_oneeightyfour]', 1,@user[:cs_oneeightyfour], :id => 'requirements_cs_oneeightyfour', :class => "tasks-list-cb"   %>
-                      <span class="tasks-list-mark"></span>
-
-                      <span class="tasks-list-desc">CS 184</span>
-                    </label>
-                  </fieldset>
-                  <fieldset class="tasks-list">
-                    <label class="tasks-list-item">
-                      <%= check_box_tag 'requirements[cs_oneeightysix]', 1,@user[:cs_oneeightysix], :id => 'requirements_cs_oneeightysix', :class => "tasks-list-cb"   %>
-
-                      <span class="tasks-list-mark"></span>
-                      <span class="tasks-list-desc">CS 186</span>
+                      <span class="tasks-list-desc">CS 170</span>
                     </label>
                   </fieldset>
                   <fieldset class="tasks-list">
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[cs_oneeightyeight]', 1,@user[:cs_oneeightyeight], :id => 'requirements_cs_oneeightyeight', :class => "tasks-list-cb"   %>
-
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc">CS 188</span>
                     </label>
@@ -531,8 +499,8 @@
       <%= link_to 'Generate Report', report_path, :id=> 'requirement_generate', :class =>"btn btn-success btn-block" %>
 
     </div>  
-
-    <div class="col-md-4">
+    <!-- changed it to 'col-md-3' instead of 4 -->
+    <div class="col-md-3">
       <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title">Student Profile</h3>
