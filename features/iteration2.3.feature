@@ -22,10 +22,9 @@ Background: The user has created a profile, and now he or she wants to see what 
  	And I check "requirements_physical_science"
 
  	And I press "Save"
+	
 
- 	Then I should see "50%"
- 	And I should see "100%"
- 	And I should see "40%"
+	
 
 
 

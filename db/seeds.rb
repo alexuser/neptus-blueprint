@@ -528,3 +528,10 @@ r414 = CampusRequirement.create(:course_id => c414.id, :american_cultures => tru
 c415 = Course.create(:name => "Comparative Literature 34")
 r415 = CampusRequirement.create(:course_id => c415.id, :american_cultures => true)
 
+
+#Generate Default Forum
+Forem::Category.create!(name: "Berkeley")
+
+Forem::Forum.create!(title: "Classes", description: "Discuss which classes to take", category_id: 1)
+
+

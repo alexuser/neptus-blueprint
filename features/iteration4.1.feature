@@ -20,6 +20,6 @@ Scenario: Sort by Salary
 Scenario: Sort by Job Openings
 	Given I see "Elementary school teachers, except special education" before "Computer software engineers, applications"
 	When I click on "Sort by Openings"
-	I should see "Computer software engineers, applications" before "Elementary school teachers, except special education"
+	Then I should see "Computer software engineers, applications" before "Elementary school teachers, except special education"
 	Then I click on "Sort by Openings"
-	I should see "Elementary school teachers, except special education" before "Computer software engineers, applications"
+	Then I should see "Elementary school teachers, except special education" before "Computer software engineers, applications"
