@@ -28,3 +28,11 @@ Scenario: choosing specific major
   Then I should see "CS" in "_major_id"
 
   And I should not see "EECS" in "_major_id"
+  
+Scenario: redirect me when I am signed in
+	Given I am on the home page
+	Given I am signed up
+	When I go to the major select welcome page
+	Then I should not see "Major Select"
+	
+  

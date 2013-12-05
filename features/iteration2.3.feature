@@ -23,6 +23,9 @@ Background: The user has created a profile, and now he or she wants to see what 
 
  	And I press "Save"
 	
+	Then I should see "50"
+	Then I should see "0"
+	
 
 	
 

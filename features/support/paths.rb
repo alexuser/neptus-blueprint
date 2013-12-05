@@ -20,6 +20,7 @@ module NavigationHelpers
     when /^the Profile page$/i then profile_path
     when /^the Edit Profile page/i then edit_user_registration_path
     when /^the forum page/i then '/forums'
+    when /^the job outlook page/i then outlook_path
       
     when /^the Report page$/i then report_path
     when /^the user page $/i then user_root_path
