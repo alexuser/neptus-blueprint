@@ -5,18 +5,6 @@ paper.path("M200 0L200 200");
 paper.path("M0 200L200 200");
 paper.path("M0 0L0 200");
 
-var paper2 = Raphael("foo", 200, 200);
-paper2.path("M0 0L200 0");
-paper2.path("M200 0L200 200");
-paper2.path("M0 200L200 200");
-paper2.path("M0 0L0 200");
-
-var paper3 = Raphael("bar", 200, 200);
-paper3.path("M0 0L200 0");
-paper3.path("M200 0L200 200");
-paper3.path("M0 200L200 200");
-paper3.path("M0 0L0 200");
-
 var CircularPath = function(R, x, y, w, paper, bgColor){
     this.radius = R;
     this.centerX = x;
@@ -57,6 +45,8 @@ var grey = '#D1D0CE',
     blue = '#98AFC7',
     green = '#437C17';
 
+var totalProgress = 0;
+
 
 var lowerDivision = new CircularPath(40, 100, 100, 13, paper, grey);
 lowerDivision.setup();
@@ -92,7 +82,8 @@ lowerDivision.update = function() {
                 reqs[i] == '#requirements_ee_fourtytwo') break;
         }
     }
-    this.setColor(progress/8.0, '#FFD801');
+    totalProgress += progress;
+    this.setColor(totalProgress/8.0, '#FFD801');
 }
 
 lowerDivision.update();
@@ -111,7 +102,7 @@ upperDesign.update = function() {
     for (var i = 0; i < reqs.length; i++) {
         if ($(reqs[i]+'.tasks-list-cb').prop('checked')) {
             progress = 1;
-            console.log("nonono!");
+            totalProgress += progress;
             break;
         }
     }
@@ -139,6 +130,7 @@ fiveUpper.update = function() {
             if (progress == 5) break;
         }
     }
+    totalProgress += progress;
     this.setColor(progress/5.0, '#728FCE');
 }
 
@@ -164,37 +156,13 @@ totalUpper.update = function() {
             if (progress == 7) break;
         }
     }
+    totalProgress += progress;
     this.setColor(progress/7.0, '#2B547E');
 }
 totalUpper.update();
+totalProgress = (totalProgress / 21.0 * 100).toFixed(2);
+paper.text(100,100,totalProgress + "%").attr('font-size', 13);
 
-
-
-var lowerDivision = new CircularPath(40, 100, 100, 13, paper2, grey);
-lowerDivision.setup();
-lowerDivision.setColor(1,green);
-var upperDesign = new CircularPath(55, 100, 100, 13, paper2, grey);
-upperDesign.setup();
-upperDesign.setColor(0.8,blue);
-var fiveUpper = new CircularPath(70, 100, 100, 13, paper2, grey);
-fiveUpper.setup();
-fiveUpper.setColor(0.5, green);
-var totalUpper = new CircularPath(85, 100, 100, 13, paper2, grey);
-totalUpper.setup();
-totalUpper.setColor(0.3, blue); 
-
-var lowerDivision = new CircularPath(40, 100, 100, 13, paper3, grey);
-lowerDivision.setup();
-lowerDivision.setColor(1,green);
-var upperDesign = new CircularPath(55, 100, 100, 13, paper3, grey);
-upperDesign.setup();
-upperDesign.setColor(0.8,blue);
-var fiveUpper = new CircularPath(70, 100, 100, 13, paper3, grey);
-fiveUpper.setup();
-fiveUpper.setColor(0.5, green);
-var totalUpper = new CircularPath(85, 100, 100, 13, paper3, grey);
-totalUpper.setup();
-totalUpper.setColor(0.3, blue); 
 
 
 

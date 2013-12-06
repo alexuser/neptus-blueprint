@@ -143,7 +143,7 @@
                   </label>
                 </fieldset>
 
-                <div class="col-lg-9">
+                <div class="col-md-9">
                   <h5>Seven Breath Requirements</h5>
 
                   <fieldset class="tasks-list">
@@ -231,17 +231,13 @@
             </div>
             <div class="panel-body">
 
-              <div class="col-md-4" id="circular-progress">
-              </div>  
                 
-                <div class="col-md-4" id="foo">
-                </div> 
-
-                <div class="col-md-4" id="bar">
-                </div> 
-              <div class="col-lg-9">
+                
+              
+              <div class="col-md-7">
                 <h5>Lower Division Requirements</h5>
                 <section class="tasks">
+                <!--
                   <div class="progress-pie-chart" data-percent="<%=@major_req_rate %>" id="major_req_rate">
                     <div class="ppc-progress">
                       <div class="ppc-progress-fill"></div>
@@ -252,7 +248,7 @@
                       </div>
                     </div>
                   </div>
-
+                -->
                   <fieldset class="tasks-list">
                     <%= hidden_field_tag 'requirements[cs_sixtyonea]', 0 %>
                     <label class="tasks-list-item">
@@ -347,11 +343,18 @@
                       <span class="tasks-list-desc">EE 42</span>
                     </label>
                   </fieldset>
+
                 </section>
-              </div>      
+                
+
+              </div>   
+
+              <div class="col-md-5" id="circular-progress">
+              </div> 
+
 
               <!-- changed the upper required courses list -->
-              <div class="col-lg-9">
+              <div class="col-md-9">
                 <h5>Upper Division Design Courses</h5>
                 <section class="tasks">
                   <fieldset class="tasks-list">
@@ -458,7 +461,7 @@
 
 
               <!-- changed the breadth courses list -->
-              <div class="col-lg-9">
+              <div class="col-md-9">
                 <h5>Breadth Courses</h5>
 
                 <section class="tasks">
