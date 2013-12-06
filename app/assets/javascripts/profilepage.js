@@ -1,10 +1,5 @@
 
-var paper = Raphael("circular-progress", 200, 200);
-paper.path("M0 0L200 0");
-paper.path("M200 0L200 200");
-paper.path("M0 200L200 200");
-paper.path("M0 0L0 200");
-
+var paper = Raphael("circular-progress", 400, 400);
 var CircularPath = function(R, x, y, w, paper, bgColor){
     this.radius = R;
     this.centerX = x;
@@ -48,16 +43,16 @@ var grey = '#D1D0CE',
 var totalProgress = 0;
 
 
-var lowerDivision = new CircularPath(40, 100, 100, 13, paper, grey);
+var lowerDivision = new CircularPath(40, 120, 120, 18, paper, grey);
 lowerDivision.setup();
 //lowerDivision.setColor(1,'#89C35C');
-var upperDesign = new CircularPath(55, 100, 100, 13, paper, grey);
+var upperDesign = new CircularPath(60, 120, 120, 18, paper, grey);
 upperDesign.setup();
 //upperDesign.setColor(0.8,'#6CBB3C');
-var fiveUpper = new CircularPath(70, 100, 100, 13, paper, grey);
+var fiveUpper = new CircularPath(80, 120, 120, 18, paper, grey);
 fiveUpper.setup();
 //fiveUpper.setColor(0.5, '#6AA121');
-var totalUpper = new CircularPath(85, 100, 100, 13, paper, grey);
+var totalUpper = new CircularPath(100, 120, 120, 18, paper, grey);
 totalUpper.setup();
 //totalUpper.setColor(0.3, '#348017'); 
 
@@ -161,11 +156,19 @@ totalUpper.update = function() {
 }
 totalUpper.update();
 totalProgress = (totalProgress / 21.0 * 100).toFixed(2);
-paper.text(100,100,totalProgress + "%").attr('font-size', 13);
+paper.text(120,120,totalProgress + "%").attr('font-size', 13);
 
+paper.circle(20, 250, 7).attr({'fill': '#FFD801', 'stroke-width': 0});
+paper.text(80, 250, 'Lower Division').attr({'font-size': 13 });
 
+paper.circle(20, 270, 7).attr({'fill': '#9DC209', 'stroke-width': 0});
+paper.text(100, 270, 'Upper Division Desgin').attr({'font-size': 13 });
 
+paper.circle(20, 290, 7).attr({'fill': '#728FCE', 'stroke-width': 0});
+paper.text(100, 290, 'Upper Division CS/EE').attr({'font-size': 13 });
 
+paper.circle(20, 310, 7).attr({'fill': '#2B547E', 'stroke-width': 0});
+paper.text(95, 310, 'Total Upper Division').attr({'font-size': 13 });
 /*
            window.onload = function () {
                 var r = Raphael("holder", 600, 600),
