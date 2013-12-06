@@ -158,17 +158,17 @@ totalUpper.update();
 totalProgress = (totalProgress / 21.0 * 100).toFixed(2);
 paper.text(120,120,totalProgress + "%").attr('font-size', 13);
 
-paper.circle(20, 250, 7).attr({'fill': '#FFD801', 'stroke-width': 0});
-paper.text(80, 250, 'Lower Division').attr({'font-size': 13 });
+paper.circle(10, 250, 7).attr({'fill': '#FFD801', 'stroke-width': 0});
+paper.text(110, 250, 'Lower Division Requirements').attr({'font-size': 13 });
 
-paper.circle(20, 270, 7).attr({'fill': '#9DC209', 'stroke-width': 0});
-paper.text(100, 270, 'Upper Division Desgin').attr({'font-size': 13 });
+paper.circle(10, 270, 7).attr({'fill': '#9DC209', 'stroke-width': 0});
+paper.text(116, 270, '1 Upper Division Desgin Course').attr({'font-size': 13 });
 
-paper.circle(20, 290, 7).attr({'fill': '#728FCE', 'stroke-width': 0});
-paper.text(100, 290, 'Upper Division CS/EE').attr({'font-size': 13 });
+paper.circle(10, 290, 7).attr({'fill': '#728FCE', 'stroke-width': 0});
+paper.text(140, 290, '20 Units Upper Division CS/EE Courses').attr({'font-size': 13 });
 
-paper.circle(20, 310, 7).attr({'fill': '#2B547E', 'stroke-width': 0});
-paper.text(95, 310, 'Total Upper Division').attr({'font-size': 13 });
+paper.circle(10, 310, 7).attr({'fill': '#2B547E', 'stroke-width': 0});
+paper.text(135, 310, '27 Units Total Upper Division Courses').attr({'font-size': 13 });
 /*
            window.onload = function () {
                 var r = Raphael("holder", 600, 600),
