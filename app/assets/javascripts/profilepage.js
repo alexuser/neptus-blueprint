@@ -1,3 +1,5 @@
+$("#foobar").popover();
+
 
 var paper = Raphael("circular-progress", 400, 400);
 var CircularPath = function(R, x, y, w, paper, bgColor){
