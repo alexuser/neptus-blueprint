@@ -2,7 +2,37 @@
 <%= javascript_include_tag "progress" %>
 <%= javascript_include_tag "raphael" %>
 
+
+  <div class ="prerequisite">
+    CS 150 prerequisite: CS 61C, EE 40 or EE 42
+    CS 152 prerequisite: CS 61C
+    CS 160 prerequisite: CS 61B or CS 61BL
+    CS 161 prerequisite: CS 61C, CS 70 or Math 55
+    CS 162 prerequisite: CS 61B, 61C, and 70
+    CS 164 prerequisite: CS 61B and CS 61C
+    CS 169 prerequisite: CS 61B and 61C, and either CS 70 or Math 113
+    CS 170 prerequisite: CS 61B and CS 70
+    CS 184 prerequisite: CS 61B or CS 61BL
+    CS 186 prerequisite: CS 61B and CS 61C
+    CS 188 prerequisite: CS 61A or CS 61B and CS 70
+    CS 61A prerequisite: Math 1A
+    CS 61B prerequisite: CS 61A or Engineering 7
+    CS 61C prerequisite: CS 61A and CS 61B or CS 61BL
+    CS 70 prerequisite: Sophomore mathematical maturity, and programming experience equivalent to that gained in 3 or the Advanced Placement CS A course
+    CS C149 prerequisite: CS 61C; CS 70 or Math 55
+    EE 20 prerequisite: Math 1B
+    EE 40 prerequisite: Math 1B
+    EE 42 prerequisite: Math 1B
+    Math 1A prerequisite: Three and one-half years of high school math, including trigonometry and analytic geometry, plus a satisfactory grade in one of the following: CEEB MAT test, an AP test, the UC/CSU math diagnostic test, or 32. Consult the Math department for details. Students with AP credit should consider choosing a course more advanced than 1A
+    Math 1B prerequisite: Math 1A
+    Math 54 prerequisite: Math 1B
+  </div>
+
+
 <div class="container">
+
+
+  
   <%= label_tag @university_req_rate, nil , :class=> "hidden-label" %>
   <%= label_tag @campus_req_rate, nil, :class=>"hidden-label" %>
   <%= label_tag @ls_college_req_rate, nil, :class =>"hidden-label" %>
@@ -230,7 +260,7 @@
               <h3 class="panel-title">Major Requirements</h3>
             </div>
             <div class="panel-body">
-              
+
               <div class="col-md-6">
                 <h5>Lower Division Requirements</h5>
                 <section class="tasks">
@@ -474,7 +504,7 @@
                       <%= check_box_tag 'requirements[cs_oneeightyeight]', 1,@user[:cs_oneeightyeight], :id => 'requirements_cs_oneeightyeight', :class => "tasks-list-cb"   %>
                       <span class="tasks-list-mark"></span>
                       <span id="CS-188" class="tasks-list-desc">CS 188</span>
-                      <btton class="btn btn-primary" id="foobar">foobar</btton>
+
                     </label>
                   </fieldset>
                 </section>
@@ -538,11 +568,19 @@
       </div>
     </div>
   </div>
+<<<<<<< HEAD
 <%= javascript_include_tag 'jquery' %>
 <%= javascript_include_tag 'profilepage' %>
 <%= javascript_include_tag 'raphael' %>
 
 <%= javascript_include_tag 'bootstrap' %>
 <%= javascript_include_tag 'popover' %>
+=======
+  <%= javascript_include_tag 'jquery' %>
+  <%= javascript_include_tag 'profilepage' %>
+  <%= javascript_include_tag 'raphael' %>
+  <%= javascript_include_tag 'bootstrap' %>
+  <%= javascript_include_tag 'popover' %>
+>>>>>>> 4e169ecd680c937f37e07dd5bb99c50fd725b2fc
 
 <!--   <%= params %>  -->

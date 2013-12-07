@@ -5,6 +5,7 @@
 @import url('http://fonts.googleapis.com/css?family=Lato:300,400,700');
 @import url('http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css');
 
+
 .tasks {
 font: 16px/1 'Lato', sans-serif;
 width: 500px;
@@ -189,12 +190,11 @@ float: right;
 margin: 0px auto 0;
 }
 
-
-
-
-
-
-
 .hidden-label {
 	visibility:hidden;
+}
+
+.prerequisite {
+	visibility:hidden;
+	display: none;
 }
