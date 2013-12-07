@@ -160,6 +160,7 @@ c943 = Course.create(:name => "CS 169")
 c944 = Course.create(:name => "CS 184")
 c945 = Course.create(:name => "CS 186")
 c946 = Course.create(:name => "CS 188")
+c947 = Course.create(:name => "CS C149")
 
 
 

@@ -50,6 +50,7 @@ class User < ActiveRecord::Base
   attr_accessible :cs_oneeightyfour
   attr_accessible :cs_oneeightysix
   attr_accessible :cs_oneeightyeight
+  attr_accessible :cs_conefourtynine
 
   # attr_accessible :title, :body
   attr_accessor :login
