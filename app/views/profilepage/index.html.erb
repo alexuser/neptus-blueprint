@@ -504,6 +504,7 @@
                       <%= check_box_tag 'requirements[cs_oneeightyeight]', 1,@user[:cs_oneeightyeight], :id => 'requirements_cs_oneeightyeight', :class => "tasks-list-cb"   %>
                       <span class="tasks-list-mark"></span>
                       <span id="CS-188" class="tasks-list-desc">CS 188</span>
+                      <div class = "btn btn-primary" id = "foobar" title="" data-content >check check</div>
                     </label>
                   </fieldset>
                 </section>
@@ -567,10 +568,10 @@
       </div>
     </div>
   </div>
-
+  <%= javascript_include_tag 'jquery' %>
   <%= javascript_include_tag 'profilepage' %>
   <%= javascript_include_tag 'raphael' %>
-  <%= javascript_include_tag 'bootstrap-popover' %>
+  <%= javascript_include_tag 'bootstrap' %>
   <%= javascript_include_tag 'popover' %>
 
 <!--   <%= params %>  -->

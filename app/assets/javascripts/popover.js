@@ -41,3 +41,6 @@ $("#CS-161").attr("title", "CS 161 prerequisite:\n 61C (Machine Structures), plu
 $("#CS-170").attr("title", "CS 170 prerequisite:\n Computer Science 61B and 70.");
 
 $("#CS-188").attr("title", "CS 188 prerequisite:\n Computer Science 61A or 61B and consent of instructor; Computer Science 70.");
+
+
+$("#foobar").popover();

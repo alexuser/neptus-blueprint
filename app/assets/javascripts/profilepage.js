@@ -1,4 +1,4 @@
-var paper = Raphael("circular-progress", 400, 400);
+var paper = raphael("circular-progress", 400, 400);
 var CircularPath = function(R, x, y, w, paper, bgColor){
     this.radius = R;
     this.centerX = x;
