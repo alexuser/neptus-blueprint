@@ -39,6 +39,7 @@ class User < ActiveRecord::Base
   attr_accessible :ee_fourty
   attr_accessible :ee_twenty
   attr_accessible :ee_fourtytwo
+  attr_accessible :cs_conefourtynine
   attr_accessible :cs_oneseventy
   attr_accessible :cs_onesixtytwo
   attr_accessible :cs_onefifty

@@ -17,7 +17,7 @@ class AddMajorRequirement < ActiveRecord::Migration
   	add_column :users, :cs_oneseventy, :boolean, :default => false
   	add_column :users, :cs_onesixtytwo, :boolean, :default => false
 
-  	# breadth courses
+  	# breadth courses    
   	add_column :users, :cs_onefifty, :boolean, :default => false
   	add_column :users, :cs_onefiftytwo, :boolean, :default => false 
   	add_column :users, :cs_onesixty, :boolean, :default => false
