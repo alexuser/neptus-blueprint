@@ -20,9 +20,9 @@ $("#EE-42").attr("title", "EE 42 prerequisite:\n Mathematics 1B.");
 
 $("#CS-C149").attr("title", "CS C149 prerequisite:\n 20N; Computer Science 61C; Computer Science 70 or Math 55.");
 
-$("#CS-150").attr("title", "CS 150 prerequisite:\n 61C, Electrical Engineering 40 or 42.");
+$("#CS-150").attr("title", "CS 150 prerequisite:\n CS 61C, Electrical Engineering 40 or 42.");
 
-$("#CS-152").attr("title", "CS 152 prerequisite:\n 61C.");
+$("#CS-152").attr("title", "CS 152 prerequisite:\n CS 61C.");
 
 $("#CS-160").attr("title", "CS 160 prerequisite:\n Computer Science 61B or 61BL.");
 
