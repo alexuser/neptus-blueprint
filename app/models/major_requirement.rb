@@ -12,7 +12,7 @@ class MajorRequirement < ActiveRecord::Base
   	finished_rate = 0
   	#TODO 
     @cs_majors.each_key{|key| finished_rate += 1 if user[key] == true}
-  	return finished_rate*100/21
+  	return finished_rate*100/22
   end
 
   def self.get_courses(fufilled_requirements)
