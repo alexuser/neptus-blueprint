@@ -27,6 +27,6 @@ $(function(){
 		$ls_college_req_rate.addClass('gt-50');
 	}
 	$('#ls_college_req_rate .ppc-progress-fill').css('transform','rotate('+ ls_deg +'deg)');
-	$('#ls_college_req_rate .ppc-progress-fill').css('-webkit-transform','rotate('+ campus_deg +'deg)');
+	$('#ls_college_req_rate .ppc-progress-fill').css('-webkit-transform','rotate('+ ls_deg +'deg)');
 	$('#ls_college_req_rate .ppc-percents span').html(ls_percent+'%');
 });
