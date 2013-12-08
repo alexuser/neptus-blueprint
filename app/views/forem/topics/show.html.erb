@@ -5,10 +5,10 @@
   <div id='menu'>
     <div class='btn-group'>
       <% if @topic.can_be_replied_to? && can?(:reply, @topic) %>
-        <%= link_to t(".reply"), forem.new_topic_post_path(@topic), :class => "btn btn-primary" %>
+        <%= link_to t(".reply to topic"), forem.new_topic_post_path(@topic), :class => "btn btn-primary" %>
       <% end %>
       <% if @topic.user == forem_user || forem_admin? %>
-        <%= link_to t(".delete"), forem.forum_topic_path(@forum, @topic), :method => :delete, data: { :confirm => t("are_you_sure") }, :class => "btn btn-danger" %>
+        <%= link_to t(".delete topic"), forem.forum_topic_path(@forum, @topic), :method => :delete, data: { :confirm => t("are_you_sure") }, :class => "btn btn-danger" %>
       <% end %>
       <!--
       <% if forem_user %>
