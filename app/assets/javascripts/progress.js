@@ -26,14 +26,4 @@ $(function(){
 	}
 	$('#ls_college_req_rate .ppc-progress-fill').css('transform','rotate('+ ls_deg +'deg)');
 	$('#ls_college_req_rate .ppc-percents span').html(ls_percent+'%');
-
-
-	var $major_req_rate =$('#major_req_rate'),
-	major_percent = parseInt($major_req_rate.data('percent')),
-	major_deg = 360*major_percent/100;
-	if (major_percent > 50) {
-		$major_req_rate.addClass('gt-50');
-	}
-	$('#major_req_rate .ppc-progress-fill').css('transform','rotate('+ major_deg +'deg)');
-	$('#major_req_rate .ppc-percents span').html(major_percent+'%');
 });
