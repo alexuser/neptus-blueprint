@@ -16,6 +16,7 @@ Scenario: Create a new post
 	Given I am on the forum page
 	And I am signed up
 	And I go to the classes
+	And I should not see "hello world"
 	And I follow "New topic"
 	Then I should see "Creating a new topic"
 	When I fill in "topic_subject" with "hello"
@@ -79,4 +80,5 @@ Scenario: Delete a post
 
 	When I follow "Delete"
 	Then I should see "There are no topics in this forum currently"
+	And I should not see "hello world"
 	
