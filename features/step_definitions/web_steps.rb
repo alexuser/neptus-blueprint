@@ -33,6 +33,12 @@ World(WithinHelpers)
 
 
 
+When /^I hover and click on "([^\"]*)"$/ do |selector|
+  page.driver.execute_script('$("#selector").trigger("hover")');
+end
+
+
+
 And /^I am signed up$/ do
   click_link 'Sign up' 
   fill_in 'user_username', :with => 'Jerry' 
