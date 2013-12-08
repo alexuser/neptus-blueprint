@@ -1,5 +1,4 @@
-<%= javascript_include_tag "progress" %>
-<%= javascript_include_tag "raphael" %>
+  <%= javascript_include_tag "progress" %>
 
 
   <div class ="prerequisite">
@@ -262,6 +261,7 @@
 
               <div class="col-md-7">
                 <h5>Lower Division Requirements</h5>
+
                 <section class="tasks">
                   <fieldset class="tasks-list">
                     <%= hidden_field_tag 'requirements[cs_sixtyonea]', 0 %>
@@ -488,7 +488,6 @@
 
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[cs_onesixtyone]', 1,@user[:cs_onesixtyone], :id => 'requirements_cs_onesixtyone', :class => "tasks-list-cb"   %>
-
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc" id='CS-161'>CS 161</span>
                     </label>
@@ -505,6 +504,7 @@
                       <%= check_box_tag 'requirements[cs_oneeightyeight]', 1,@user[:cs_oneeightyeight], :id => 'requirements_cs_oneeightyeight', :class => "tasks-list-cb"   %>
                       <span class="tasks-list-mark"></span>
                       <span id="CS-188" class="tasks-list-desc">CS 188</span>
+                      
                     </label>
                   </fieldset>
                 </section>
@@ -566,8 +566,7 @@
       </div>
     </div>
   </div>
-  <%= javascript_include_tag 'jquery' %>
+  <%= javascript_include_tag "raphael" %>
   <%= javascript_include_tag 'profilepage' %>
-  <%= javascript_include_tag 'raphael' %>
   <%= javascript_include_tag 'bootstrap' %>
   <%= javascript_include_tag 'popover' %>
