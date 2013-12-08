@@ -1,8 +1,32 @@
+<head>
+	<style type="text/css">
+		input {margin: 10px;}
+		textarea {margin: 8px;}
+	</style>
+</head>
+
+
 <%= render :partial => 'forem/forums/head', :locals => { :forum => @topic.forum } %>
 
 <h2><%= t("forem.post.edit", :post => @post) %></h2>
-
+<!--
 <%= simple_form_for [forem, @topic, @post] do |f| %>
   <%= render :partial => "form", :locals => { :f => f } %>
   <%= f.submit t("forem.post.buttons.edit"), :class => "btn btn-primary" %>
 <% end %>
+-->
+<form accept-charset="UTF-8" action="/forums/topics/asdf--3/posts/4" class="simple_form edit_post" id="edit_post_4" method="post">
+	<div style="margin:0;padding:0;display:inline">
+		<input name="utf8" type="hidden" value="&#x2713;" />
+		<input name="_method" type="hidden" value="put" />
+		<input name="authenticity_token" type="hidden" value="1YeBcfMpw3R7k05Os7N8TxBXrO23E+XLyQw9Q2OXp6Q=" />
+	</div>
+  <div class="input text required post_text">
+  	<label class="text required" for="post_text"><abbr title="required">*</abbr> Text</label>
+  	<textarea class="text required field span12" cols="40" id="post_text" name="post[text]" required="required" rows="20">
+		asdf
+	</textarea>
+  </div>
+
+  <input class="btn btn-primary" name="commit" type="submit" value="Edit" />
+</form>
