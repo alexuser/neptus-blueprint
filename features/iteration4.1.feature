@@ -10,7 +10,3 @@ Background: I am on the job outlook pagee
 	And I am signed up
 	Then I go to the job outlook page
 
-	Then I should see "Common Careers"
-	And I should see "College Majors"
-	And I should see "Nurse"
-	
