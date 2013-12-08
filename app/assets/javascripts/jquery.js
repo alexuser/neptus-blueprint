@@ -3029,7 +3029,8 @@ jQuery.event = {
 
 		// Event object or event type
 		var type = event.type || event,
-			namespaces = [],
+			namespaces = [
+			],
 			cache, exclusive, i, cur, old, ontype, special, handle, eventPath, bubbleType;
 
 		// focus/blur morphs to focusin/out; ensure we're not firing them right now
