@@ -531,8 +531,16 @@ r415 = CampusRequirement.create(:course_id => c415.id, :american_cultures => tru
 
 
 #Generate Default Forum
-Forem::Category.create!(name: "Berkeley")
+Forem::Category.create!(name: "General")
+Forem::Category.create!(name: "UC Berkeley")
+Forem::Category.create!(name: "Career")
+Forem::Category.create!(name: "College Admissions and Search")
 
-Forem::Forum.create!(title: "Classes", description: "Discuss which classes to take", category_id: 1)
-
-
+Forem::Forum.create!(title: "College Search & Selection", description: "Help you choose your dream college", category_id: 1)
+Forem::Forum.create!(title: "Majors", description: "What kind of major should I choose?", category_id: 2)
+Forem::Forum.create!(title: "Classes", description: "Discuss which classes to take", category_id: 2)
+Forem::Forum.create!(title: "Study Abroad", description: "Study Abroad", category_id: 2)
+Forem::Forum.create!(title: "Internships, Careers, and Employment", description: "Explore opportunities.", category_id: 3)
+Forem::Forum.create!(title: "College Admissions", description: "How to get into a good college!", category_id: 4)
+Forem::Forum.create!(title: "College Essays", description: "Teach you how to write a good college essay.", category_id: 4)
+Forem::Forum.create!(title: "College Search and Selection", description: "How to select a good college", category_id: 4)
