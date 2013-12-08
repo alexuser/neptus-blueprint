@@ -6,6 +6,7 @@ $(function(){
 		$university_req_rate.addClass('gt-50');
 	}
 	$('#university_req_rate .ppc-progress-fill').css('transform','rotate('+ university_deg +'deg)');
+	$('#university_req_rate .ppc-progress-fill').css('-webkit-transform','rotate('+ university_deg +'deg)');
 	$('#university_req_rate .ppc-percents span').html(university_percent+'%');
 
 
@@ -16,6 +17,7 @@ $(function(){
 		$campus_req_rate.addClass('gt-50');
 	}
 	$('#campus_req_rate .ppc-progress-fill').css('transform','rotate('+ campus_deg +'deg)');
+	$('#campus_req_rate .ppc-progress-fill').css('-webkit-transform','rotate('+ campus_deg +'deg)');
 	$('#campus_req_rate .ppc-percents span').html(campus_percent+'%');
 
 	var $ls_college_req_rate =$('#ls_college_req_rate'),
@@ -25,5 +27,6 @@ $(function(){
 		$ls_college_req_rate.addClass('gt-50');
 	}
 	$('#ls_college_req_rate .ppc-progress-fill').css('transform','rotate('+ ls_deg +'deg)');
+	$('#ls_college_req_rate .ppc-progress-fill').css('-webkit-transform','rotate('+ campus_deg +'deg)');
 	$('#ls_college_req_rate .ppc-percents span').html(ls_percent+'%');
 });
