@@ -11,4 +11,5 @@ Scenario: Test the existence of forum
 	Given I am on the home page
 	And I am signed up
 	Then I go to the forum page
+
 	

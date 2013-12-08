@@ -2391,7 +2391,7 @@ input[type="button"].btn-block {
 
 .glyphicon {
   position: relative;
-  top: 1px;
+  top:     1px;
   display: inline-block;
   font-family: 'Glyphicons Halflings';
   -webkit-font-smoothing: antialiased;
@@ -5924,8 +5924,8 @@ body.modal-open,
 .popover-title {
   padding: 8px 14px;
   margin: 0;
-  font-size: 14px;
-  font-weight: normal;
+  font-size: 15px;
+  font-weight: bold;
   line-height: 18px;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
@@ -5934,6 +5934,9 @@ body.modal-open,
 
 .popover-content {
   padding: 9px 14px;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 15px;
 }
 
 .popover .arrow,
