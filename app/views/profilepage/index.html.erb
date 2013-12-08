@@ -262,6 +262,7 @@
 
               <div class="col-md-6">
                 <h5>Lower Division Requirements</h5>
+
                 <section class="tasks">
                   <fieldset class="tasks-list">
                     <%= hidden_field_tag 'requirements[cs_sixtyonea]', 0 %>
@@ -368,7 +369,7 @@
 
 
               <!-- changed the upper required courses list -->
-              <div class="col-md-9">
+              <div class="col-md-7">
                 <h5>Upper Division Design Courses</h5>
                 <section class="tasks">
                   <fieldset class="tasks-list">
@@ -477,10 +478,10 @@
 
 
               <!-- changed the breadth courses list -->
-              <div class="col-md-9">
+              <div class="col-md-5">
                 <h5>Breadth Courses</h5>
 
-                <section class="tasks">
+                <section class="tasks" style="width: 150px">
                   <fieldset class="tasks-list">
                     <%= hidden_field_tag 'requirements[cs_onesixtyone]', 0 %>
                     <%= hidden_field_tag 'requirements[cs_oneeightyeight]', 0 %>
@@ -488,7 +489,6 @@
 
                     <label class="tasks-list-item">
                       <%= check_box_tag 'requirements[cs_onesixtyone]', 1,@user[:cs_onesixtyone], :id => 'requirements_cs_onesixtyone', :class => "tasks-list-cb"   %>
-
                       <span class="tasks-list-mark"></span>
                       <span class="tasks-list-desc" id='CS-161'>CS 161</span>
                     </label>
@@ -505,6 +505,7 @@
                       <%= check_box_tag 'requirements[cs_oneeightyeight]', 1,@user[:cs_oneeightyeight], :id => 'requirements_cs_oneeightyeight', :class => "tasks-list-cb"   %>
                       <span class="tasks-list-mark"></span>
                       <span id="CS-188" class="tasks-list-desc">CS 188</span>
+                      
                     </label>
                   </fieldset>
                 </section>
