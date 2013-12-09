@@ -89,6 +89,12 @@ class ProfilepageController < ApplicationController
     def report
         @user = current_user
         @major_courses = []
+        @lower_division_helper_one = []
+        @lower_division = []
+        @lower_division_helper_two = []
+        @twenty_upper_division = []
+        @upper_design = []
+        @twentyseven_total_upper_division = []
         ureport
 
         creport
@@ -97,6 +103,85 @@ class ProfilepageController < ApplicationController
 
         sevenbreath
         MajorRequirement.get_courses(@user).each {|course| @major_courses << course}
+        course = Course.create(:name => "You have fulfilled the requirement")
+        if @major_courses.include?(Course.find_by_name("CS 61A"))
+            @major_courses.delete(Course.find_by_name("CS 61A"))
+            @lower_division << Course.find_by_name("CS 61A")
+            @lower_division_helper_one << Course.find_by_name("CS 61A")
+        end
+        if @major_courses.include?(Course.find_by_name("CS 61B"))
+            @major_courses.delete(Course.find_by_name("CS 61B"))
+            @lower_division << Course.find_by_name("CS 61B")
+            @lower_division_helper_one << Course.find_by_name("CS 61B")
+        end
+        if @major_courses.include?(Course.find_by_name("CS 61C"))
+            @major_courses.delete(Course.find_by_name("CS 61C"))
+            @lower_division << Course.find_by_name("CS 61C")
+            @lower_division_helper_one << Course.find_by_name("CS 61C")
+        end
+        if @major_courses.include?(Course.find_by_name("Math 1A"))
+            @major_courses.delete(Course.find_by_name("Math 1A"))
+            @lower_division << Course.find_by_name("Math 1A")
+            @lower_division_helper_one << Course.find_by_name("Math 1A")
+        end
+        if @major_courses.include?(Course.find_by_name("Math 1B"))
+            @major_courses.delete(Course.find_by_name("Math 1B"))
+            @lower_division << Course.find_by_name("Math 1B")
+            @lower_division_helper_one << Course.find_by_name("Math 1B")
+        end
+        if @major_courses.include?(Course.find_by_name("Math 54"))
+            @major_courses.delete(Course.find_by_name("Math 54"))
+            @lower_division << Course.find_by_name("Math 54")
+            @lower_division_helper_one << Course.find_by_name("Math 54")
+        end
 
+        if @major_courses.include?(Course.find_by_name("CS 70"))
+            @major_courses.delete(Course.find_by_name("CS 70"))
+            @lower_division << Course.find_by_name("CS 70")
+            @lower_division_helper_one << Course.find_by_name("CS 70")
+
+        end
+        if @major_courses.include?(Course.find_by_name("EE 20"))
+            @major_courses.delete(Course.find_by_name("EE 20"))
+            @lower_division << Course.find_by_name("EE 20")
+            @lower_division_helper_two << Course.find_by_name("EE 20")
+        end
+        if @major_courses.include?(Course.find_by_name("EE 40"))
+            @major_courses.delete(Course.find_by_name("EE 40"))
+            @lower_division << Course.find_by_name("EE 40")
+            @lower_division_helper_two << Course.find_by_name("EE 40")
+        end
+        if @major_courses.include?(Course.find_by_name("EE 42"))
+            @major_courses.delete(Course.find_by_name("EE 42"))
+            @lower_division << Course.find_by_name("EE 42 ")
+            @lower_division_helper_two << Course.find_by_name("EE 42 ")
+        end
+        
+        i = @lower_division_helper_two.count
+        if i < 3
+            if @lower_division_helper_one = 0
+                @lower_division = [] << course
+            end
+        end
+
+
+        
+        @twenty_upper_division = @major_courses
+        @twentyseven_upper_division = @major_courses
+        if @major_courses.count < 9
+            @twenty_upper_division = [] << course
+        end
+
+        if @major_courses.count < 6
+            @twentyseven_upper_division = [] << course
+        end
+
+        @major_courses.delete(Course.find_by_name("CS 161"))
+        @major_courses.delete(Course.find_by_name("CS 170"))
+        @major_courses.delete(Course.find_by_name("CS 188"))
+        @upper_design = @major_courses
+        if @upper_design.count < 9 
+            @upper_design = [] << course
+        end
     end 
 end

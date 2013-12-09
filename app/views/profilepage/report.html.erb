@@ -95,9 +95,33 @@
 
 					<table class ="table table-striped table-bordered"> 
 						<thead>
-							<tr><th> Major Course Name</th></tr>
+							<tr><th> Lower Division Requirements</th></tr>
 						</thead>
-						<% @major_courses.each do |course| %>
+						<% @lower_division.each do |course| %>
+						<tr><td><%= course.name  if course.present?%></td></tr>
+						<% end %>
+					</table>
+					<table class ="table table-striped table-bordered"> 
+						<thead>
+							<tr><th>1 Upper Division Desgin Course</th></tr>
+						</thead>
+						<% @upper_design.each do |course| %>
+						<tr><td><%= course.name  if course.present?%></td></tr>
+						<% end %>
+					</table>
+					<table class ="table table-striped table-bordered"> 
+						<thead>
+							<tr><th>20 Units Upper Division CS/EE Courses</th></tr>
+						</thead>
+						<% @twenty_upper_division.each do |course| %>
+						<tr><td><%= course.name  if course.present?%></td></tr>
+						<% end %>
+					</table>
+					<table class ="table table-striped table-bordered"> 
+						<thead>
+							<tr><th>27 Units Total Upper Division Courses</th></tr>
+						</thead>
+						<% @twentyseven_upper_division.each do |course| %>
 						<tr><td><%= course.name  if course.present?%></td></tr>
 						<% end %>
 					</table>
