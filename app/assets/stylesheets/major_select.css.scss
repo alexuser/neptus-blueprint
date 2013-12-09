@@ -7,10 +7,19 @@
 @import url('http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css');
 
 
+
+
 body {
 font: 16px/1 'Lato', sans-serif;
 padding-top: 60px;
 padding-bottom: 40px;
+
+background-image: url(/bg.jpg);
+background-repeat: no-repeat;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+background-size:cover;
+width: 100%;
 }
 .nav li {
 padding-top: 5px;

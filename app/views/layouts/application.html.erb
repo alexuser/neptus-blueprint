@@ -4,10 +4,11 @@
   <title>Neptus</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "bootstrap" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  
   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -42,8 +43,5 @@
 <div class="container">
   <%= yield %>
 </div>
-
-
-<hr>
 </body>
 </html>
