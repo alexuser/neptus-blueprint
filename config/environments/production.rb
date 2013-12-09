@@ -20,6 +20,7 @@ Neptus::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
   
+  config.assets.paths << "#{Rails}/vendor/assets/fonts"
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 

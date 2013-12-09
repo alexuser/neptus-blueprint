@@ -10036,99 +10036,6 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
   })
 
 }( window.jQuery );
-/* ============================================================
- * bootstrap-dropdown.js v2.0.1
- * http://twitter.github.com/bootstrap/javascript.html#dropdowns
- * ============================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ============================================================ */
-
-
-
-!function( $ ){
-
-  "use strict"
-
- /* DROPDOWN CLASS DEFINITION
-  * ========================= */
-
-  var toggle = '[data-toggle="dropdown"]'
-    , Dropdown = function ( element ) {
-        var $el = $(element).on('click.dropdown.data-api', this.toggle)
-        $('html').on('click.dropdown.data-api', function () {
-          $el.parent().removeClass('open')
-        })
-      }
-
-  Dropdown.prototype = {
-
-    constructor: Dropdown
-
-  , toggle: function ( e ) {
-      var $this = $(this)
-        , selector = $this.attr('data-target')
-        , $parent
-        , isActive
-
-      if (!selector) {
-        selector = $this.attr('href')
-        selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
-      }
-
-      $parent = $(selector)
-      $parent.length || ($parent = $this.parent())
-
-      isActive = $parent.hasClass('open')
-
-      clearMenus()
-      !isActive && $parent.toggleClass('open')
-
-      return false
-    }
-
-  }
-
-  function clearMenus() {
-    $(toggle).parent().removeClass('open')
-  }
-
-
-  /* DROPDOWN PLUGIN DEFINITION
-   * ========================== */
-
-  $.fn.dropdown = function ( option ) {
-    return this.each(function () {
-      var $this = $(this)
-        , data = $this.data('dropdown')
-      if (!data) $this.data('dropdown', (data = new Dropdown(this)))
-      if (typeof option == 'string') data[option].call($this)
-    })
-  }
-
-  $.fn.dropdown.Constructor = Dropdown
-
-
-  /* APPLY TO STANDARD DROPDOWN ELEMENTS
-   * =================================== */
-
-  $(function () {
-    $('html').on('click.dropdown.data-api', clearMenus)
-    $('body').on('click.dropdown.data-api', toggle, Dropdown.prototype.toggle)
-  })
-
-}( window.jQuery );
 /* =========================================================
  * bootstrap-modal.js v2.0.1
  * http://twitter.github.com/bootstrap/javascript.html#modals
@@ -13761,6 +13668,8 @@ $("#CS-188").popover({
 	content: 'CS 61A or CS 61B; CS 70.'
 });
 
+
+
 var paper = Raphael("circular-progress", 400, 400);
 var CircularPath = function(R, x, y, w, paper, bgColor){
     this.radius = R;
@@ -14157,6 +14066,7 @@ $(function(){
 		$university_req_rate.addClass('gt-50');
 	}
 	$('#university_req_rate .ppc-progress-fill').css('transform','rotate('+ university_deg +'deg)');
+	$('#university_req_rate .ppc-progress-fill').css('-webkit-transform','rotate('+ university_deg +'deg)');
 	$('#university_req_rate .ppc-percents span').html(university_percent+'%');
 
 
@@ -14167,6 +14077,7 @@ $(function(){
 		$campus_req_rate.addClass('gt-50');
 	}
 	$('#campus_req_rate .ppc-progress-fill').css('transform','rotate('+ campus_deg +'deg)');
+	$('#campus_req_rate .ppc-progress-fill').css('-webkit-transform','rotate('+ campus_deg +'deg)');
 	$('#campus_req_rate .ppc-percents span').html(campus_percent+'%');
 
 	var $ls_college_req_rate =$('#ls_college_req_rate'),
@@ -14176,17 +14087,8 @@ $(function(){
 		$ls_college_req_rate.addClass('gt-50');
 	}
 	$('#ls_college_req_rate .ppc-progress-fill').css('transform','rotate('+ ls_deg +'deg)');
+	$('#ls_college_req_rate .ppc-progress-fill').css('-webkit-transform','rotate('+ ls_deg +'deg)');
 	$('#ls_college_req_rate .ppc-percents span').html(ls_percent+'%');
-
-
-	var $major_req_rate =$('#major_req_rate'),
-	major_percent = parseInt($major_req_rate.data('percent')),
-	major_deg = 360*major_percent/100;
-	if (major_percent > 50) {
-		$major_req_rate.addClass('gt-50');
-	}
-	$('#major_req_rate .ppc-progress-fill').css('transform','rotate('+ major_deg +'deg)');
-	$('#major_req_rate .ppc-percents span').html(major_percent+'%');
 });
 /**
  * QUnit - A JavaScript Unit Testing Framework
