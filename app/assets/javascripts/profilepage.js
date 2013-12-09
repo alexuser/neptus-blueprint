@@ -161,7 +161,7 @@ paper.circle(10, 250, 7).attr({'fill': '#FFD801', 'stroke-width': 0});
 paper.text(110, 250, 'Lower Division Requirements').attr({'font-size': 13 });
 
 paper.circle(10, 270, 7).attr({'fill': '#9DC209', 'stroke-width': 0});
-paper.text(116, 270, '1 Upper Division Desgin Course').attr({'font-size': 13 });
+paper.text(116, 270, '1 Upper Division Design Course').attr({'font-size': 13 });
 
 paper.circle(10, 290, 7).attr({'fill': '#728FCE', 'stroke-width': 0});
 paper.text(140, 290, '20 Units Upper Division CS/EE Courses').attr({'font-size': 13 });
