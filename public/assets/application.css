@@ -15281,6 +15281,81 @@ section {
   color: #336699;
   font-size: 50px;
 }
+
+/* line 11, ../../app/assets/stylesheets/home.css.scss */
+.header-description {
+  font-family: lato;
+  margin: 30px 0 0px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 300;
+  color: white;
+}
+
+/* line 21, ../../app/assets/stylesheets/home.css.scss */
+.header-description a {
+  font-family: lato;
+  font-size: 30px;
+  font-weight: 300;
+  color: white;
+}
+
+/* line 28, ../../app/assets/stylesheets/home.css.scss */
+.header-description h2 {
+  font-weight: 100;
+  font-size: 60px;
+  color: white;
+  text-shadow: 0 0px 12px rgba(36, 36, 36, 0.55);
+  padding: 0px 0 40px 0;
+}
+
+/* line 36, ../../app/assets/stylesheets/home.css.scss */
+.header-description h3 {
+  font-family: lato;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 300;
+  color: white;
+}
+
+/* line 46, ../../app/assets/stylesheets/home.css.scss */
+.header-btn {
+  font-family: lato;
+  margin: 60px 0 0px;
+  font-size: 25px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 24px;
+  padding: 20px 35px;
+  border: 2px solid #db522f;
+  background: #db522f;
+  display: inline-block;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+
+/* line 66, ../../app/assets/stylesheets/home.css.scss */
+.header-btn:hover {
+  color: #fff;
+  background: transparent;
+}
+
+/* line 71, ../../app/assets/stylesheets/home.css.scss */
+.header-features {
+  margin: -50px 110px 0 110px;
+  color: #fff;
+  display: block;
+}
+
+/* line 76, ../../app/assets/stylesheets/home.css.scss */
+.header-feature {
+  padding: 50px;
+}
 @import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
 @import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css");
 /*!
@@ -23608,19 +23683,25 @@ td.visible-print {
     display: none !important;
   }
 }
-/* line 10, ../../app/assets/stylesheets/major_select.css.scss */
+/* line 12, ../../app/assets/stylesheets/major_select.css.scss */
 body {
   font: 16px/1 'Lato', sans-serif;
   padding-top: 60px;
   padding-bottom: 40px;
+  background-image: url(/bg.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  width: 100%;
 }
 
-/* line 15, ../../app/assets/stylesheets/major_select.css.scss */
+/* line 24, ../../app/assets/stylesheets/major_select.css.scss */
 .nav li {
   padding-top: 5px;
 }
 
-/* line 19, ../../app/assets/stylesheets/major_select.css.scss */
+/* line 28, ../../app/assets/stylesheets/major_select.css.scss */
 .leaderboard {
   padding: 60px;
   margin-bottom: 30px;
@@ -23631,7 +23712,7 @@ body {
   border-radius: 6px;
 }
 
-/* line 28, ../../app/assets/stylesheets/major_select.css.scss */
+/* line 37, ../../app/assets/stylesheets/major_select.css.scss */
 .leaderboard h1 {
   font-size: 40px;
   margin-bottom: 5px;
@@ -23640,14 +23721,14 @@ body {
   color: #FF6600;
 }
 
-/* line 35, ../../app/assets/stylesheets/major_select.css.scss */
+/* line 44, ../../app/assets/stylesheets/major_select.css.scss */
 .leaderboard h2 {
   font-size: 24px;
   font-weight: 200;
   line-height: 27px;
 }
 
-/* line 40, ../../app/assets/stylesheets/major_select.css.scss */
+/* line 49, ../../app/assets/stylesheets/major_select.css.scss */
 .leaderboard p {
   font-size: 18px;
   font-weight: 200;
