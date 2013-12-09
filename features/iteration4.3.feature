@@ -19,6 +19,9 @@ Scenario: Create a new post
 	And I should not see "hello world"
 	And I follow "New topic"
 	Then I should see "Creating a new topic"
+	When I press "Create Topic"
+	Then I should see "Creating a new topic"
+
 	When I fill in "topic_subject" with "hello"
 	And I fill in "topic_posts_attributes_0_text" with "hello world"
 	And I press "Create Topic"
@@ -61,6 +64,9 @@ Scenario: Reply a post
 
 	When I follow "Reply"
 	Then I should see "Text"
+	When I press "Post Reply"
+	Then I should see "Text"
+
 	And I fill in "post_text" with "good post"
 	And I press "Post Reply"
 	Then I am on the hello post page
