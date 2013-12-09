@@ -17,6 +17,3 @@ Scenario: click on Next button
 
   Then I am on the new user session page
 
-  When I follow "Forgot your password?"
-  
-  Then I am on the new user password page
