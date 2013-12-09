@@ -20,8 +20,6 @@
       <div class="navbar-collapse collapse">
 
         <ul class="nav navbar-nav">
-
-
           <%if user_signed_in? %>
           <li><%= link_to "My Profile", main_app.profile_path %></li>
           <li><%= link_to "My Report", main_app.report_path %></li>
@@ -32,7 +30,6 @@
           <li><%= link_to "Discussion", forem.root_path %></li>
           <li><%= link_to "About", main_app.about_path %></li>
           <li><%= link_to "Contact", main_app.contact_path%></li>
-
         </ul>
 
         <%= render 'layouts/devise_header' %>
@@ -43,7 +40,6 @@
 </div>
 
 <div class="container">
-
   <%= yield %>
 </div>
 
