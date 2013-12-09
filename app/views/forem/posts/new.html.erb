@@ -1,3 +1,4 @@
+<div class ="jumbotron">
 <%= render :partial => 'forem/forums/head', :locals => { :forum => @topic.forum } %>
 
 <h2>
@@ -13,3 +14,4 @@
   <%= render :partial => "form", :locals => { :f => f } %>
   <%= f.submit t("forem.post.buttons.reply"), :class => "btn btn-primary" %>
 <% end %>
+</div>
