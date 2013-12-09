@@ -1,5 +1,6 @@
+<div class ="jumbotron">
 <div id='forums_container'>
-  <h1 id='forums_title'><%= t('.title') %></h1>
+  <h2 id='forums_title'><%= t('.title') %></h2>
 
   <%= render @categories %>
 </div>
@@ -9,4 +10,7 @@
   <% if forem_admin? %>
     <%= link_to t("area", :scope => "forem.admin"), forem.admin_root_path %>
   <% end %>
+
 </footer>
+
+</div>
