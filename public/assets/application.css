@@ -15276,13 +15276,15 @@ main {
 section {
   margin-top: 20px;
 }
-/* line 5, ../../app/assets/stylesheets/home.css.scss */
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
+@import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css");
+/* line 8, ../../app/assets/stylesheets/home.css.scss */
 .welcome .headline {
   color: #336699;
   font-size: 50px;
 }
 
-/* line 11, ../../app/assets/stylesheets/home.css.scss */
+/* line 14, ../../app/assets/stylesheets/home.css.scss */
 .header-description {
   font-family: lato;
   margin: 30px 0 0px;
@@ -15292,7 +15294,7 @@ section {
   color: white;
 }
 
-/* line 21, ../../app/assets/stylesheets/home.css.scss */
+/* line 24, ../../app/assets/stylesheets/home.css.scss */
 .header-description a {
   font-family: lato;
   font-size: 30px;
@@ -15300,7 +15302,7 @@ section {
   color: white;
 }
 
-/* line 28, ../../app/assets/stylesheets/home.css.scss */
+/* line 31, ../../app/assets/stylesheets/home.css.scss */
 .header-description h2 {
   font-weight: 100;
   font-size: 60px;
@@ -15309,7 +15311,7 @@ section {
   padding: 0px 0 40px 0;
 }
 
-/* line 36, ../../app/assets/stylesheets/home.css.scss */
+/* line 39, ../../app/assets/stylesheets/home.css.scss */
 .header-description h3 {
   font-family: lato;
   text-align: center;
@@ -15318,7 +15320,7 @@ section {
   color: white;
 }
 
-/* line 46, ../../app/assets/stylesheets/home.css.scss */
+/* line 49, ../../app/assets/stylesheets/home.css.scss */
 .header-btn {
   font-family: lato;
   margin: 60px 0 0px;
@@ -15339,20 +15341,20 @@ section {
   border-radius: 9px;
 }
 
-/* line 66, ../../app/assets/stylesheets/home.css.scss */
+/* line 69, ../../app/assets/stylesheets/home.css.scss */
 .header-btn:hover {
   color: #fff;
   background: transparent;
 }
 
-/* line 71, ../../app/assets/stylesheets/home.css.scss */
+/* line 74, ../../app/assets/stylesheets/home.css.scss */
 .header-features {
   margin: -50px 110px 0 110px;
   color: #fff;
   display: block;
 }
 
-/* line 76, ../../app/assets/stylesheets/home.css.scss */
+/* line 79, ../../app/assets/stylesheets/home.css.scss */
 .header-feature {
   padding: 50px;
 }
