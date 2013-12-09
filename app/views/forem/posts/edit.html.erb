@@ -1,3 +1,11 @@
+<head>
+	<style type="text/css">
+		input {margin: 10px;}
+		textarea {margin: 8px;}
+	</style>
+</head>
+
+
 <%= render :partial => 'forem/forums/head', :locals => { :forum => @topic.forum } %>
 
 <h2><%= t("forem.post.edit", :post => @post) %></h2>
@@ -6,3 +14,5 @@
   <%= render :partial => "form", :locals => { :f => f } %>
   <%= f.submit t("forem.post.buttons.edit"), :class => "btn btn-primary" %>
 <% end %>
+
+

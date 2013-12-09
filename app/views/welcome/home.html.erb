@@ -11,18 +11,18 @@
 
   <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" img src ="graph.jpg" alt="140x140" style="width: 140px; height: 140px;" >
-          <h2>Job Outlook</h2>
+          <a href= "/outlook"><img class="img-circle" img src ="graph.jpg" alt="140x140" style="width: 140px; height: 140px;" ></a>
+          <h2><%= link_to "Job Outlook", main_app.outlook_path %></h2>
           <p>Determine your path and discover possible career oppstounities. Blueprint identifies popular college majors and carrers and displays median earnings.</p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" img src ="catalog.jpg" alt="140x140" style="width: 140px; height: 140px;">
-          <h2>Blueprint</h2>
+          <a href= '/profile'><img class="img-circle" img src ="catalog.jpg" alt="140x140" style="width: 140px; height: 140px;"></a>
+          <h2><%= link_to "Blueprint", main_app.profile_path%></h2>
           <p>Easily keep track of the next steps to reach your graduation with ease. Blueprint makes it easy with a requirements overview and suggested courses.</p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" img src="forum.jpg" alt="140x140" style="width: 140px; height: 140px;">
-          <h2>Forums</h2>
+          <a href= '/forums'><img class="img-circle" img src="forum.jpg" alt="140x140" style="width: 140px; height: 140px;"></a>
+          <h2><%= link_to "Forum", forem.root_path %></h2>
           <p>Still undecided? Harness the knowledge of your peers and discuss your considerations with other students at your campus.</p>
         </div><!-- /.col-lg-4 -->
       </div>

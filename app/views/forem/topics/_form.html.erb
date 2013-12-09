@@ -1,9 +1,29 @@
-<%= simple_form_for [forem, @forum, @topic] do |f| %>
-  <%= f.input :subject %>
+<head>
+	<style type="text/css">
+		input {margin: 10px;}
+		textarea {margin: 8px;}
+	</style>
+</head>
 
-  <%= f.simple_fields_for :posts do |post| %>
-    <%= render :partial => "forem/posts/form", :locals => { :f => post }%>
-  <% end %>
+<form accept-charset="UTF-8" action="/forums/forums/classes/topics" class="simple_form new_topic" id="new_topic" method="post">
+	<div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" />
+		<input name="authenticity_token" type="hidden" value="1YeBcfMpw3R7k05Os7N8TxBXrO23E+XLyQw9Q2OXp6Q=" />
+	</div>
+  	<p>	
+  	<div class="input string required topic_subject">
+  		<label class="string required" for="topic_subject"><abbr title="required">*</abbr> Title </label><input class="string required" id="topic_subject" maxlength="255" name="topic[subject]" required="required" size="50" type="text" />
+  	</div>
+  	</p>
   
-  <%= f.submit :class => "btn btn-primary" %>
-<% end %>
+    <div class="input text required topic_posts_text">
+    	<label class="text required" for="topic_posts_attributes_0_text">
+    		<abbr title="required">*</abbr>
+    		Text
+    	</label>
+    	<textarea class="text required field span12" cols="49" id="topic_posts_attributes_0_text" name="topic[posts_attributes][0][text]" required="required" rows="20">
+		</textarea>
+	</div>
+
+  <input class="btn btn-primary" name="commit" type="submit" value="Create Topic" />
+  </form>
+
