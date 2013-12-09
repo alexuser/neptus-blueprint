@@ -1,0 +1,27 @@
+---
+glyphicons-halflings-regular.eot: glyphicons-halflings-regular.eot
+glyphicons-halflings-regular/index.eot: glyphicons-halflings-regular.eot
+glyphicons-halflings-regular.svg: glyphicons-halflings-regular.svg
+glyphicons-halflings-regular/index.svg: glyphicons-halflings-regular.svg
+glyphicons-halflings-regular.ttf: glyphicons-halflings-regular.ttf
+glyphicons-halflings-regular/index.ttf: glyphicons-halflings-regular.ttf
+glyphicons-halflings-regular.woff: glyphicons-halflings-regular.woff
+glyphicons-halflings-regular/index.woff: glyphicons-halflings-regular.woff
+rails.png: rails.png
+rails/index.png: rails.png
+application.js: application.js
+application/index.js: application.js
+application.css: application.css
+application/index.css: application.css
+jquery.min.map: jquery.min.map
+jquery/index.min.map: jquery.min.map
+select2/select2-spinner.gif: select2/select2-spinner.gif
+select2/select2-spinner/index.gif: select2/select2-spinner.gif
+select2/select2.png: select2/select2.png
+select2/select2/index.png: select2/select2.png
+select2/select2x2.png: select2/select2x2.png
+select2/select2x2/index.png: select2/select2x2.png
+glyphicons-halflings-white.png: glyphicons-halflings-white.png
+glyphicons-halflings-white/index.png: glyphicons-halflings-white.png
+glyphicons-halflings.png: glyphicons-halflings.png
+glyphicons-halflings/index.png: glyphicons-halflings.png
