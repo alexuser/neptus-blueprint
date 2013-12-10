@@ -133,18 +133,20 @@ class ProfilepageController < ApplicationController
         course = Course.create(:name => "You have fulfilled the requirement")
         @twenty_upper_division = @major_courses
         @twentyseven_upper_division = @major_courses
-        if @major_courses.count < 9
+        number_upper = 12
+
+        if (number_upper - @major_courses.count >= 5)
             @twenty_upper_division = [] << course
         end
 
-        if @major_courses.count < 6
+        if (number_upper - @major_courses.count >= 7) 
             @twentyseven_upper_division = [] << course
         end
 
-        @major_courses.delete(Course.find_by_name("CS 161"))
-        @major_courses.delete(Course.find_by_name("CS 170"))
-        @major_courses.delete(Course.find_by_name("CS 188"))
-        @upper_design = @major_courses
+        @upper_design = Array.new(@major_courses)
+        @upper_design.delete(Course.find_by_name("CS 161"))
+        @upper_design.delete(Course.find_by_name("CS 170"))
+        @upper_design.delete(Course.find_by_name("CS 188"))
         if @upper_design.count < 9 
             @upper_design = [] << course
         end
