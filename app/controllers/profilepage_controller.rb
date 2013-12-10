@@ -130,6 +130,7 @@ class ProfilepageController < ApplicationController
     end 
 
     def upperDivisionReport
+        course = Course.create(:name => "You have fulfilled the requirement")
         @twenty_upper_division = @major_courses
         @twentyseven_upper_division = @major_courses
         if @major_courses.count < 9
