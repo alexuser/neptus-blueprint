@@ -86,44 +86,50 @@ class ProfilepageController < ApplicationController
         end 
     end
 
-    def report
-        @user = current_user
+    def lowerHelper(major, lower, lower_helper, name)
+        course_name = Course.find_by_name(name)
+        if major.include?(course_name)
+            major.delete(course_name)
+            lower << course_name
+            lower_helper << course_name
+        end
+    end 
+
+    def majorReport 
         @major_courses = []
-        @lower_division_helper_one = []
+
         @lower_division = []
+        @lower_division_helper_one = []
         @lower_division_helper_two = []
+
         @twenty_upper_division = []
         @upper_design = []
         @twentyseven_total_upper_division = []
-        ureport
 
-        creport
-
-        ls3report
-
-        sevenbreath
         MajorRequirement.get_courses(@user).each {|course| @major_courses << course}
+
+        lowerDivisionReport
+        upperDivisionReport
+    end 
+
+    def lowerDivisionReport 
         course = Course.create(:name => "You have fulfilled the requirement")
-        
-        
-        class_hash = ["CS 61A", "CS 61B", "CS 61C", "Math 1A", "Math 1B", "Math 54", "CS 70", "EE 20", "EE 40", "EE 42"]
-        class_hash.each do |x|
-            if @major_courses.include?(Course.find_by_name(x))
-               @major_courses.delete(Course.find_by_name(x))
-               @lower_division << Course.find_by_name(x)
-               @lower_division_helper_one << Course.find_by_name(x)
-            end
-        end
-        
-        i = @lower_division_helper_two.count
-        if i < 3
-            if @lower_division_helper_one == 0
-                @lower_division = [] << course
-            end
-        end
+        all_lower_one = ["CS 61A", "CS 61B", "CS 61C", "Math 1A", "Math 1B", "Math 54", "CS 70"]
+        all_lower_two =["EE 20", "EE 40", "EE 42"]
 
-
+        all_lower_one.each {|name| lowerHelper(@major_courses, @lower_division, @lower_division_helper_one, name)}
+        all_lower_two.each {|name| lowerHelper(@major_courses, @lower_division, @lower_division_helper_two, name)}
         
+        if @lower_division_helper_one.count == 0 and @lower_division_helper_two.count < 3
+            @lower_division = [] 
+            @lower_division << course
+            return @lower_division
+        elsif @lower_division_helper_two.count < 3
+            @lower_division_helper_two.each {|name| @lower_division.delete(name)}
+        end
+    end 
+
+    def upperDivisionReport
         @twenty_upper_division = @major_courses
         @twentyseven_upper_division = @major_courses
         if @major_courses.count < 9
@@ -141,5 +147,15 @@ class ProfilepageController < ApplicationController
         if @upper_design.count < 9 
             @upper_design = [] << course
         end
+    end 
+
+    def report
+        @user = current_user
+
+        ureport
+        creport
+        ls3report
+        sevenbreath
+        majorReport
     end 
 end
