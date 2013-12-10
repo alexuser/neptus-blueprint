@@ -104,62 +104,20 @@ class ProfilepageController < ApplicationController
         sevenbreath
         MajorRequirement.get_courses(@user).each {|course| @major_courses << course}
         course = Course.create(:name => "You have fulfilled the requirement")
-        if @major_courses.include?(Course.find_by_name("CS 61A"))
-            @major_courses.delete(Course.find_by_name("CS 61A"))
-            @lower_division << Course.find_by_name("CS 61A")
-            @lower_division_helper_one << Course.find_by_name("CS 61A")
-        end
-        if @major_courses.include?(Course.find_by_name("CS 61B"))
-            @major_courses.delete(Course.find_by_name("CS 61B"))
-            @lower_division << Course.find_by_name("CS 61B")
-            @lower_division_helper_one << Course.find_by_name("CS 61B")
-        end
-        if @major_courses.include?(Course.find_by_name("CS 61C"))
-            @major_courses.delete(Course.find_by_name("CS 61C"))
-            @lower_division << Course.find_by_name("CS 61C")
-            @lower_division_helper_one << Course.find_by_name("CS 61C")
-        end
-        if @major_courses.include?(Course.find_by_name("Math 1A"))
-            @major_courses.delete(Course.find_by_name("Math 1A"))
-            @lower_division << Course.find_by_name("Math 1A")
-            @lower_division_helper_one << Course.find_by_name("Math 1A")
-        end
-        if @major_courses.include?(Course.find_by_name("Math 1B"))
-            @major_courses.delete(Course.find_by_name("Math 1B"))
-            @lower_division << Course.find_by_name("Math 1B")
-            @lower_division_helper_one << Course.find_by_name("Math 1B")
-        end
-        if @major_courses.include?(Course.find_by_name("Math 54"))
-            @major_courses.delete(Course.find_by_name("Math 54"))
-            @lower_division << Course.find_by_name("Math 54")
-            @lower_division_helper_one << Course.find_by_name("Math 54")
-        end
-
-        if @major_courses.include?(Course.find_by_name("CS 70"))
-            @major_courses.delete(Course.find_by_name("CS 70"))
-            @lower_division << Course.find_by_name("CS 70")
-            @lower_division_helper_one << Course.find_by_name("CS 70")
-
-        end
-        if @major_courses.include?(Course.find_by_name("EE 20"))
-            @major_courses.delete(Course.find_by_name("EE 20"))
-            @lower_division << Course.find_by_name("EE 20")
-            @lower_division_helper_two << Course.find_by_name("EE 20")
-        end
-        if @major_courses.include?(Course.find_by_name("EE 40"))
-            @major_courses.delete(Course.find_by_name("EE 40"))
-            @lower_division << Course.find_by_name("EE 40")
-            @lower_division_helper_two << Course.find_by_name("EE 40")
-        end
-        if @major_courses.include?(Course.find_by_name("EE 42"))
-            @major_courses.delete(Course.find_by_name("EE 42"))
-            @lower_division << Course.find_by_name("EE 42 ")
-            @lower_division_helper_two << Course.find_by_name("EE 42 ")
+        
+        
+        class_hash = ["CS 61A", "CS 61B", "CS 61C", "Math 1A", "Math 1B", "Math 54", "CS 70", "EE 20", "EE 40", "EE 42"]
+        class_hash.each do |x|
+            if @major_courses.include?(Course.find_by_name(x))
+               @major_courses.delete(Course.find_by_name(x))
+               @lower_division << Course.find_by_name(x)
+               @lower_division_helper_one << Course.find_by_name(x)
+            end
         end
         
         i = @lower_division_helper_two.count
         if i < 3
-            if @lower_division_helper_one = 0
+            if @lower_division_helper_one == 0
                 @lower_division = [] << course
             end
         end
